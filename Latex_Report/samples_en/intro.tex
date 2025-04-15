@@ -1,0 +1,78 @@
+\chapter{Introduction}
+\label{ch:intro}
+Accurate and consistent localization is a cornerstone of autonomous vehicle navigation. Whether operating on city streets, inside industrial warehouses, or across expansive campuses, autonomous systems rely on precise knowledge of their position to safely and efficiently perform tasks like obstacle avoidance, route following, and mission planning. As the demand for intelligent mobility grows, the need for localization systems that are both robust and real-time—especially in complex or signal-challenged environments—has become increasingly critic
+\section{Motivation}
+High-precision and reliable localization is crucial for autonomous vehicles and robots, as it directly affects tasks like path planning, obstacle avoidance, and other repetitive missions (e.g., warehouse deliveries or routine patrols)\cite{kim2018stereo}. Typically, positioning relies on Global Navigation Satellite Systems (GNSS) and Inertial Navigation Systems (INS), which complement each other. GNSS can provide absolute position without drift—especially when using differential signals—while INS delivers frequent updates to track movement\cite{carvalho1997optimal}. However, in urban areas with tall buildings or indoor environments, GNSS signals can be blocked or distorted, and INS alone may accumulate significant drift over time\cite{liu2019segmentation}. Moreover, these systems do not inherently provide information about the surrounding environment.
+
+To address such limitations, researchers have adopted onboard sensors like LiDAR, monocular cameras, and stereo cameras. One widely used method is Simultaneous Localization and Mapping (SLAM), which enables a robot to estimate its position in a completely new environment without needing a prior map. While SLAM is flexible and powerful, it can drift if loop closures are infrequent or the vehicle cannot revisit known areas to correct its estimates.
+
+An alternative that improves accuracy and stability is map-based localization, where a pre-built map (created beforehand by SLAM, GNSS-based surveys, or other methods) is used as a global reference \cite{levinson2007mapbased}. In this approach, the vehicle’s current sensor data—such as LiDAR scans—are matched against the detailed information in the map to determine its position. This matching process helps minimize drift and provides robust localization, even in environments where GNSS signals are unavailable or unreliable. Once the map is constructed, indoor and outdoor autonomous systems can repeatedly use it to perform their tasks more reliably, whether that involves delivering goods, patrolling a facility, or navigating urban streets. As a result, map-based localization is considered an indispensable component of future autonomous navigation, especially when consistent high accuracy and global reference information are required.
+
+Despite its advantages, map-based localization introduces new challenges. Processing high-resolution 3D maps in real-time demands efficient data structures and fast scan-matching algorithms. Additionally, integrating local motion estimation (e.g., via LiDAR-Inertial Odometry) with global map alignment must be handled carefully to ensure both consistency and computational feasibility. Full graph-based optimization, while accurate, often becomes intractable over time due to the growth of the state space.
+
+This thesis addresses these challenges by proposing a hybrid system that combines real-time LiDAR-Inertial Odometry (FAST-LIO2), efficient map-matching via multithreaded NDT (NDT-OMP), and a sliding-window factor graph fusion approach. The system dynamically loads submaps around the robot based on a configurable radius, allowing scalable scan-matching while maintaining global consistency. The goal is to develop a real-time, robust, and accurate localization framework suitable for large-scale and semi-dynamic environments.
+
+\section{Objective}
+
+The primary objective of this thesis is to develop a real-time, LiDAR-based localization framework that achieves both high-frequency motion estimation and drift-free global consistency in large-scale environments. This is accomplished by integrating LiDAR-Inertial Odometry with map-based scan matching, and fusing them through a computationally efficient sliding-window factor graph.
+\begin{itemize}
+    \item To integrate a robust LiDAR-Inertial Odometry(LIO) module using FAST-LIO2, capable of providing real-time, low-drift pose estimates by tightly coupling LiDAR and IMU data.
+    \item To develop a scan-to-map matching module by integrating a multithreaded Normal Distributions Transform (NDT-OMP) algorithm, enabling real-time alignment of incoming LiDAR scans with a pre-built 3D point cloud map. 
+    % This approach leverages the robustness of NDT for point cloud registration while utilizing parallel processing to maintain computational efficiency.
+
+    \item To design and implement a grid-based submap management system that loads only the relevant local tiles within a configurable radius of the robot’s position and incrementally replaces out-of-range tiles without reloading the full map.\item To fuse odometry and map matching results using a sliding-window factor graph optimization approach, enabling efficient, bounded optimization that retains local consistency while discarding outdated states.
+    \item To evaluate the proposed system on benchmark datasets and custom scenarios, measuring performance in terms of localization accuracy, computation time, memory usage, and robustness under varying environmental conditions.
+\end{itemize}
+% \section{Problem Statement}
+\section{Research Questions}
+
+The primary questions guiding this research are:
+\begin{enumerate}
+    \item How does integrating a pre-built map improve the accuracy and robustness of LiDAR-based localization in GNSS-denied environments?
+    % \item Which scan-to-map matching techniques offer the best trade-off between accuracy and computational efficiency for large-scale or dynamic environments?
+    % \item What role does sensor fusion (e.g., LiDAR-inertial, LiDAR-wheel odometry) play in enhancing the reliability of map-based localization?
+    % \item How can we optimize both map representation and scan processing to ensure scalable and efficient localization?
+    \item What is the impact of dynamic submap loading and grid-based map management on computational performance and scalability?
+    \item Can this approach maintain accurate localization in semi-dynamic or partially structured environments, such as urban or campus settings?
+    \item How can LiDAR-Inertial odometry and NDT-based map matching be effectively fused to enhance real-time localization accuracy and robustness?
+    % \item How can LiDAR-Inertial odometry (FAST-LIO2) and multithreaded NDT-based scan matching be effectively fused to achieve both accuracy and real-time performance?
+    % \item How does sliding-window factor graph optimization compare to full graph smoothing in terms of runtime and pose consistency?
+\end{enumerate}
+\section{Scope and limitations}
+\subsection{Scope}
+The proposed localization system is designed for real-time operation in diverse environments, including indoor spaces, outdoor areas, and urban environments. It assumes the availability of a high-resolution 3D LIDAR map of the operation environment. The system provides accurate pose estimation by fusing LIDAR-Inertial Odometry with scan-to-map matching, and its particularly suited scenarios where GNSS is unreliable or unavailable.
+\subsection{Limitations}
+\begin{itemize}
+    \item The system does not perform global localization (i.e., it cannot determine an unknown initial pose within the map). It assumes the robot starts with a known or approximated initial position close to its true location.
+    \item The approach relies entirely on a pre-built map; it does not perform simultaneous mapping (SLAM) or update the map during operation.
+    \item Highly dynamic environments or areas with significant structural changes may affect scan matching accuracy.
+\end{itemize}
+
+
+\section{Methodology overview}
+% \section{Contribution of the thesis}
+% \begin{enumerate}
+%     \item  A robust framework that integrates LiDAR scans with a pre-built map to reduce drift and improve global consistency.
+%     \item Comparative Study of Scan-Matching Techniques: An in-depth evaluation of multiple algorithms (e.g., ICP variants, Normal Distributions Transform) in terms of accuracy and efficiency.
+%     \item Sensor Fusion Integration: A demonstration of how additional sensors (e.g., IMU, wheel encoders) can enhance localization stability and resilience.
+%     \item Scalability Insights: Guidelines and best practices for handling large-scale maps to maintain real-time performance.
+% \end{enumerate}
+
+\section{Overview of the thesis structure}
+\begin{itemize}
+    \item Chapter 2 – Literature Review: Reviews the state-of-the-art in LiDAR-based localization, including LiDAR–Inertial Odometry SLAM , map-based localization , scan matching and sensor fusion techniques.
+    \item Chapter 3 – System Design and Implementation: Describes the design of the proposed system, including each module, the integration flow, and technical implementation details.
+    \item Chapter 4 - Experimental setup and results: Presents experimental evaluations, including performance metrics and comparisons with baseline approaches.
+    \item Chapter 5 – Discussion: Interprets the findings, discusses limitations, and addresses how the proposed system meets the research objectives.
+    \item Chapter 6 - Conclusion and future work: Summarizes key contributions, discusses possible improvements, and proposes directions for further research.
+\end{itemize}
+
+% The rest of the thesis is organized as follows. Chapter 2 overviews the related
+% literature, including a brief description of the selected reference LIO-SAM frame-
+% work. The proposed method, including exploration and localization, is described
+% in Chapter 3. Experimental results are reported in Chapter 4 and discussed in
+% Chapter 5. Finally, the thesis is concluded in Chapter 6.
+
+
+
+
