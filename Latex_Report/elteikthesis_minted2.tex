@@ -7,12 +7,33 @@
 	%final, % Set final to hide todos
 ]{elteikthesis}[2025/04/26]
 
+\usepackage{comment}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath,amssymb}
+\usepackage[flushleft]{threeparttable}
+\usepackage{array,booktabs,makecell}
+\usepackage{xcolor}
+\usepackage[font=small]{caption}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\captionsetup[figure]{width=0.92\textwidth}
+
+%\usepackage[font=small,labelfont=bf,justification=raggedright,singlelinecheck=false]{caption}
+
+
+
 % The minted package is also supported for source highlighting
 % See elteikthesis_minted.tex for example
 %\usepackage[newfloat]{minted}
 
 % Document's metadata
-\title{Lidar-Based map-observation Localization Module for Autonomous Navigation} % title
+\title{Robust LiDAR-Inertial Localization with Prior Maps in GNSS-Challenged
+	Environments} % title
 \date{2025} % year of defense
 
 % Author's metadata
@@ -31,9 +52,9 @@
 \department{IFROS} % department's name
 \city{Budapest} % city
 \logo{elte_cimer_szines} % logo
-
-% Add bibliography file
+\usepackage[backend=biber]{biblatex}
 \addbibresource{elteikthesis.bib}
+% Add bibliography file
 
 % The document
 \begin{document}
@@ -62,14 +83,13 @@
 \cleardoublepage
 \input{samples_en/methodology}
 \cleardoublepage
-%\input{samples_en/result.tex}
+\input{samples_en/result.tex}
 \cleardoublepage
 
-% \input{samples_en/impl.tex}
-% \cleardoublepage
+\input{samples_en/discussion.tex}
+\cleardoublepage
 
-% \input{samples_en/sum.tex}
-% \cleardoublepage
+\input{samples_en/sum.tex} \cleardoublepage
 
 % Acknowledgements (optional) - in case your thesis received funding or would like to express special thanks to someone
 % \chapter*{\acklabel}
@@ -77,9 +97,9 @@
 % In case your thesis received financial support from a project or the university, it is usually required to indicate the proper attribution in the thesis itself. Special thanks can also be expressed towards teachers, fellow students and colleagues who helped you in the process of creating your thesis.
 
 % Appendices (optional) - useful for detailed information in long tables, many and/or large figures, etc.
-% \appendix
-% \input{samples_en/sim.tex}
-% \cleardoublepage
+\appendix
+\input{samples_en/appendex.tex}
+\cleardoublepage
 
 % Bibliography (mandatory)
 \phantomsection

@@ -433,6 +433,40 @@
       \field{pages}{5958\bibrangedash 5964}
       \range{pages}{7}
     \endentry
+    \entry{yin2021center}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=38416cfd1d293286ab723e9cf254420a}{%
+           family={Yin},
+           familyi={Y\bibinitperiod},
+           given={Tianwei},
+           giveni={T\bibinitperiod}}}%
+        {{hash=24e39514a947d107ce59334310fc58bb}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xingyi},
+           giveni={X\bibinitperiod}}}%
+        {{hash=7680d27578e3f36a8f45650c3bdca314}{%
+           family={Krahenbuhl},
+           familyi={K\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{fullhash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{bibnamehash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{authorbibnamehash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{authornamehash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{authorfullhash}{dca0ade865943f2b21f7936b69eab87e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}
+      \field{title}{Center-based 3D Object Detection and Tracking}
+      \field{year}{2021}
+      \field{pages}{11784\bibrangedash 11793}
+      \range{pages}{10}
+    \endentry
     \entry{cadena2016past}{article}{}
       \name{author}{8}{}{%
         {{hash=e3395f53691b0224f8a3c7766bd34f78}{%
@@ -812,6 +846,163 @@
       \field{title}{A Portable 3D LIDAR-based System for Long-term and Wide-area People Behavior Measurement}
       \field{year}{2019}
     \endentry
+    \entry{lang2019pointpillars}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=e9927725a3483dbe3fe8289056f46494}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={Alex\bibnamedelima H},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=9c0abc10b8b8b47d7540b19fe4802ff4}{%
+           family={Vora},
+           familyi={V\bibinitperiod},
+           given={Sourabh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d2047c4d49ddd538f9c22a99dc18fa3c}{%
+           family={Caesar},
+           familyi={C\bibinitperiod},
+           given={Holger},
+           giveni={H\bibinitperiod}}}%
+        {{hash=18b2b7bcac2726abd9a2a21e2cd788ef}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Lubing},
+           giveni={L\bibinitperiod}}}%
+        {{hash=df7964e44c59618d377ea26520d99168}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Jiong},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0c3325985f73ff54cb6bd5443fd77c0e}{%
+           family={Beijbom},
+           familyi={B\bibinitperiod},
+           given={Oscar},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{46f23355dccbe318400f0706e6a6ab94}
+      \strng{fullhash}{c98e0d7c993a3b6dbbaf5aad5225a7e2}
+      \strng{bibnamehash}{46f23355dccbe318400f0706e6a6ab94}
+      \strng{authorbibnamehash}{46f23355dccbe318400f0706e6a6ab94}
+      \strng{authornamehash}{46f23355dccbe318400f0706e6a6ab94}
+      \strng{authorfullhash}{c98e0d7c993a3b6dbbaf5aad5225a7e2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}
+      \field{title}{PointPillars: Fast Encoders for Object Detection from Point Clouds}
+      \field{year}{2019}
+      \field{pages}{12697\bibrangedash 12705}
+      \range{pages}{9}
+    \endentry
+    \entry{yan2018second}{article}{}
+      \name{author}{3}{}{%
+        {{hash=7991a015696b3862155dff66c97e619b}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ad7e6942aaa73d5de6d5bf649a5f4f7b}{%
+           family={Mao},
+           familyi={M\bibinitperiod},
+           given={Yuxing},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=a9c8728e355996d027a7e56b60820a18}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{ac4851e7427b5540084b079be5206480}
+      \strng{fullhash}{ac4851e7427b5540084b079be5206480}
+      \strng{bibnamehash}{ac4851e7427b5540084b079be5206480}
+      \strng{authorbibnamehash}{ac4851e7427b5540084b079be5206480}
+      \strng{authornamehash}{ac4851e7427b5540084b079be5206480}
+      \strng{authorfullhash}{ac4851e7427b5540084b079be5206480}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sensors}
+      \field{number}{10}
+      \field{title}{SECOND: Sparsely Embedded Convolutional Detection}
+      \field{volume}{18}
+      \field{year}{2018}
+      \field{pages}{3337}
+      \range{pages}{1}
+    \endentry
+    \entry{caesar2020nuscenes}{inproceedings}{}
+      \name{author}{10}{}{%
+        {{hash=d2047c4d49ddd538f9c22a99dc18fa3c}{%
+           family={Caesar},
+           familyi={C\bibinitperiod},
+           given={Holger},
+           giveni={H\bibinitperiod}}}%
+        {{hash=6d2898a2a942f70dba274e4ca01c309a}{%
+           family={Bankiti},
+           familyi={B\bibinitperiod},
+           given={Varun},
+           giveni={V\bibinitperiod}}}%
+        {{hash=e9927725a3483dbe3fe8289056f46494}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={Alex\bibnamedelima H},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=9c0abc10b8b8b47d7540b19fe4802ff4}{%
+           family={Vora},
+           familyi={V\bibinitperiod},
+           given={Sourabh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2bbb3979ebf91b42242a0c58ec57d311}{%
+           family={Liong},
+           familyi={L\bibinitperiod},
+           given={Venice\bibnamedelima Erin},
+           giveni={V\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6cacd034725d0431a7b1f3fd4a060c02}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=5f853094b70c00b55c9bfd73dc41d683}{%
+           family={Krishnan},
+           familyi={K\bibinitperiod},
+           given={Anush},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d627c895a7726afc8a55a9fa241c4b19}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=4dab25d83f7aedebf88253fb9d8e2c64}{%
+           family={Baldan},
+           familyi={B\bibinitperiod},
+           given={Giancarlo},
+           giveni={G\bibinitperiod}}}%
+        {{hash=0c3325985f73ff54cb6bd5443fd77c0e}{%
+           family={Beijbom},
+           familyi={B\bibinitperiod},
+           given={Oscar},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{2c328f527cb71bd917b1f85566566eee}
+      \strng{fullhash}{91d902a41838b390ef9c26ffe8ec7e74}
+      \strng{bibnamehash}{2c328f527cb71bd917b1f85566566eee}
+      \strng{authorbibnamehash}{2c328f527cb71bd917b1f85566566eee}
+      \strng{authornamehash}{2c328f527cb71bd917b1f85566566eee}
+      \strng{authorfullhash}{91d902a41838b390ef9c26ffe8ec7e74}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}
+      \field{title}{nuScenes: A multimodal dataset for autonomous driving}
+      \field{year}{2020}
+      \field{pages}{11621\bibrangedash 11631}
+      \range{pages}{11}
+    \endentry
     \entry{thrun2005probabilistic}{book}{}
       \name{author}{3}{}{%
         {{hash=5112ea130eadef0764fce0145b8b9f91}{%
@@ -842,8 +1033,8 @@
       \strng{authorbibnamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
       \strng{authornamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
       \strng{authorfullhash}{cb3e97dbc1e8d4a631a5b656776c23d3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Probabilistic Robotics}
@@ -863,8 +1054,8 @@
       \strng{authorbibnamehash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
       \strng{authornamehash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
       \strng{authorfullhash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Basic Engineering}
@@ -897,8 +1088,8 @@
       \strng{authorbibnamehash}{ffde757da3863460c4d0fa4babfba0cd}
       \strng{authornamehash}{ffde757da3863460c4d0fa4babfba0cd}
       \strng{authorfullhash}{ffde757da3863460c4d0fa4babfba0cd}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)}
@@ -929,8 +1120,8 @@
       \strng{authorbibnamehash}{46be1162cd4bd01e4c1abbf265a0be7d}
       \strng{authornamehash}{46be1162cd4bd01e4c1abbf265a0be7d}
       \strng{authorfullhash}{46be1162cd4bd01e4c1abbf265a0be7d}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of AeroSense: The 11th International Symposium on Aerospace/Defense Sensing, Simulation and Controls}
@@ -953,8 +1144,8 @@
       \strng{authorbibnamehash}{44074d3cb57c174a8b15ccc9a576ac0d}
       \strng{authornamehash}{44074d3cb57c174a8b15ccc9a576ac0d}
       \strng{authorfullhash}{44074d3cb57c174a8b15ccc9a576ac0d}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://doi.org/10.5281/zenodo.14117}}
@@ -986,8 +1177,8 @@
       \strng{authorbibnamehash}{864778c9dd6baf4aafa237c2d3ac1f6e}
       \strng{authornamehash}{864778c9dd6baf4aafa237c2d3ac1f6e}
       \strng{authorfullhash}{864778c9dd6baf4aafa237c2d3ac1f6e}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Information Theory}
@@ -1040,8 +1231,8 @@
       \strng{authorbibnamehash}{3fbcb4af6b78c36ee3493ecc22663649}
       \strng{authornamehash}{3fbcb4af6b78c36ee3493ecc22663649}
       \strng{authorfullhash}{898146e759470137311d84eab1b7fc00}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The International Journal of Robotics Research}
@@ -1055,7 +1246,53 @@
       \verb 10.1177/0278364911430419
       \endverb
     \endentry
+    \entry{mmdet3d2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=860842ec5ab118419b8a53d72d6e0ef1}{%
+           family={Contributors},
+           familyi={C\bibinitperiod},
+           given={MMDetection3D},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{860842ec5ab118419b8a53d72d6e0ef1}
+      \strng{fullhash}{860842ec5ab118419b8a53d72d6e0ef1}
+      \strng{bibnamehash}{860842ec5ab118419b8a53d72d6e0ef1}
+      \strng{authorbibnamehash}{860842ec5ab118419b8a53d72d6e0ef1}
+      \strng{authornamehash}{860842ec5ab118419b8a53d72d6e0ef1}
+      \strng{authorfullhash}{860842ec5ab118419b8a53d72d6e0ef1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/open-mmlab/mmdetection3d}}
+      \field{title}{{MMDetection3D: OpenMMLab} next-generation platform for general {3D} object detection}
+      \field{year}{2020}
+    \endentry
+    \entry{autoware_universe}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=1eb6f4f494c147df1e88e94373c4a9b8}{%
+           family={Foundation},
+           familyi={F\bibinitperiod},
+           given={Autoware},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1eb6f4f494c147df1e88e94373c4a9b8}
+      \strng{fullhash}{1eb6f4f494c147df1e88e94373c4a9b8}
+      \strng{bibnamehash}{1eb6f4f494c147df1e88e94373c4a9b8}
+      \strng{authorbibnamehash}{1eb6f4f494c147df1e88e94373c4a9b8}
+      \strng{authornamehash}{1eb6f4f494c147df1e88e94373c4a9b8}
+      \strng{authorfullhash}{1eb6f4f494c147df1e88e94373c4a9b8}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/autowarefoundation/autoware.universe}}
+      \field{note}{Accessed: 2024-04-29}
+      \field{title}{Autoware Universe: An Open-source Software Stack for Autonomous Driving}
+      \field{year}{2023}
+    \endentry
   \enddatalist
+  \missing{autoware_ndt}
 \endrefsection
 \endinput
 

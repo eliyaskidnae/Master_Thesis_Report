@@ -150,7 +150,7 @@
 
 % ------------------------------
 % Margin
-\RequirePackage[left=35mm, right=25mm, top=25mm, bottom=25mm, headheight=16pt]{geometry}
+\RequirePackage[left=28mm, right=18mm, top=20mm, bottom=20mm, headheight=14pt]{geometry}
 %\setlength{\textwidth}{150mm}
 %\setlength{\textheight}{247mm}
 % ------------------------------
@@ -178,8 +178,8 @@
 }
 
 % Set header and footer margin from main content
-\topskip = 15pt		% default: 10pt
-\footskip = 40pt	% default: 30pt
+\topskip = 10pt		% default: 10pt
+\footskip = 30pt	% default: 30pt
 
 % Clear default footer style
 \fancyfoot{}

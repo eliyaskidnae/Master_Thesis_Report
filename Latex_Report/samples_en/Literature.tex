@@ -14,7 +14,7 @@ By contrast, tightly coupled designs feed raw IMU data directly into the LiDAR o
 \begin{figure}
     \centering
     \includegraphics[width=1 \linewidth]{images/fast_lio.drawio.png}
-    \caption{Architecture of FAST-LIO2: A tightly coupled LiDAR-Inertial Odometry \cite{xuFastLIO2}}
+    \caption{Architecture of FAST-LIO2: A tightly coupled LiDAR-Inertial Odometry \cite{yin2021center}}
     \label{fig:fast_lio2_architecture}
 \end{figure}
 
@@ -36,8 +36,8 @@ By contrast,\cite{Lin2021Autonomous} utilize stereo-based “visual point cloud�
 
 Overall, these methods demonstrate that leveraging a prior 3D or reflectivity map can curb drift and boost localization accuracy in challenging real-world environments. Still, each approach faces trade-offs in data collection overhead, dynamic scene handling, or computational costs.
 
-\subsection{Point Cloud Registration for Localization}
-Point cloud registration is a key technique in LiDAR-based localization, used to align a current LiDAR scan with a prior map to estimate the sensor’s pose. The classic Iterative Closest Point (ICP) algorithm performs this by minimizing distances between matched point pairs across the two clouds. While ICP is conceptually simple, it suffers from sensitivity to noise, poor initial alignment, and local minima, making it unreliable for large-scale or noisy environments \cite{BeslICP1992}.
+\subsection{ Point Cloud Registration Techniques for Localization}
+Point cloud registration is a key technique in LiDAR-based localization, used to align a current LiDAR scan with a prior map to estimate the sensor’s pose. The classic Iterative Closest Point (ICP) algorithm performs this by minimizing distances between matched point pairs across the two clouds. While ICP is conceptually simple, it suffers from sensitivity to noise, poor initial alignment, and local minima, making it unreliable for large-scale or noisy environments \cite{BeslICP1992}.\\
 
 To address these limitations, the Normal Distributions Transform (NDT) was proposed by \cite{biber2003ndt} and
 further elaborated in subsequent research\cite{magnusson2007ndt}.  NDT offers a compact representation
@@ -45,6 +45,26 @@ of surfaces by converting point clouds into a set of local probability density f
 (PDFs), each characterizing a surface section.Instead of relying on discrete point matches, NDT represents the map as a grid of voxels, each containing a Gaussian distribution that models the local geometry. Scan points are registered by maximizing their likelihood under these distributions. This makes NDT more robust to outliers, partial overlaps, and noisy measurements.
 
 Modern implementations such as NDT-OMP further improve runtime performance through multi-threading, enabling real-time scan-to-map matching in large-scale environments \cite{koide2019portable}. Due to its robustness and efficiency, NDT is widely used in autonomous driving and is adopted in this thesis for scan-matching against a pre-built point cloud map.
+
+\subsection{Dynamic Object Removal Techniques for Localization}
+
+In LiDAR-based localization, scan-matching techniques are widely employed to align real-time sensor data with a pre-built static map. However, dynamic objects such as moving vehicles, pedestrians, and cyclists introduce discrepancies between the current point cloud and the static reference. These inconsistencies can significantly degrade localization performance, leading to pose drift, poor convergence, or failure in highly dynamic environments.
+
+To enhance the reliability of scan-matching, dynamic object removal has been introduced as a crucial preprocessing step. Early methods, including Euclidean clustering, geometric filtering, and background subtraction, identified dynamic elements based on heuristics such as size, shape, or temporal consistency \cite{liu2019segmentation,koide2019portable} . Although computationally efficient, these approaches often struggle in cluttered or semi-structured environments, resulting in high false positive rates and poor generalization.
+\begin{figure}
+	\centering
+	\includegraphics[width=1
+	\linewidth]{images/center_point2.png}
+	\caption{Overview of CenterPoint 3d object detection framework.  \cite{yin2021center}}
+	\label{fig:Overview-CenterPoint }
+\end{figure}
+Recent advancements leverage deep learning-based 3D object detection models such as PointPillars\cite{lang2019pointpillars}, SECOND \cite{yan2018second}, and CenterPoint \cite{yin2021center} to semantically identify dynamic agents. By predicting 3D bounding boxes for known classes, these models enable precise removal of dynamic objects, preserving static features critical for accurate localization.
+
+Among these, CenterPoint\cite{yin2021center}has emerged as a state-of-the-art solution. It employs a center-based detection paradigm over voxelized LiDAR input and achieves high accuracy on large-scale datasets such as nuScenes\cite{caesar2020nuscenes}, making it particularly suitable for real-time dynamic object filtering.
+
+CenterPoint follows a two-stage architecture\cite{yin2021center}. First, the raw LiDAR point cloud is voxelized into a sparse 3D tensor, allowing efficient processing by sparse convolutional neural networks. A backbone network typically based on PointPillars \cite{lang2019pointpillars} or SECOND\cite{yan2018second} extracts spatial features while maintaining the geometric structure of the environment. These features are projected onto a Bird’s-Eye View (BEV) representation, preserving spatial relationships and enabling faster 2D convolutional operations. In the second stage, a keypoint-based detection head predicts object centers by generating a center heatmap over the BEV feature map. Following center localization, the model regresses the full set of object attributes, including 3D bounding box dimensions, orientation (yaw angle), velocity, and semantic class label. This decoupled center-to-attribute approach simplifies the detection task and enhances robustness against small, distant, or partially occluded objects, as illustrated in Figure \ref{fig:Overview-CenterPoint }.Due to its high detection accuracy and real-time inference capability, CenterPoint is adopted in this work as the dynamic object detection module.
+
+
 
 \section{Theoretical Background }
 % \subsection{Point-Cloud Registration}
@@ -131,12 +151,17 @@ The algorithm for NDT registration is shown in Algorithm \ref{alg:ndt_registrati
 Filtering-based sensor fusion recursively estimates a system’s state (e.g., a robot’s position, orientation, velocity) using two main phases: a prediction step (where the state is propagated using a motion model) and an update step (where incoming sensor measurements refine that prediction) \cite{thrun2005probabilistic}.This real-time, sequential estimation framework is widely employed in robotics to handle noisy sensors while maintaining tractable computational load. Nonetheless, large global corrections or loop closures can be challenging to incorporate without more advanced smoothing or factor-graph techniques\cite{cadena2016past}.
 
 \begin{enumerate}
-    \item \textbf{Extended Kalman Filter(EKF) }extends the linear Kalman Filter \cite{kalman1960new} to handle nonlinear systems by linearizing the motion and measurement models around the current estimate.  Let $\mathbf{x}_k$ denote the state at time $k$, and $\hat{\mathbf{x}}_{k|k-1}$ be the predicted mean. The \emph{prediction} step is
+    \item \textbf{Extended Kalman Filter(EKF) }extends the linear Kalman Filter \cite{kalman1960new} to handle nonlinear systems by linearizing the motion and measurement models around the current estimate.  Let $\mathbf{x}_k$ denote the state at time $k$, and 
+    $\hat{\mathbf{x}}_{k|k-1}$ be the predicted mean. 
+    
+    The \emph{prediction} step is
         \begin{equation}
         \hat{\mathbf{x}}_{k|k-1} = \mathbf{f}\bigl(\hat{\mathbf{x}}_{k-1|k-1}, \mathbf{u}_{k}\bigr), \quad
         \mathbf{P}_{k|k-1} = \mathbf{F}_k \,\mathbf{P}_{k-1|k-1}\,\mathbf{F}_k^T + \mathbf{Q}_k,
         \end{equation}
-        where $\mathbf{F}_k$ is the Jacobian of $\mathbf{f}$ w.r.t.\ the state, $\mathbf{Q}_k$ is the process noise covariance, and $\mathbf{u}_k$ is any control input. The \emph{update} step uses a measurement model $\mathbf{h}$:
+        where $\mathbf{F}_k$ is the Jacobian of $\mathbf{f}$ w.r.t.\ the state, $\mathbf{Q}_k$ is the process noise covariance, and $\mathbf{u}_k$ is any control input. 
+        
+    The \emph{update} step uses a measurement model $\mathbf{h}$ is 
         \begin{equation}
         \mathbf{K}_k = \mathbf{P}_{k|k-1} \,\mathbf{H}_k^T 
         \bigl(\mathbf{H}_k\,\mathbf{P}_{k|k-1}\,\mathbf{H}_k^T + \mathbf{R}_k\bigr)^{-1}
@@ -216,9 +241,4 @@ where $h_k(\cdot)$ is the measurement function, $z_k$ is the observation, and $\
 
 \subsubsection{Incremental Solvers and Real-Time Performance}
 For real-time or large-scale applications, solving the entire problem from scratch at each step may be intractable \cite{thrun2005probabilistic}. Incremental smoothing algorithms like iSAM2 \cite{kaess2012isam2} maintain a factorization of the problem in a data structure (often a Bayes tree) that can be efficiently updated with new measurements. Rather than re-solving globally each time, iSAM2 carries out local re-linearization and partial variable reordering, providing near-constant-time updates for many practical cases.
-\section{Gaps in the literature and research questions}
-
-
-
-
 
