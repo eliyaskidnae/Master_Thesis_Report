@@ -1,7 +1,7 @@
 \chapter{Litreature Review}
 \label{ch:intro}
 \section{Overview of Relevant Literature}
-This chapter presents an overview of relevant literature that underpins the design and development of the proposed localization system. Reviews key techniques in Lidar and LiDAR-Inertial Odometry, SLAM, and localization using a priori maps, with a focus on real-time performance, drift reduction, and global consistency. 
+This chapter presents an overview of relevant literature that underpins the design and development of the proposed localization system. Reviews key techniques in Lidar and LiDAR-Inertial Odometry, SLAM, localization using a priori maps, point-cloud registration and object detection from 3D-LIDAR scan.
 \subsection{LiDAR and LiDAR-Inertial Odometry Techniques}
 Localization is a crucial capability for mobile robots, referring to the process of determining the robot’s position and orientation in a given environment. Early attempts at localization depended heavily on wheel encoders, commonly known as wheel odometry, but this method suffered from significant drift whenever the wheels slipped or the ground was uneven \cite{MohamedOdometry}. As robotics advanced, researchers explored range sensors and visual sensors to improve motion estimation \cite{WangVisionSurvey}. At the same time, algorithms like Iterative Closest Point (ICP) emerged, enabling the alignment of consecutive scans and sparking a separate stream of research in range sensor‐based odometry \cite{BeslICP1992}.
 
@@ -21,7 +21,7 @@ By contrast, tightly coupled designs feed raw IMU data directly into the LiDAR o
 Due to its high computational efficiency, accuracy, and real-time capability, FAST-LIO2 is adopted in this thesis as the LiDAR-Inertial Odometry (LIO) front-end. Its design aligns with the system’s objective to maintain high-frequency odometry while minimizing drift, providing a solid foundation for downstream scan-to-map correction and graph-based fusion.
 
 \subsection{SLAM and Loop Closure-Based Localization}
-Moving beyond pure odometry, SLAM (Simultaneous Localization and Mapping) takes an extra step by adding loop closure mechanisms to maintain global consistency \cite{cadena2016past}. While LiDAR–Inertial Odometry can reduce local drift, it remains prone to cumulative error over long distances if no global corrections are made. By detecting revisits to previously mapped areas, a full SLAM pipeline—like Google Cartographer (for 2D LiDAR) \cite{hess2016real} or other graph‐based back ends \cite{grisetti_gmapping}—refines the entire trajectory, resulting in notably higher accuracy. However, these systems carry greater computational cost and design complexity, since maintaining a global graph or submap structure calls for advanced data management. Some research also integrates GNSS (e.g., GPS) data for a global reference frame, further reducing drift when the robot is outdoors. Even then, GNSS signals often fail in heavily built‐up city centers or fully indoor settings, limiting their usefulness for certain applications.
+Moving beyond pure odometry, SLAM (Simultaneous Localization and Mapping) takes an extra step by adding loop closure mechanisms to maintain global consistency \cite{cadena2016past}. While LiDAR–Inertial Odometry can reduce local drift, it remains prone to cumulative error over long distances if no global corrections are made. By detecting revisits to previously mapped areas, a full SLAM pipeline—like Google Cartographer (for 2D LiDAR) \cite{hess2016real} or other graph‐based back ends \cite{kiss2025arxiv,grisetti_gmapping,blanco2025mola_lo} refines the entire trajectory, resulting in notably higher accuracy. However, these systems carry greater computational cost and design complexity, since maintaining a global graph or submap structure calls for advanced data management. Some research also integrates GNSS (e.g., GPS) data for a global reference frame, further reducing drift when the robot is outdoors. Even then, GNSS signals often fail in heavily built‐up city centers or fully indoor settings, limiting their usefulness for certain applications.
 
 SLAM inherently relies on loop‐closure events or prior constraints to limit its global drift; if these loop closures are sparse or absent over a long trajectory, the system can still accumulate significant positioning errors \cite{grisetti_gmapping, cadena2016past}. That limitation underscores the motivation for map‐based localization, in which an existing map is used to provide absolute constraints and reduce drift, even in lengthy or repetitive environments where loop closures are not guaranteed.
 
@@ -36,7 +36,7 @@ By contrast,\cite{Lin2021Autonomous} utilize stereo-based “visual point cloud�
 
 Overall, these methods demonstrate that leveraging a prior 3D or reflectivity map can curb drift and boost localization accuracy in challenging real-world environments. Still, each approach faces trade-offs in data collection overhead, dynamic scene handling, or computational costs.
 
-\subsection{ Point Cloud Registration Techniques for Localization}
+\subsection{Point Cloud Registration Techniques}
 Point cloud registration is a key technique in LiDAR-based localization, used to align a current LiDAR scan with a prior map to estimate the sensor’s pose. The classic Iterative Closest Point (ICP) algorithm performs this by minimizing distances between matched point pairs across the two clouds. While ICP is conceptually simple, it suffers from sensitivity to noise, poor initial alignment, and local minima, making it unreliable for large-scale or noisy environments \cite{BeslICP1992}.\\
 
 To address these limitations, the Normal Distributions Transform (NDT) was proposed by \cite{biber2003ndt} and
@@ -46,7 +46,7 @@ of surfaces by converting point clouds into a set of local probability density f
 
 Modern implementations such as NDT-OMP further improve runtime performance through multi-threading, enabling real-time scan-to-map matching in large-scale environments \cite{koide2019portable}. Due to its robustness and efficiency, NDT is widely used in autonomous driving and is adopted in this thesis for scan-matching against a pre-built point cloud map.
 
-\subsection{Dynamic Object Removal Techniques for Localization}
+\subsection{Dynamic Object Removal Techniques}
 
 In LiDAR-based localization, scan-matching techniques are widely employed to align real-time sensor data with a pre-built static map. However, dynamic objects such as moving vehicles, pedestrians, and cyclists introduce discrepancies between the current point cloud and the static reference. These inconsistencies can significantly degrade localization performance, leading to pose drift, poor convergence, or failure in highly dynamic environments.
 
@@ -70,6 +70,7 @@ CenterPoint follows a two-stage architecture\cite{yin2021center}. First, the raw
 % \subsection{Point-Cloud Registration}
 
 \subsection{Normal Distributions Transform (NDT)}
+\label{sec:Normal Distributions Transform}
 
 % \paragraph{Mathematical Formulation}
 The NDT algorithm begins by subdividing the space occupied by a scan into discrete grid cells---squares in 2D or cubes in 3D. A PDF is calculated for each cell based on the distribution of points within that cell. Each PDF describes how points within the cell are likely generated, assuming the points result from a multivariate normal random process. The probability density function for a cell is defined as:

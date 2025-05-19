@@ -1291,6 +1291,216 @@
       \field{title}{Autoware Universe: An Open-source Software Stack for Autonomous Driving}
       \field{year}{2023}
     \endentry
+    \entry{teufel2022realistic}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=57e4268138ecaf4bfc0b224082367dcd}{%
+           family={Teufel},
+           familyi={T\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=81b6f3912bf8c05a9645a38408936a6e}{%
+           family={Meißner},
+           familyi={M\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3561537d773e73f265a933af9d2acf65}{%
+           family={Wagner},
+           familyi={W\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{9b5e83c7a0f52371cb103247d8c0d675}
+      \strng{fullhash}{9b5e83c7a0f52371cb103247d8c0d675}
+      \strng{bibnamehash}{9b5e83c7a0f52371cb103247d8c0d675}
+      \strng{authorbibnamehash}{9b5e83c7a0f52371cb103247d8c0d675}
+      \strng{authornamehash}{9b5e83c7a0f52371cb103247d8c0d675}
+      \strng{authorfullhash}{9b5e83c7a0f52371cb103247d8c0d675}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE Intelligent Vehicles Symposium (IV)}
+      \field{title}{{Realistic Rain, Snow, and Fog Variations for Comprehensive Performance Characterization of LiDAR Perception}}
+      \field{year}{2022}
+      \field{pages}{567\bibrangedash 574}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/IV53394.2022.00086
+      \endverb
+    \endentry
+    \entry{Geiger2012KITTI}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=06133052ac3c14a188601b82783cd4f7}{%
+           family={Geiger},
+           familyi={G\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f594289a77a4b801a7156edc29235ad8}{%
+           family={Lenz},
+           familyi={L\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod}}}%
+        {{hash=bc58c1e920023b071a4d0695299cf804}{%
+           family={Urtasun},
+           familyi={U\bibinitperiod},
+           given={Raquel},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{627edf12ee4004074265a942326edc30}
+      \strng{fullhash}{627edf12ee4004074265a942326edc30}
+      \strng{bibnamehash}{627edf12ee4004074265a942326edc30}
+      \strng{authorbibnamehash}{627edf12ee4004074265a942326edc30}
+      \strng{authornamehash}{627edf12ee4004074265a942326edc30}
+      \strng{authorfullhash}{627edf12ee4004074265a942326edc30}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}
+      \field{title}{Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite}
+      \field{year}{2012}
+      \field{pages}{3354\bibrangedash 3361}
+      \range{pages}{8}
+    \endentry
+    \entry{Kim2020Mulran}{article}{}
+      \name{author}{4}{}{%
+        {{hash=656677ed0198a0b2134ef0242cfb8d88}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Giseop},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8bf1e77f9de3972442930b7b022d3674}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Seong\bibnamedelima Hun},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=f1160aa8e428ceffe149a12a0ba14c8a}{%
+           family={Jeon},
+           familyi={J\bibinitperiod},
+           given={Jinwoo},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c3242678326dc788084c2ca12ce8b526}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Ayoung},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{996a151971efe2d4e1c979eb2afccb7b}
+      \strng{fullhash}{603cce8469d93f2a3d40405bc51769c0}
+      \strng{bibnamehash}{996a151971efe2d4e1c979eb2afccb7b}
+      \strng{authorbibnamehash}{996a151971efe2d4e1c979eb2afccb7b}
+      \strng{authornamehash}{996a151971efe2d4e1c979eb2afccb7b}
+      \strng{authorfullhash}{603cce8469d93f2a3d40405bc51769c0}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International Journal of Robotics Research}
+      \field{number}{12-14}
+      \field{title}{MulRan: Multimodal Range Dataset for Urban Place Recognition}
+      \field{volume}{40}
+      \field{year}{2021}
+      \field{pages}{1394\bibrangedash 1407}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1177/02783649211012805
+      \endverb
+    \endentry
+    \entry{kiss2025arxiv}{article}{}
+      \name{author}{6}{}{%
+        {{hash=30c17bb2248b22f9ef70d5e2cf83a153}{%
+           family={Guadagnino},
+           familyi={G\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=22de2fd16bb5f4526a603b5e0789c451}{%
+           family={Mersch},
+           familyi={M\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1774a1f1ad14dc83fbedb7ce144b2603}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=df1a9903f5d403922d3920209efd3d69}{%
+           family={Vizzo},
+           familyi={V\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=3c06f5d2b31ad5acee8aaf1085c50af9}{%
+           family={Grisetti},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=dc807e0640c5d99a25c02f497b0e081e}{%
+           family={Stachniss},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{ccf7200a4cf60edc86ca4f88e45db97f}
+      \strng{fullhash}{5288d650f52cb1c1adf3fb920783f0f3}
+      \strng{bibnamehash}{ccf7200a4cf60edc86ca4f88e45db97f}
+      \strng{authorbibnamehash}{ccf7200a4cf60edc86ca4f88e45db97f}
+      \strng{authornamehash}{ccf7200a4cf60edc86ca4f88e45db97f}
+      \strng{authorfullhash}{5288d650f52cb1c1adf3fb920783f0f3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint}
+      \field{title}{{KISS-SLAM: A Simple, Robust, and Accurate 3D LiDAR SLAM System With Enhanced Generalization Capabilities}}
+      \field{volume}{arXiv:2503.12660}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2503.12660
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2503.12660
+      \endverb
+    \endentry
+    \entry{blanco2025mola_lo}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6526211ffd56d8688200df8bfc0baf62}{%
+           family={Blanco-Claraco},
+           familyi={B\bibinithyphendelim C\bibinitperiod},
+           given={Jose\bibnamedelima Luis},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{fullhash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{bibnamehash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{authorbibnamehash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{authornamehash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{authorfullhash}{6526211ffd56d8688200df8bfc0baf62}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International Journal of Robotics Research}
+      \field{number}{0}
+      \field{title}{A flexible framework for accurate LiDAR odometry, map manipulation, and localization}
+      \field{volume}{0}
+      \field{year}{2025}
+      \field{pages}{02783649251316881}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1177/02783649251316881
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1177/02783649251316881
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1177/02783649251316881
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1177/02783649251316881
+      \endverb
+    \endentry
   \enddatalist
   \missing{autoware_ndt}
 \endrefsection

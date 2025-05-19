@@ -6,14 +6,19 @@
 \select@language {english} \addvspace {10\p@ }
 \select@language {english} \contentsline {figure}{\numberline {3.1}{\ignorespaces Complete Diagram of Map Based Localization\relax }}{19}{figure.caption.7}%
 \select@language {english} \contentsline {figure}{\numberline {3.2}{\ignorespaces LIDAR scan pre-processing\relax }}{20}{figure.caption.8}%
-\select@language {english} \contentsline {figure}{\numberline {3.3}{\ignorespaces Grid Based Point-cloud division \relax }}{22}{figure.caption.11}%
-\select@language {english} \contentsline {figure}{\numberline {3.4}{\ignorespaces Demonstration of fixed-lag smoothing with a lag size of \( n = 4 \) in a factor graph-based localization system.\relax }}{27}{figure.caption.15}%
+\select@language {english} \contentsline {figure}{\numberline {3.3}{\ignorespaces Demonstration of fixed-lag smoothing with a lag size of \( n = 4 \) in a factor graph-based localization system.\relax }}{27}{figure.caption.14}%
 \select@language {english} \addvspace {10\p@ }
-\select@language {english} \contentsline {figure}{\numberline {4.1}{\ignorespaces Hardware setup used for real-world data collection and testing: (a) Hunter robotic platform; (b) onboard sensors.\relax }}{31}{figure.caption.16}%
-\select@language {english} \contentsline {figure}{\numberline {4.2}{\ignorespaces Saxion Sequence 01 – Trajectory Alignment with Zoomed Comparison}}{34}{figure.caption.22}%
-\select@language {english} \contentsline {figure}{\numberline {4.3}{\ignorespaces Saxion Sequence 02– Trajectory Alignment with Zoomed Comparison}}{35}{figure.caption.24}%
-\select@language {english} \contentsline {figure}{\numberline {4.4}{\ignorespaces KITTI Sequence 05 – Trajectory Alignment with Zoomed Comparison}}{36}{figure.caption.28}%
+\select@language {english} \contentsline {figure}{\numberline {4.1}{\ignorespaces Hardware setup used for real-world data collection and testing: (a) Hunter robotic platform; (b) onboard sensors.\relax }}{31}{figure.caption.17}%
+\select@language {english} \contentsline {figure}{\numberline {4.2}{\ignorespaces Saxion Sequence 01 – Trajectory Alignment with Zoomed Comparison}}{35}{figure.caption.23}%
+\select@language {english} \contentsline {figure}{\numberline {4.3}{\ignorespaces KITTI Sequence 05 – Trajectory Alignment with Zoomed Comparison}}{37}{figure.caption.28}%
+\select@language {english} \contentsline {figure}{\numberline {4.4}{\ignorespaces Computation characteristics of the proposed localization system: Sliding-window optimization scalability and real-time frame-wise timing breakdown.\relax }}{38}{figure.caption.31}%
+\select@language {english} \contentsline {figure}{\numberline {4.5}{\ignorespaces Detecting and removing dynamic objects from 3d LIDAR point-cloud}}{39}{figure.caption.33}%
+\select@language {english} \contentsline {figure}{\numberline {4.6}{\ignorespaces Point-cloud Registration Performance with and without Dynamic Object Removal}}{40}{figure.caption.35}%
+\select@language {english} \contentsline {figure}{\numberline {4.8}{\ignorespaces Error compression localization in transition zone}}{42}{figure.caption.39}%
+\select@language {english} \contentsline {figure}{\numberline {4.9}{\ignorespaces Point‐cloud snapshots under increasing composite geometric noise levels: (a) Original scan; (b) Mild noise; (c) Moderate noise; (d) Severe noise.\relax }}{43}{figure.caption.42}%
 \select@language {english} \addvspace {10\p@ }
 \select@language {english} \addvspace {10\p@ }
 \select@language {english} \addvspace {10\p@ }
-\select@language {english} \contentsline {figure}{\numberline {A.1}{\ignorespaces Full trajectory with a zoomed-in view overlaid for detailed comparison. The red dashed box indicates the zoomed region.\relax }}{41}{figure.caption.33}%
+\select@language {english} \contentsline {figure}{\numberline {A.1}{\ignorespaces Saxion Sequence 02– Trajectory Alignment with Zoomed Comparison}}{48}{figure.caption.44}%
+\select@language {english} \contentsline {figure}{\numberline {A.2}{\ignorespaces Saxion Sequence 03 – Trajectory Alignment with Zoomed Comparison}}{49}{figure.caption.45}%
+\select@language {english} \contentsline {figure}{\numberline {A.3}{\ignorespaces NDT scan matching and proposed Translation (APE) Error statistics under Mild, Moderate, and Severe composite noise (b) Mild noise; (c) Moderate noise; (d) Severe noise.\relax }}{50}{figure.caption.46}%

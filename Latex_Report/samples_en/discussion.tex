@@ -1,4 +1,11 @@
 \chapter{Discussion}
 \label{ch:discu}
 
+This study aimed to develop a robust, real-time LiDAR-inertial localization system that leverages prebuilt maps, LiDAR-Inertial Odometry (FAST-LIO2), and efficient scan matching, all fused through a sliding-window factor graph framework. The evaluation across multiple datasets and challenging conditions provides strong evidence of the system’s effectiveness. This chapter discusses the findings in relation to the research questions.
 
+
+\subsection{Improving Accuracy and Robustness with Prebuilt Maps}
+
+The integration of a prebuilt 3D map significantly enhances the robustness and accuracy of localization in GNSS-denied environments. By aligning real-time LiDAR scans with globally consistent map segments, the system reduces drift that typically accumulates in odometry-only methods. Experimental results from the Saxion and KITTI datasets show that the proposed system achieves centimeter- to decimeter-level translational RMSE, while Fast-LIO2 alone reaches up to 2–3 meters of drift.
+
+Moreover, in GNSS-challenged environments where SLAM methods depend on loop closure, the proposed system offers an advantage by relying on a static map as a global reference. Even in KITTI Sequence 05, where loop closure is feasible, SLAM baselines such as KISS-ICP and MOLA exhibit maximum translational errors over 6 meters, while the proposed system maintains low error throughout. This demonstrates the superiority of map-based localization in scenarios where loop closures are sparse, unreliable, or delayed
