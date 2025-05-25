@@ -1,27 +1,27 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'elteikthesis_minted2.blg'
-[52] biber:340> INFO - === ma mei 12, 2025, 12:01:08
-[61] Biber.pm:418> INFO - Reading 'elteikthesis_minted2.bcf'
-[102] Biber.pm:972> INFO - Found 42 citekeys in bib section 0
+[50] biber:340> INFO - === za mei 24, 2025, 05:49:57
+[60] Biber.pm:418> INFO - Reading 'elteikthesis_minted2.bcf'
+[101] Biber.pm:972> INFO - Found 43 citekeys in bib section 0
 [110] Biber.pm:4383> INFO - Processing section 0
-[116] Biber.pm:4574> INFO - Looking for bibtex file 'elteikthesis.bib' for section 0
+[117] Biber.pm:4574> INFO - Looking for bibtex file 'elteikthesis.bib' for section 0
 [118] bibtex.pm:1713> INFO - LaTeX decoding ...
-[144] bibtex.pm:1518> INFO - Found BibTeX data source 'elteikthesis.bib'
-[311] UCollate.pm:68> INFO - Overriding locale 'hungarian' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[312] UCollate.pm:68> INFO - Overriding locale 'hungarian' defaults 'variable = shifted' with 'variable = non-ignorable'
-[312] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'hungarian'
-[312] Biber.pm:4209> INFO - No sort tailoring available for locale 'hungarian'
-[328] bbl.pm:654> INFO - Writing 'elteikthesis_minted2.bbl' with encoding 'UTF-8'
-[343] bbl.pm:757> INFO - Output to elteikthesis_minted2.bbl
-[344] Biber.pm:130> WARN - Duplicate entry key: 'levinson2007mapbased' in file 'elteikthesis.bib', skipping ...
-[344] Biber.pm:130> WARN - Duplicate entry key: 'cadena2016past' in file 'elteikthesis.bib', skipping ...
-[344] Biber.pm:130> WARN - Possible typo (case mismatch) between datasource keys: 'Levinson2007MapBased' and 'levinson2007mapbased' in file 'elteikthesis.bib'
-[344] Biber.pm:130> WARN - Possible typo (case mismatch) between datasource keys: 'Lin2021Autonomous' and 'lin2021autonomous' in file 'elteikthesis.bib'
-[344] Biber.pm:130> WARN - Duplicate entry key: 'Levinson2007MapBased' in file 'elteikthesis.bib', skipping ...
-[344] Biber.pm:130> WARN - Duplicate entry key: 'Liu2019Precise' in file 'elteikthesis.bib', skipping ...
-[344] Biber.pm:130> WARN - Duplicate entry key: 'Lin2021Autonomous' in file 'elteikthesis.bib', skipping ...
-[344] Biber.pm:130> WARN - Duplicate entry key: 'Rozenberszki2020LOL' in file 'elteikthesis.bib', skipping ...
-[344] Biber.pm:130> WARN - Duplicate entry key: 'cadena2016past' in file 'elteikthesis.bib', skipping ...
-[344] Biber.pm:130> WARN - legacy month field 'October' in entry 'kim2018stereo' is not an integer - this will probably not sort properly.
-[344] Biber.pm:130> WARN - I didn't find a database entry for 'autoware_ndt' (section 0)
-[344] Biber.pm:132> INFO - WARNINGS: 11
+[146] bibtex.pm:1518> INFO - Found BibTeX data source 'elteikthesis.bib'
+[316] UCollate.pm:68> INFO - Overriding locale 'hungarian' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[316] UCollate.pm:68> INFO - Overriding locale 'hungarian' defaults 'variable = shifted' with 'variable = non-ignorable'
+[316] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'hungarian'
+[316] Biber.pm:4209> INFO - No sort tailoring available for locale 'hungarian'
+[331] bbl.pm:654> INFO - Writing 'elteikthesis_minted2.bbl' with encoding 'UTF-8'
+[357] bbl.pm:757> INFO - Output to elteikthesis_minted2.bbl
+[357] Biber.pm:130> WARN - Duplicate entry key: 'levinson2007mapbased' in file 'elteikthesis.bib', skipping ...
+[357] Biber.pm:130> WARN - Duplicate entry key: 'cadena2016past' in file 'elteikthesis.bib', skipping ...
+[357] Biber.pm:130> WARN - Possible typo (case mismatch) between datasource keys: 'Levinson2007MapBased' and 'levinson2007mapbased' in file 'elteikthesis.bib'
+[357] Biber.pm:130> WARN - Possible typo (case mismatch) between datasource keys: 'Lin2021Autonomous' and 'lin2021autonomous' in file 'elteikthesis.bib'
+[357] Biber.pm:130> WARN - Duplicate entry key: 'Levinson2007MapBased' in file 'elteikthesis.bib', skipping ...
+[357] Biber.pm:130> WARN - Duplicate entry key: 'Liu2019Precise' in file 'elteikthesis.bib', skipping ...
+[357] Biber.pm:130> WARN - Duplicate entry key: 'Lin2021Autonomous' in file 'elteikthesis.bib', skipping ...
+[357] Biber.pm:130> WARN - Duplicate entry key: 'Rozenberszki2020LOL' in file 'elteikthesis.bib', skipping ...
+[357] Biber.pm:130> WARN - Duplicate entry key: 'cadena2016past' in file 'elteikthesis.bib', skipping ...
+[357] Biber.pm:130> WARN - legacy month field 'October' in entry 'kim2018stereo' is not an integer - this will probably not sort properly.
+[357] Biber.pm:130> WARN - I didn't find a database entry for 'koide2021portable' (section 0)
+[358] Biber.pm:132> INFO - WARNINGS: 11

@@ -1,11 +1,40 @@
 \chapter{Discussion}
 \label{ch:discu}
+This chapter reflects on the results presented in Chapter 4 and discusses how they address
+the research questions, the implications of the findings, and possible directions for future
+work.
+\section{Interpretation of Results}
+\subsection{Accuracy and Robustness  }
+The results demonstrate that integrating a prior 3D map into a LiDAR-inertial localization framework significantly enhances both accuracy and robustness.By aligning real-time LiDAR scans with globally consistent reference  map , the system reduces drift that typically accumulates in odometry-only methods.Experimental results from multiple datasets show that the proposed system achieves centimeter- to decimeter-level translational RMSE(see  Table ~\ref{tab:ape_rot_saxion_seq1} ,\ref{tab:ape_rot_saxion_seq2}, \ref{tab:ape_rot_saxion_seq3}), while standalone LiDAR-Inertial Odometry exhibits drift ranging from meter-level to over ten meters in extended trajectories.Unlike SLAM approaches that rely on loop closures, this method consistently aligns live LiDAR scans to a static reference map, maintaining accuracy even in environments with sparse or unreliable loop opportunities(Table ~\ref{tab:ape_rot_kitti_seq5}).
 
-This study aimed to develop a robust, real-time LiDAR-inertial localization system that leverages prebuilt maps, LiDAR-Inertial Odometry (FAST-LIO2), and efficient scan matching, all fused through a sliding-window factor graph framework. The evaluation across multiple datasets and challenging conditions provides strong evidence of the system’s effectiveness. This chapter discusses the findings in relation to the research questions.
+To effectively combine high-frequency LiDAR-Inertial Odometry (FAST-LIO2) with
+NDT-based map matching, the proposed system employs a factor graph optimization frame-
+work.The factor graph fuses odometry and scan-matching constraints into a consistent probabilistic model, reducing accumulated linearization errors compared to filtering methods.The sliding-window strategy further ensures real-time performance by limiting the optimization to a fixed temporal window, maintaining constant computational cost regardless of trajectory length (see Figure \ref{fig:computation_summary}).This
+design effectively mitigates drift in odometry and compensates for scan-matching failures,
+preserving both short-term precision and long-term consistency in challenging environments.
 
+\subsection{Real-Time Performance }
 
-\subsection{Improving Accuracy and Robustness with Prebuilt Maps}
+Results show that while standard NDT and ICP struggle to meet real-time constraints as map size  increases often resulting in slow convergence or failure, the proposed approach maintains reliable performance (Table \ref{tab:scanmap_radius}). By operating on locally segmented submaps and leveraging multithreaded NDT-OMP, the system ensures fast and stable scan matching.To manage computational load in large-scale environments, the system incorporates dynamic submap loading and tile-based map management. Instead of operating on a full global map, only local map tiles within a defined radius are loaded and used for scan-to-map matching. This reduces memory usage and significantly improves convergence speed of multithreaded NDT-OMP matching.
 
-The integration of a prebuilt 3D map significantly enhances the robustness and accuracy of localization in GNSS-denied environments. By aligning real-time LiDAR scans with globally consistent map segments, the system reduces drift that typically accumulates in odometry-only methods. Experimental results from the Saxion and KITTI datasets show that the proposed system achieves centimeter- to decimeter-level translational RMSE, while Fast-LIO2 alone reaches up to 2–3 meters of drift.
+\subsection{Environmental Adaptability }
+Under moderate fog (visibility {60}{m}), both NDT and the fusion method exhibit stable performance, with {APE} increasing only marginally compared to the baseline(Table ~\ref{tab:ape_fog_translation}). This confirms that {NDT} scan matching retains resilience in moderately degraded visibility. However, under severe fog ({visibility 30}{m}), scan matching becomes unreliable due to poor feature correspondences, and {FAST-LIO2} suffers from high drift. As a result, the fusion pipeline repeatedly fails, unable to maintain reliable pose estimates. In sparse map regions and transition zones, scan-to-map registration frequently fails due to a lack of correspondences. Nevertheless, the fusion method maintains localization thanks to high-rate odometry updates and prior structure in the factor graph(Figure~\ref{fig:ape-error-unmapped}).
 
-Moreover, in GNSS-challenged environments where SLAM methods depend on loop closure, the proposed system offers an advantage by relying on a static map as a global reference. Even in KITTI Sequence 05, where loop closure is feasible, SLAM baselines such as KISS-ICP and MOLA exhibit maximum translational errors over 6 meters, while the proposed system maintains low error throughout. This demonstrates the superiority of map-based localization in scenarios where loop closures are sparse, unreliable, or delayed
+Dynamic object removal further enhances registration performance. Filtering out transient objects improves convergence, reduces iteration counts, and lowers overall computational load during scan matching(see Table~\ref{tab:dynamic_object_runtime_pipeline_comparison}). While the object detection module introduces some processing overhead, it remains feasible for real-time operation, particularly on GPU-accelerated platforms. However, the system may face limitations on resource-constrained devices without hardware acceleration.
+
+\section{Implications}
+These findings underscore the value of combining prior maps, real-time odometry, and probabilistic optimization for autonomous navigation. The approach enables accurate and robust pose estimation in GNSS-denied and moderately degraded visual environments, which are common in urban outdoor and indoor settings. The use of dynamic submap loading and multithreaded NDT further supports the system’s deployment in real-time and large-scale environments, particularly for high-accuracy, repetitive navigation tasks.
+
+\section{Limitations and Future Work}
+
+Despite its strong performance, the proposed localization system has certain limitations. First, it assumes a known and reliable initial pose, and thus cannot handle global localization or recovery in scenarios where the robot is lost or starts without a prior estimate. Second, the system relies entirely on a static prior map without incorporating adaptive updates, which may reduce its effectiveness in environments that change over time.
+
+Future work could address these limitations through the following directions:
+
+\begin{itemize}
+	\item \textbf{Global localization and recovery:} Integrating robust initial pose estimation methods to enable map-based localization when the robot starts or becomes lost (kidnapped robot problem).
+	\item \textbf{Map adaptability:} Supporting online map updates or incremental SLAM fusion to ensure reliable operation during long-term deployments in dynamic environments.
+	\item \textbf{Multi-sensor fusion:} Extending the system to incorporate visual, radar, and LiDAR data for improved robustness and redundancy, particularly under adverse environmental conditions.
+\end{itemize}
+
+Together, these directions could further increase the adaptability and autonomy of the system in complex and unstructured environments.

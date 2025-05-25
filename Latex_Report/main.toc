@@ -1,35 +1,63 @@
 \select@language {english} \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \select@language {english} \contentsline {section}{\numberline {1.1}Motivation}{2}{section.1.1}%
-\select@language {english} \contentsline {section}{\numberline {1.2}Objective}{4}{section.1.2}%
+\select@language {english} \contentsline {section}{\numberline {1.2}Objective}{3}{section.1.2}%
 \select@language {english} \contentsline {section}{\numberline {1.3}Research Questions}{4}{section.1.3}%
-\select@language {english} \contentsline {section}{\numberline {1.4}Scope and limitations}{5}{section.1.4}%
-\select@language {english} \contentsline {subsection}{\numberline {1.4.1}Scope}{5}{subsection.1.4.1}%
-\select@language {english} \contentsline {subsection}{\numberline {1.4.2}Limitations}{5}{subsection.1.4.2}%
-\select@language {english} \contentsline {section}{\numberline {1.5}Methodology overview}{5}{section.1.5}%
-\select@language {english} \contentsline {section}{\numberline {1.6}Overview of the thesis structure}{5}{section.1.6}%
-\select@language {english} \contentsline {chapter}{\numberline {2}Litreature Review}{7}{chapter.2}%
-\select@language {english} \contentsline {section}{\numberline {2.1}Overview of Relevant Literature}{7}{section.2.1}%
-\select@language {english} \contentsline {subsection}{\numberline {2.1.1}LiDAR and LiDAR-Inertial Odometry Techniques}{7}{subsection.2.1.1}%
-\select@language {english} \contentsline {subsection}{\numberline {2.1.2}SLAM and Loop Closure-Based Localization}{9}{subsection.2.1.2}%
-\select@language {english} \contentsline {subsection}{\numberline {2.1.3}Localization Using Prior Maps}{10}{subsection.2.1.3}%
-\select@language {english} \contentsline {subsection}{\numberline {2.1.4}Point Cloud Registration for Localization}{11}{subsection.2.1.4}%
+\select@language {english} \contentsline {section}{\numberline {1.4}Scope and limitations}{4}{section.1.4}%
+\select@language {english} \contentsline {subsection}{\numberline {1.4.1}Scope}{4}{subsection.1.4.1}%
+\select@language {english} \contentsline {subsection}{\numberline {1.4.2}Limitations}{4}{subsection.1.4.2}%
+\select@language {english} \contentsline {section}{\numberline {1.5}Overview of the thesis structure}{5}{section.1.5}%
+\select@language {english} \contentsline {chapter}{\numberline {2}Litreature Review}{6}{chapter.2}%
+\select@language {english} \contentsline {section}{\numberline {2.1}Overview of Relevant Literature}{6}{section.2.1}%
+\select@language {english} \contentsline {subsection}{\numberline {2.1.1}LiDAR and LiDAR-Inertial Odometry Techniques}{6}{subsection.2.1.1}%
+\select@language {english} \contentsline {subsection}{\numberline {2.1.2}SLAM and Loop Closure-Based Localization}{8}{subsection.2.1.2}%
+\select@language {english} \contentsline {subsection}{\numberline {2.1.3}Localization Using Prior Maps}{8}{subsection.2.1.3}%
+\select@language {english} \contentsline {subsection}{\numberline {2.1.4}Point Cloud Registration Techniques}{9}{subsection.2.1.4}%
+\select@language {english} \contentsline {subsection}{\numberline {2.1.5}Dynamic Object Removal Techniques}{10}{subsection.2.1.5}%
 \select@language {english} \contentsline {section}{\numberline {2.2}Theoretical Background }{11}{section.2.2}%
 \select@language {english} \contentsline {subsection}{\numberline {2.2.1}Normal Distributions Transform (NDT)}{11}{subsection.2.2.1}%
-\select@language {english} \contentsline {subsection}{\numberline {2.2.2}Sensor Fusion}{14}{subsection.2.2.2}%
-\select@language {english} \contentsline {subsubsection}{Filtered Based Approaches}{14}{section*.2}%
-\select@language {english} \contentsline {subsubsection}{Factor Graph Based Sensor Fusion}{15}{section*.3}%
-\select@language {english} \contentsline {subsubsection}{Incremental Solvers and Real-Time Performance}{16}{section*.5}%
-\select@language {english} \contentsline {section}{\numberline {2.3}Gaps in the literature and research questions}{17}{section.2.3}%
-\select@language {english} \contentsline {chapter}{\numberline {3}Methodology}{19}{chapter.3}%
-\select@language {english} \contentsline {section}{\numberline {3.1}System Overview}{19}{section.3.1}%
-\select@language {english} \contentsline {subsection}{\numberline {3.1.1}LIDAR Scan Pre-Processing}{20}{subsection.3.1.1}%
-\select@language {english} \contentsline {subsection}{\numberline {3.1.2}Map Pre-Processing}{22}{subsection.3.1.2}%
-\select@language {english} \contentsline {subsubsection}{Grid-based Map Point Cloud Division }{22}{section*.9}%
-\select@language {english} \contentsline {subsection}{\numberline {3.1.3}Dynamic Map Loading}{23}{subsection.3.1.3}%
-\select@language {english} \contentsline {subsection}{\numberline {3.1.4}LIDAR Inertia Odometry}{24}{subsection.3.1.4}%
-\select@language {english} \contentsline {subsection}{\numberline {3.1.5}Scan-to-Map Matching}{24}{subsection.3.1.5}%
-\select@language {english} \contentsline {subsubsection}{}{24}{section*.11}%
-\select@language {english} \contentsline {chapter}{\numberline {4}Result }{25}{chapter.4}%
-\select@language {english} \contentsline {section}{\numberline {4.1}Experimental Environment}{25}{section.4.1}%
-\select@language {english} \contentsline {subsection}{\numberline {4.1.1}Hardware Setup}{25}{subsection.4.1.1}%
-\select@language {english} \contentsline {subsection}{\numberline {4.1.2}Software Setup}{25}{subsection.4.1.2}%
+\select@language {english} \contentsline {subsection}{\numberline {2.2.2}Sensor Fusion Approaches}{12}{subsection.2.2.2}%
+\select@language {english} \contentsline {subsubsection}{Filtered Based Approaches}{12}{section*.3}%
+\select@language {english} \contentsline {subsubsection}{Factor Graph Based Sensor Fusion}{13}{section*.4}%
+\select@language {english} \contentsline {subsubsection}{Incremental Solvers}{14}{section*.6}%
+\select@language {english} \contentsline {section}{\numberline {2.3}Research Gaps}{15}{section.2.3}%
+\select@language {english} \contentsline {chapter}{\numberline {3}Methodology}{16}{chapter.3}%
+\select@language {english} \contentsline {section}{\numberline {3.1}System Overview}{16}{section.3.1}%
+\select@language {english} \contentsline {section}{\numberline {3.2}LIDAR Scan Pre-Processing}{18}{section.3.2}%
+\select@language {english} \contentsline {subsection}{\numberline {3.2.1}Map Pre-Processing}{20}{subsection.3.2.1}%
+\select@language {english} \contentsline {section}{\numberline {3.3}LIDAR Inertia Odometry}{21}{section.3.3}%
+\select@language {english} \contentsline {section}{\numberline {3.4}Scan-to-Map Matching}{21}{section.3.4}%
+\select@language {english} \contentsline {section}{\numberline {3.5} Real-Time Factor Graph Optimization }{23}{section.3.5}%
+\select@language {english} \contentsline {subsection}{\numberline {3.5.1}Factor Graph Formulation}{23}{subsection.3.5.1}%
+\select@language {english} \contentsline {paragraph}{1. Prior Factor}{23}{section*.11}%
+\select@language {english} \contentsline {paragraph}{2. Odometry (Between) Factors}{24}{section*.12}%
+\select@language {english} \contentsline {paragraph}{3. Map-Matching Priors}{24}{section*.13}%
+\select@language {english} \contentsline {subsection}{\numberline {3.5.2}Maximum A Posteriori (MAP) Estimation}{24}{subsection.3.5.2}%
+\select@language {english} \contentsline {subsection}{\numberline {3.5.3}Fixed-Lag Smoothing and Marginalization}{25}{subsection.3.5.3}%
+\select@language {english} \contentsline {subsection}{\numberline {3.5.4}Outlier Rejection via Mahalanobis Distance}{26}{subsection.3.5.4}%
+\select@language {english} \contentsline {section}{\numberline {3.6}Dynamic Object Detection and Removal}{28}{section.3.6}%
+\select@language {english} \contentsline {subsection}{\numberline {3.6.1}Dynamic Object Detection}{28}{subsection.3.6.1}%
+\select@language {english} \contentsline {subsection}{\numberline {3.6.2}Detected Object removal }{29}{subsection.3.6.2}%
+\select@language {english} \contentsline {section}{\numberline {3.7}Environmental Noise Simulation}{29}{section.3.7}%
+\select@language {english} \contentsline {subparagraph}{Point Deletion.}{29}{section*.15}%
+\select@language {english} \contentsline {subparagraph}{Backscatter Modification.}{29}{section*.16}%
+\select@language {english} \contentsline {subparagraph}{Intensity Attenuation.}{30}{section*.17}%
+\select@language {english} \contentsline {chapter}{\numberline {4}Result}{31}{chapter.4}%
+\select@language {english} \contentsline {section}{\numberline {4.1}Experimental Environment}{31}{section.4.1}%
+\select@language {english} \contentsline {subsection}{\numberline {4.1.1}Hardware and Software Setup}{31}{subsection.4.1.1}%
+\select@language {english} \contentsline {subsection}{\numberline {4.1.2}Datasets and Map Preparation}{32}{subsection.4.1.2}%
+\select@language {english} \contentsline {paragraph}{Benchmark Dataset}{32}{section*.21}%
+\select@language {english} \contentsline {paragraph}{Custom Saxion Dataset}{32}{section*.22}%
+\select@language {english} \contentsline {section}{\numberline {4.2}Performance Evaluation}{32}{section.4.2}%
+\select@language {english} \contentsline {subsection}{\numberline {4.2.1} Localization Performance in Standard Conditions}{33}{subsection.4.2.1}%
+\select@language {english} \contentsline {subsubsection}{Saxion Campus Dataset}{33}{section*.23}%
+\select@language {english} \contentsline {subsubsection}{Comparison with SLAM Methods }{35}{section*.28}%
+\select@language {english} \contentsline {subsubsection}{Real-time Performance }{36}{section*.31}%
+\select@language {english} \contentsline {subsection}{\numberline {4.2.2} Extended Evaluation Under Challenging Conditions}{38}{subsection.4.2.2}%
+\select@language {english} \contentsline {subsubsection}{Impact of Dynamic Object Removal on Registration Performance}{38}{section*.34}%
+\select@language {english} \contentsline {subsubsection}{Localization on Map Side Feature Sparse Environment}{40}{section*.39}%
+\select@language {english} \contentsline {subsubsection}{Localization Under Fog Degradation with a Recent Map}{41}{section*.43}%
+\select@language {english} \contentsline {chapter}{Bibliography}{43}{section*.46}%
+\select@language {english} \contentsline {chapter}{List of Figures}{47}{section*.48}%
+\select@language {english} \contentsline {chapter}{List of Tables}{48}{section*.49}%
+\select@language {english} \contentsline {chapter}{List of Algorithms}{49}{section*.50}%
+\select@language {english} \contentsline {chapter}{List of Codes}{50}{section*.52}%

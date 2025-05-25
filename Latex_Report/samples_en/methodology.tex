@@ -1,24 +1,41 @@
 \chapter{Methodology}
 \label{ch:intro}
 
+This chapter outlines the methodological foundation of the proposed localization system. It describes the main system components and how they are integrated to estimate the robot’s pose by combining LiDAR and inertial measurements with a pre-built 3D map. The focus is on the overall process and key implementation choices that support accurate and real-time localization.
+
 \section{System Overview}
 
-The architecture overview and the complete step-by-step algorithm flow of the proposed localization system are shown in Figure \ref{fig:diagram-map-basedlocalization} and Algorithm \ref{alg:localization-system}. The input of the system includes the raw online point-cloud, raw IMU data as well as the prior map , and output real-time accurate 6 DOF pose.\\	
-The system can be divided in to the following different modules:
-\begin{enumerate}
-	\item Scan Pre-Processing: Performs a series of point cloud processing steps to filter and extract relevant features from the raw LiDAR data.
-	
-	\item LIDAR-INERTIA Odometry - Estimates high-frequency odometry by fusing raw IMU data and LiDAR scans using FAST-LIO\cite{xuFastLIO2} framework. The resulting odometry is added as a local constraint (odom factor) to the factor graph.
-	
-	\item Dynamic Local Map Loading: Generates a local map around the robot’s current pose within a specified radius from the prior map.
-	
-	
-	\item Scan-to-Map Matching: Aligns the current LiDAR scan with the local map to estimate the robot's pose in the prior map using parallelize NDT. The estimated pose is added as a prior constraint (map factor) to the factor graph.
-	
-	\item Sliding Window Factor Graph Optimizer:Fuses odometry and map constraints within a sliding window to optimize and output a real-time, accurate 6-DoF pose.
-	
-	
-\end{enumerate}
+
+The proposed localization system estimates the 6-DoF pose of a mobile robot by combining LiDAR and inertial sensor data with a prior 3D map of the environment. The system is designed to operate in real time and deliver accurate, drift-resilient localization in complex, large-scale, and partially dynamic environments.
+
+The localization pipeline begins with preprocessing of the raw LiDAR point cloud. This includes filtering, downsampling, and transformation to a consistent reference frame. To improve robustness in semi-dynamic scenes, transient objects such as vehicles and pedestrians are detected using a deep learning-based 3D object detection model and removed from the scan prior to registration.
+
+In parallel, inertial measurements from the IMU are fused with deskewed LiDAR data using the FAST-LIO2 framework~\cite{xuFastLIO2}, which provides high-frequency odometry estimates through tightly coupled LiDAR-inertial integration. This module ensures locally consistent motion tracking with minimal latency.
+
+To correct drift and maintain alignment with a global reference, the system performs scan-to-map matching. A local submap is dynamically loaded from the global map based on the robot’s current estimated position. Only relevant tiles within a specified radius are retrieved, optimizing memory and computation. The filtered LiDAR scan is then aligned with this submap using a multithreaded Normal Distributions Transform (NDT-OMP) algorithm~\cite{koide2019portable}, which produces a globally referenced pose estimate.
+
+Both odometry and scan-matching results are fused using a fixed-lag smoothing approach based on factor graph optimization. This module maintains a sliding window of recent trajectory states and performs real-time optimization to output a drift-resilient and globally consistent pose estimate.
+
+The overall system architecture and step-by-step algorithm flow are illustrated in Figure~\ref{fig:diagram-map-basedlocalization} and Algorithm~\ref{alg:localization-system}, respectively. The subsequent sections describe each component of the system in detail, including LiDAR preprocessing, local submap loading, odometry estimation, scan matching, graph-based fusion, and dynamic object removal.
+
+
+%The architecture overview and the complete step-by-step algorithm flow of the proposed localization system are shown in Figure \ref{fig:diagram-map-basedlocalization} and Algorithm \ref{alg:localization-system}. 
+
+%The input of the system includes the raw online point-cloud, raw IMU data as well as the prior map , and output real-time accurate 6 DOF pose.\\	
+%The system can be divided in to the following different modules:
+%\begin{enumerate}
+%	\item Scan Pre-Processing: Performs a series of point cloud processing steps to filter and extract relevant features from the raw LiDAR data.
+%	
+%	\item LIDAR-INERTIA Odometry - Estimates high-frequency odometry by fusing raw IMU data and LiDAR scans using FAST-LIO\cite{xuFastLIO2} framework. The resulting odometry is added as a local constraint (odom factor) to the factor graph.
+%	
+%	\item Dynamic Local Map Loading: Generates a local map around the robot’s current pose within a specified radius from the prior map.
+%	
+%	\item Scan-to-Map Matching: Aligns the current LiDAR scan with the local map to estimate the robot's pose in the prior map using parallelize NDT. The estimated pose is added as a prior constraint (map factor) to the factor graph.
+%	
+%	\item Sliding Window Factor Graph Optimizer:Fuses odometry and map constraints within a sliding window to optimize and output a real-time, accurate 6-DoF pose.
+%	
+%	
+%\end{enumerate}
 
 \begin{figure}
     \centering
@@ -46,7 +63,7 @@ The system can be divided in to the following different modules:
 		\State Estimate LiDAR-Inertial Odometry using $\{\mathcal{P}_t^{filtered}, \mathcal{I}_t\}$ to obtain odometry pose $\mathbf{T}_t^{lio}$	
 		
 		\If{$|| \mathbf{T}_t - \mathbf{T}_{last}^{map} || > d_{threshold}$}
-		\State Load dynamic local map $\mathcal{M}_t^{local}$ from $\mathcal{M}$ centered at $\mathbf{T}_t^{lio}$
+		\State Load dynamic local map $\mathcal{M}_t^{local}$ from $\mathcal{M}$ centered at $\mathbf{T}_t$
 		\State Update $\mathbf{T}_{last}^{map} \gets \mathbf{T}_t$
 		\EndIf
 		
@@ -66,68 +83,75 @@ The system can be divided in to the following different modules:
 \end{algorithm}
 
 
-\section{LIDAR Scan Pre-Processing}
-Before aligning each incoming LiDAR scan to the global map, we first subject the raw point cloud to a series of pre-processing operations. These operations improve both efficiency and reliability by filtering out irrelevant regions and outliers, down-sampling to reduce data volume, and transforming the data into a consistent coordinate frame.Our approach, illustrated in Figure\ref{fig:lidar_scan_preprocessing}  consists of the following  main steps:
-\begin{figure}
-    \centering
-    \includegraphics[width=0.4\linewidth]{images/LIDAR_PreProccess.drawio.png}
-    \caption{LIDAR scan pre-processing}
-    \label{fig:lidar_scan_preprocessing}
-\end{figure}
+
+\subsection{LiDAR Scan Pre-Processing}
+
+Raw LiDAR scans typically produce large point-clouds that vary in density across the range of the sensor. While points near the sensor are densely sampled, those at longer distances become increasingly sparse due to fixed angular resolution. This non-uniform density, combined with measurement noise and dynamic objects, introduces challenges for efficient and robust localization. To address these issues, I apply a structured pre-processing pipeline that filters, reduces, and cleans the incoming data prior to further processing.
+
+As illustrated in Figure~\ref{fig:lidar-preprocessing}, the following steps are applied to each incoming point cloud:
 
 \begin{itemize}
-    \item \textbf{Crop-Box Filter}: This step confines the point cloud to a user-defined three-dimensional region (a bounding “box”) around the sensor or area of interest. By discarding all points lying outside this box, we focus only on the relevant portion of the scene, reducing both memory and computational overhead for subsequent processing.
-    \item \textbf{Outlier Removal}: Once the point cloud is restricted to the area of interest, we remove random noise and spurious measurements using a statistical outlier filter. Concretely, we compute for each point the average distance to its k‐nearest neighbors. Points whose mean distance exceeds the global mean plus a chosen multiplier of the standard deviation are marked as outliers and deleted. This practice is a commonly adopted heuristic that discards stray or floating points, which might result from occasional sensor glitches or moving objects in the environment.
-    \item \textbf{Voxel-Grid Downsampling} To further ease computational load, the point cloud is then down-sampled. A typical approach uses a voxel-grid filter: space is subdivided into small volumetric “voxels,” and all points within each voxel are replaced by a single centroid representative. This retains the main geometry while reducing point density, thereby speeding up map‐based matching algorithms.
-    \item \textbf{Coordinate Transformation}:   Finally, we apply a rigid transformation that aligns the processed point cloud to a consistent coordinate frame used throughout our localization pipeline—the vehicle’s base link frame.This accounts for any known extrinsic offsets between the LiDAR sensor and the vehicle origin.
+	\item \textbf{Crop-Box Filtering:} I use a spatial crop-box filter to remove points outside a user-defined region of interest centered around the sensor. This step eliminates distant or irrelevant points, reducing computational load and focusing on the region critical for accurate scan alignment.
+	
+	\item \textbf{Statistical Outlier Removal:} To mitigate the effect of random noise, I apply a statistical filter that removes isolated or spurious measurements. For each point, the average distance to its $k$ nearest neighbors is computed. Points exceeding the global mean by a threshold multiple of the standard deviation are discarded as outliers.
+	
+	\item \textbf{Voxel-Grid Downsampling:} To reduce data size while preserving geometric structure, I downsample the filtered point cloud using a voxel-grid filter. The space is partitioned into uniform voxels, and all points within each voxel are replaced by their centroid. This ensures that the point cloud remains computationally tractable without compromising registration fidelity.
+	
+ \item \textbf{Dynamic Object Removal:} To improve robustness in dynamic environments, points associated with moving objects are removed. I use a learning-based detector (CenterPoint) to identify dynamic agents and remove their corresponding points using 3D bounding boxes. Further details are provided in Section~\ref{sec:dynamic_object_removal}.
 \end{itemize}
 
-As summarized in Table~\ref{tab:lidar_preprocessing}, the LiDAR preprocessing parameters vary depending on the sensor type and application requirements. All filtering and scan processing operations are implemented using the Point Cloud Library (PCL).
+This cleaned and downsampled point-cloud is then used as input to the scan-to-map matching module, where it is aligned with a local submap to estimate the robot's global pose.
 
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.4\textwidth]{preproccessing_cloud.png}
+\caption{Overview of LiDAR scan pre-processing steps. The raw point cloud undergoes spatial cropping, statistical outlier removal, voxel-grid downsampling, and dynamic object removal.}
+\label{fig:lidar-preprocessing}
 
-\begin{table}[htbp]
-\centering
-\caption{LiDAR Scan Processing Methods and Parametrs  Across Different Sensor Setups}
-\label{tab:lidar_preprocessing}
-\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}|}
-\hline
-\textbf{Processing Step} & \textbf{KITTI(Velodyne HDL-64E)} & \textbf{MulRan(Ouster-OS1-64)} & \textbf{(Ouster-OS1-128)} \\
-\hline
-LiDAR Type & Velodyne HDL-64E & Ouster OS1-64 & Ouster OS1-128 \\
-% \hline
-% \textbf{Vertical Channels} & 64 & 64 & 128 \\
-% \hline
-% \textbf{Vertical FOV} & $\pm$2° to $\pm$24.8° ($\sim$26.8° total) & $\pm$16.6° ($\sim$33.2° total) & $\pm$22.5° ($\sim$45° total) \\
-\hline
-Max Range & $\sim$120 m & $\sim$120 m & $\sim$240 m \\
-\hline
-Crop Box Filter & 90-100m & 90-100m & 180-200m\\
-\hline
-Downsampling Method & Voxel-Grid(leaf-size: 0.5m) & Voxel-Grid(leaf-size: 0.4-0.6 m) & Voxel-Voxel(0.5-0.8 m) \\
-\hline
-Outlier Removal & Statistical (K=50, Std=1.0) & Statistical (K=40, Std=1.0) & Statistical(K=40 ,Std=1,0) \\
-\hline
-% \textbf{Ground Removal} & Not used & Yes — flat surface segmentation &  Yes — flat surface segmentation \\
-% \hline
-\end{tabular}
-\end{table}
+\end{figure}
+
+
+%\begin{table}[htbp]
+%\centering
+%\caption{LiDAR Scan Processing Methods and Parametrs  Across Different Sensor Setups}
+%\label{tab:lidar_preprocessing}
+%\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}|}
+%\hline
+%\textbf{Processing Step} & \textbf{KITTI(Velodyne HDL-64E)} & \textbf{MulRan(Ouster-OS1-64)} & \textbf{(Ouster-OS1-128)} \\
+%\hline
+%LiDAR Type & Velodyne HDL-64E & Ouster OS1-64 & Ouster OS1-128 \\
+%% \hline
+%% \textbf{Vertical Channels} & 64 & 64 & 128 \\
+%% \hline
+%% \textbf{Vertical FOV} & $\pm$2° to $\pm$24.8° ($\sim$26.8° total) & $\pm$16.6° ($\sim$33.2° total) & $\pm$22.5° ($\sim$45° total) \\
+%\hline
+%Max Range & $\sim$120 m & $\sim$120 m & $\sim$240 m \\
+%\hline
+%Crop Box Filter & 90-100m & 90-100m & 180-200m\\
+%\hline
+%Downsampling Method & Voxel-Grid(leaf-size: 0.5m) & Voxel-Grid(leaf-size: 0.4-0.6 m) & Voxel-Voxel(0.5-0.8 m) \\
+%\hline
+%Outlier Removal & Statistical (K=50, Std=1.0) & Statistical (K=40, Std=1.0) & Statistical(K=40 ,Std=1,0) \\
+%\hline
+%% \textbf{Ground Removal} & Not used & Yes — flat surface segmentation &  Yes — flat surface segmentation \\
+%% \hline
+%\end{tabular}
+%\end{table}
 
 \subsection{Map Pre-Processing}
 
-To support real-time localization in large-scale environments, the global point-cloud map is pre-processed into a 2D grid of “tiles,” each stored as an individual point-cloud file. During this offline division, every point’s \(x\)–\(y\) coordinates are used to assign it to a grid cell of side length \(s\), where \(s\) is chosen to balance tile granularity against file count.Each
+To support real-time localization in large-scale environments, the global point-cloud map is pre-processed into a 2D grid of tiles each stored as an individual point-cloud file. During this offline division, every point’s \(x\)–\(y\) coordinates are used to assign it to a grid cell of side length \(s\), where \(s\) is chosen to balance tile granularity against file count.Each
 grid cell is saved as an individual point cloud file, and its index is stored as metadata for fast
 retrieval. During localization, these indexes enable loading only the relevant grids within the
 robot’s local map radius, reducing memory usage and improving processing efficiency.
 
-
-
-At runtime, we maintain a dynamic local sub-map around the robot by loading only those tiles whose centers lie within a radius
+At runtime, I maintain a dynamic local sub-map around the robot by loading only those tiles whose centers lie within a radius
 \begin{equation}
 	\label{eq:rmap}
 	r_{\mathrm{map}} = r_{\mathrm{lidar}} + r_{\mathrm{margin}},
 \end{equation}
-where \(r_{\mathrm{lidar}}\) is the LiDAR’s maximum range and \(r_{\mathrm{margin}}\) is a small buffer to ensure sufficient overlap for robust scan-to-map matching. To avoid unnecessary I/O, we trigger a map update only when the robot’s current position \(\mathbf{T}_t\) moves farther than a threshold \(d_{\mathrm{thresh}}\) from the last update location \(\mathbf{T}_{\mathrm{last}}\), that is,
+where \(r_{\mathrm{lidar}}\) is the LiDAR’s maximum range and \(r_{\mathrm{margin}}\) is a small buffer to ensure sufficient overlap for robust scan-to-map matching. To avoid unnecessary I/O, I trigger a map update only when the robot’s current position \(\mathbf{T}_t\) moves farther than a threshold \(d_{\mathrm{thresh}}\) from the last update location \(\mathbf{T}_{\mathrm{last}}\), that is,
 \begin{equation}
 	\label{eq:load_condition}
 	\|\mathbf{T}_t - \mathbf{T}_{\mathrm{last}}\|_2 > d_{\mathrm{thresh}}.
@@ -155,8 +179,12 @@ which we publish as an odometry factor in our global factor graph. IMU noise den
 
 
 \section{Scan-to-Map Matching}
+The Scan-to-Map Matching module is a critical component of the proposed localization system. Its primary objective is to align the current LiDAR scan with a dynamically loaded local submap and estimate the robot’s pose relative to the prior map coordinate frame.Several registration techniques were considered during system design. While Iterative Closest Point (ICP)\cite{BeslICP1992} and the standard Normal Distributions Transform (NDT)\cite{biber2003ndt} are commonly used, they were not selected due to their high computational cost and sensitivity to initial pose estimates.
 
-The Scan-to-Map Matching module is a crucial component of the proposed localization system. Its primary objective is to align the current LiDAR scan with the dynamically loaded local map and estimate the robot's accurate pose within the prior map coordinate frame.In this work, the Normal Distributions Transform (NDT)\cite{biber2003ndt} algorithm is employed for robust and efficient scan registration. Specifically, a multi-threaded implementation of NDT (NDT-OMP) \cite{koide2019portable} is utilized, leveraging OpenMP-based parallelization to accelerate computation and enable real-time performance. 
+To overcome these limitations, this work adopts a multithreaded implementation of the Normal Distributions Transform (NDT-OMP)~\cite{koide2019portable}, which leverages OpenMP-based parallelization to significantly accelerate computation. NDT-OMP maintains the robustness of NDT while enabling real-time performance through parallel evaluation of gradients and Hessians during scan registration. This makes it particularly well-suited for large-scale and time-constrained localization tasks.
+
+%
+%The Scan-to-Map Matching module is a crucial component of the proposed localization system. Its primary objective is to align the current LiDAR scan with the dynamically loaded local map and estimate the robot's accurate pose within the prior map coordinate frame.In this work, the Normal Distributions Transform (NDT)\cite{biber2003ndt} algorithm is employed for robust and efficient scan registration. Specifically, a multi-threaded implementation of NDT (NDT-OMP) \cite{koide2019portable} is utilized, leveraging OpenMP-based parallelization to accelerate computation and enable real-time performance. 
 
 
 
@@ -198,35 +226,40 @@ At each iteration the pose update uses a line-search–scaled Newton step:
 	\quad
 	\|\Delta\mathbf{p}\|<\varepsilon.
 \end{equation}
-Table ~\ref{tab:ndt-omp-params} Describes the main parameters and their value in our implementation.
+The key parameters governing the NDT-OMP scan matching process are summarized in Table~\ref{tab:ndt-omp-params}. These parameters control the resolution of the voxel grid, convergence criteria, optimization behavior, and parallelization strategy.
+
 \begin{table}[ht]
-	
 	\centering
-	\renewcommand{\arraystretch}{1}
-	\setlength{\tabcolsep}{2pt}
+	\renewcommand{\arraystretch}{1.1}
+	\setlength{\tabcolsep}{6pt}
 	\caption{Key parameters of the NDT-OMP Scan-to-Map Matching implementation}
 	\label{tab:ndt-omp-params}
-	\begin{tabular}{@{}llll@{}}
+	\begin{tabular}{@{}lll@{}}
 		\toprule
-		\textbf{Parameter}         & \textbf{Symbol}       & \textbf{Description}                                      & \textbf{Value}                          \\ 
+		\textbf{Parameter}         & \textbf{Symbol}       & \textbf{Description} \\ 
 		\midrule
-		Voxel resolution           & \(r\)                 & Side length of each map voxel                             & 2\,m                                    \\ 
-		Initial step size          & \(\alpha_0\)          & Starting multiplier for Newton update                     & 0.2                                    \\ 
-		Convergence threshold      & \(\varepsilon\)       & Minimum norm of pose update for convergence                & \(10^{-4}\)                             \\ 
-		Maximum iterations         & \(N_{\max}\)          & Upper limit on Newton-method iterations                    & 40                                   \\ 
-		Thread count               & \(T\)                 & Number of parallel threads (OpenMP maximum)               & 8       \\ 
+		Voxel resolution           & \(r\)                 & Side length of each map voxel \\ 
+		Initial step size          & \(\alpha_0\)          & Starting multiplier for Newton update \\ 
+		Convergence threshold      & \(\varepsilon\)       & Minimum norm of pose update for convergence \\ 
+		Maximum iterations         & \(N_{\max}\)          & Upper limit on Newton-method iterations \\ 
+		Thread count               & \(T\)                 & Number of parallel threads used in optimization \\ 
 		\bottomrule
 	\end{tabular}
 \end{table}
 
+Once scan matching converges, the resulting optimized pose is used as a global correction in the fusion stage, where it is integrated with LiDAR-inertial odometry using a factor graph-based optimization framework.
 
 
 
 
-\section{ Real-Time Pose Graph Optimization }
+\section{ Real-Time Factor Graph Optimization }
 \label{sec:fusion}
 
-The fusion strategy combines high-frequency odometry from LIO with global pose corrections from scan-to-map matching. An incremental solver (iSAM2) with fixed-lag smoothing is used to maintain real-time performance while optimizing recent trajectory estimates. This approach ensures accurate and drift-resilient pose estimation while keeping computational cost bounded.
+To fuse odometry from FAST-LIO2 with global corrections from scan-to-map matching, a factor graph with fixed-lag smoothing is employed. An Extended Kalman Filter (EKF) was initially considered, using FAST-LIO2 as the prediction model and map-based updates. However, the high-dimensional state of FAST-LIO2, which includes LiDAR–IMU calibration and bias terms, made EKF integration unstable and impractical.
+
+The factor graph approach offers a more modular and scalable solution by modeling each constraint independently and optimizing them jointly. The use of a sliding window limits computation to recent states, ensuring real-time performance.
+
+The following section details the formulation of the factor graph and the types of factors used.
 
 \subsection{Factor Graph Formulation}
 
@@ -242,7 +275,7 @@ A prior factor is used to anchor the initial pose to a known global reference fr
 	\phi_{\text{prior}}(\mathbf{x}_0) = \exp\left( -\frac{1}{2} | \mathbf{x}_0 - \bar{\mathbf{x}}_0 |^2{\Sigma_0} \right)
 \end{equation}
 
-In this formulation, $\mathbf{x}_0$ is the estimated initial pose of the robot. The term $\bar{\mathbf{x}}_0$ denotes the prior mean pose from the first LIO output or initialization, and $\mathbf{{\Sigma_0}}$ is the prior covariance matrix reflecting the uncertainty in. This Gaussian prior serves as a fixed anchor to stabilize the trajectory estimation.
+In this formulation, $\mathbf{x}_0$ is the estimated initial pose of the robot. The term $\bar{\mathbf{x}}_0$ denotes the prior mean pose from the first LIO output or initialization, and $\mathbf{{\Sigma_0}}$ is the prior covariance matrix reflecting the uncertainty. This Gaussian prior serves as a fixed anchor to stabilize the trajectory estimation.
 
 \paragraph{2. Odometry (Between) Factors}
 Relative motion from LIO is encoded using between factors, which represent the relative transformation between consecutive poses:
@@ -304,7 +337,7 @@ To obtain a reduced representation, we marginalize out \( \mathbf{x}_m \):
 	P(\mathbf{x}_r) = \int P(\mathbf{x}_m, \mathbf{x}_r) \, d\mathbf{x}_m.
 \end{equation}
 
-GTSAM uses the Schur complement to perform this marginalization operation. As a result, a new dense factor is introduced between variables in \( \mathbf{x}_r \) that were connected to \( \mathbf{x}_m \), preserving the influence of the eliminated variables.
+As a result, a new dense factor is introduced between variables in \( \mathbf{x}_r \) that were connected to \( \mathbf{x}_m \), preserving the influence of the eliminated variables.
 
 \begin{figure}[htbp]
 	\centering
@@ -378,12 +411,12 @@ where \(\chi^2_{d,\,0.95}\) is the 95\% quantile of the \(\chi^2_d\) distributio
 
 
 \section{Dynamic Object Detection and Removal}
-
+\label{sec:dynamic_object_removal}
 \subsection{Dynamic Object Detection}
 
 To identify and remove dynamic objects from the LiDAR point cloud, this work utilizes a deep learning-based 3D object detection pipeline based on CenterPoint\cite{yin2021center}. The model is developed and trained using the MMDetection3D framework\cite{mmdet3d2020}, and is deployed for real-time inference using the Autoware-compatible implementation\cite{autoware_universe}.
 
-The detection architecture adopts the two-stage design of CenterPoint\cite{yin2021center}, as shown in Figure \ref{fig:Overview-CenterPoint }. First, the raw LiDAR point cloud is voxelized and processed by a voxel feature encoder and a PointPillars-based sparse convolutional backbone\cite{lang2019pointpillars}, which extracts high-level spatial features. These features are projected into a Bird’s-Eye View (BEV) map, enabling efficient object detection. A keypoint-based detection head then identifies object centers and regresses 3D bounding box attributes, including size, orientation, and velocity. The final output includes class-labeled 3D detections, which are used to support dynamic object removal.
+The detection architecture adopts the two-stage design of CenterPoint, as shown in Figure \ref{fig:Overview-CenterPoint }. First, the raw LiDAR point cloud is voxelized and processed by a voxel feature encoder and a PointPillars-based sparse convolutional backbone\cite{lang2019pointpillars}, which extracts high-level spatial features. These features are projected into a Bird’s-Eye View (BEV) map, enabling efficient object detection. A keypoint-based detection head then identifies object centers and regresses 3D bounding box attributes, including size, orientation, and velocity. The final output includes class-labeled 3D detections, which are used to support dynamic object removal.
 
 Instead of training from scratch, this work utilizes a pretrained CenterPoint model trained on the nuScenes dataset \cite{caesar2020nuscenes}, comprising over 28k LiDAR frames. The model includes five object classes: CAR, TRUCK, BUS, BICYCLE, and PEDESTRIAN. These categories cover the primary dynamic agents present in urban driving scenarios. After training, the model is exported to the ONNX (Open Neural Network Exchange) format, which supports cross-platform deployment and enables hardware-accelerated inference using TensorRT.
 
@@ -392,51 +425,59 @@ Instead of training from scratch, this work utilizes a pretrained CenterPoint mo
 
 \subsection{Detected Object removal }
 
+
 Following object detection, dynamic elements are removed from the LiDAR point cloud using their predicted 3D bounding boxes. For each detected object, its position, dimensions, and orientation are used to define an oriented 3D cropping volume. These bounding boxes are expanded slightly with a fixed margin to ensure full exclusion of the object’s points, accounting for detection uncertainty or sensor noise.
 
 Each bounding box is then used to define a geometric filter in 3D space. The removal process involves identifying all LiDAR points that fall within the transformed bounding box and excluding them from the original scan. This is performed iteratively for all detected dynamic objects in each frame. The result is a filtered point cloud that retains only static environmental features, which are then used for downstream localization tasks. 
 
 
 \section{Environmental Noise Simulation}
-\label{sec:env_noise_sim}
+\label{sec:fog_simulation}
 
+To assess the robustness of the proposed localization pipeline under adverse conditions, we simulate the impact of atmospheric fog on LiDAR scans. Fog causes scattering and absorption of laser beams, leading to partial loss of valid returns, the appearance of false near-field echoes, and a reduction in return intensity. Our simulation adopts the physically grounded model proposed by Teufel et al.~\cite{teufel2022realistic}, applied only to live LiDAR scans. The degradation severity is controlled by the \textit{meteorological visibility} \( V \) (in meters), defined as the maximum distance at which an object can be reliably seen under foggy conditions.
 
-To quantify the resilience of our localization pipeline under a spectrum of adverse environmental conditions, we adapt the physically‐grounded framework of \cite{teufel2022realistic}, which realistically models rain, snow, and fog in LiDAR point clouds
- based on physical and empirical fundamentals.Rather than reproducing intensity effects, we concentrate solely on the geometric impact and generalize their approach into four spatial perturbations applied to each live scan immediately prior to registration
+The fog model introduces three major effects, each governed by simple visibility-dependent equations: \textit{(i)} deletion of real points, \textit{(ii)} modification into near-sensor backscatter points, and \textit{(iii)} intensity attenuation.
 
+\subparagraph{Point Deletion.}
+Real LiDAR returns are probabilistically removed based on their distance \( d \) and visibility \( V \), using:
+\[
+p_{\text{delete}}(d) = \frac{a \cdot e^{bV}}{a \cdot e^{bV} + 1}
+\]
+Here, \( a = -0.70 \) and \( b = -0.024 \) are empirically derived constants that define the effect of fog density on the likelihood of return loss. Deletion probability increases with distance and with denser fog (lower \( V \)).
 
+\subparagraph{Backscatter Modification.}
+Points that are not deleted may be converted into \textit{false returns}, simulating backscatter from fog droplets. The probability of modification increases with distance:
+\[
+p_{\text{modify}}(d) = 1 - e^{-d \cdot \epsilon}, \quad \epsilon = 0.23 \cdot e^{-0.0082V}
+\]
+The new range is drawn from an exponential distribution:
+\[
+f(x) = \frac{1}{\lambda} e^{-x / \lambda}, \quad \lambda = -0.006 \cdot V + 2.31
+\]
+This causes the point to be radially pulled closer to the sensor, mimicking typical fog backscatter effects.
 
-\begin{enumerate}
-	\item \textbf{Removal of True Returns}
-	In dense fog or heavy precipitation, many pulses are absorbed or scattered, never returning to the sensor. We mimic this by randomly deleting a fixed percentage of genuine points. Higher removal rates correspond to thicker fog or more intense rainfall conditions. 
-	\item \textbf{Positional Jitter:} Droplet and flake impacts introduce small, random range and angle errors. We model this with zero-mean Gaussian noise  (standard deviation $\sigma_{\rm jitter}$ ) applied independently to each surviving point's $x,y,z$ coordinates.
-	
-	\item \textbf{Backscatter Point Modification:} A common artifact in foggy or drizzly conditions is a faint false return that appears closer to the sensor than the true object—produced when the beam scatters off a droplet mid-air. To simulate these near-field echoes, we select a fraction of points and “pull” them toward the LiDAR by resampling their range from an exponential distribution (so most of these modified points sit very close to the sensor).
-	
-	\item \textbf{Insert False Points:}Severe precipitation can yield completely spurious returns with no real obstacle. We inject these false points  by sampling a new, shorter range from an exponential law and appending an extra point at that location. 
-	
-\end{enumerate}
+\subparagraph{Intensity Attenuation.}
+Return intensity is reduced due to scattering loss along the beam path:
+\[
+I(d) = I_0 \cdot e^{-\gamma d}, \quad \gamma = 0.02
+\]
+Points with final intensity below a threshold (e.g., 1000 for 16-bit returns) are discarded. Simulated backscatter points are assigned random intensities in the range of 0--32\% of the maximum value, consistent with real sensor behavior under fog.
 
-\subsubsection{Composite Noise Levels}
-\label{sec:composite_noise}
 \begin{table}[H]
 	\centering
-	\caption{Composite noise parameterizations and corresponding environmental severity levels}
+	\caption{Fog severity levels based on visibility range}
 	\label{tab:noise_levels}
-	\begin{tabular}{l c c c c c c}
+	\begin{tabular}{lc}
 		\toprule
-		\textbf{Level}   & \textbf{Removal Rate} & \(\sigma_{\rm jitter}\) & \textbf{Modify Rate} &  \textbf{Insert Rate} \\
-		& (\,\%)                & (m)                     & (\,\%)              & (\,\%)          \\
+		\textbf{Fog Level} & \textbf{Visibility \( V \) (m)} \\
 		\midrule
-		Mild      & 5   & 0.02 & 2   & 2.0 \\
-		Moderate  & 15  & 0.05 & 3   & 2.0 \\
-		Severe    & 25  & 0.10 & 5   & 5.0 \\
+		Mild      & 100 \\
+		Moderate  & 60  \\
+		Severe    & 30  \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
-
-We define three severity tiers—\textit{Mild}, \textit{Moderate}, and \textit{Severe}— by varying the Removal, Modify, and Insert rates.  Table \ref{tab:noise_levels} summarizes these settings and their analogues:
-
+This fog simulation enables a physically interpretable, parameterized degradation model suitable for evaluating localization performance under various visibility conditions.
 
 

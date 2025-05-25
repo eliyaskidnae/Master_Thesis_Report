@@ -596,6 +596,98 @@
       \field{pages}{34\bibrangedash 46}
       \range{pages}{13}
     \endentry
+    \entry{blanco2025mola_lo}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6526211ffd56d8688200df8bfc0baf62}{%
+           family={Blanco-Claraco},
+           familyi={B\bibinithyphendelim C\bibinitperiod},
+           given={Jose\bibnamedelima Luis},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{fullhash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{bibnamehash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{authorbibnamehash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{authornamehash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{authorfullhash}{6526211ffd56d8688200df8bfc0baf62}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International Journal of Robotics Research}
+      \field{number}{0}
+      \field{title}{A flexible framework for accurate LiDAR odometry, map manipulation, and localization}
+      \field{volume}{0}
+      \field{year}{2025}
+      \field{pages}{02783649251316881}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1177/02783649251316881
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1177/02783649251316881
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1177/02783649251316881
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1177/02783649251316881
+      \endverb
+    \endentry
+    \entry{kiss2025arxiv}{article}{}
+      \name{author}{6}{}{%
+        {{hash=30c17bb2248b22f9ef70d5e2cf83a153}{%
+           family={Guadagnino},
+           familyi={G\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=22de2fd16bb5f4526a603b5e0789c451}{%
+           family={Mersch},
+           familyi={M\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1774a1f1ad14dc83fbedb7ce144b2603}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=df1a9903f5d403922d3920209efd3d69}{%
+           family={Vizzo},
+           familyi={V\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=3c06f5d2b31ad5acee8aaf1085c50af9}{%
+           family={Grisetti},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=dc807e0640c5d99a25c02f497b0e081e}{%
+           family={Stachniss},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{ccf7200a4cf60edc86ca4f88e45db97f}
+      \strng{fullhash}{5288d650f52cb1c1adf3fb920783f0f3}
+      \strng{bibnamehash}{ccf7200a4cf60edc86ca4f88e45db97f}
+      \strng{authorbibnamehash}{ccf7200a4cf60edc86ca4f88e45db97f}
+      \strng{authornamehash}{ccf7200a4cf60edc86ca4f88e45db97f}
+      \strng{authorfullhash}{5288d650f52cb1c1adf3fb920783f0f3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint}
+      \field{title}{{KISS-SLAM: A Simple, Robust, and Accurate 3D LiDAR SLAM System With Enhanced Generalization Capabilities}}
+      \field{volume}{arXiv:2503.12660}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2503.12660
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2503.12660
+      \endverb
+    \endentry
     \entry{koide2024tightly}{article}{}
       \name{author}{4}{}{%
         {{hash=22d6cf0da576ce7de9f83dc948b76f73}{%
@@ -632,6 +724,43 @@
       \field{journaltitle}{arXiv preprint arXiv:2402.05540}
       \field{title}{Tightly Coupled Range Inertial Localization on a 3D Prior Map Based on Sliding Window Factor Graph Optimization}
       \field{year}{2024}
+    \endentry
+    \entry{thrun2005probabilistic}{book}{}
+      \name{author}{3}{}{%
+        {{hash=5112ea130eadef0764fce0145b8b9f91}{%
+           family={Thrun},
+           familyi={T\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=98f4ab1bc2ac191d8f8a0651315ce9c0}{%
+           family={Burgard},
+           familyi={B\bibinitperiod},
+           given={Wolfram},
+           giveni={W\bibinitperiod}}}%
+        {{hash=93b0c4a7857a82a8f94e256475887c74}{%
+           family={Fox},
+           familyi={F\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{fullhash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{bibnamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{authorbibnamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{authornamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{authorfullhash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Probabilistic Robotics}
+      \field{year}{2005}
     \endentry
     \entry{Levinson2007MapBased}{inproceedings}{}
       \name{author}{3}{}{%
@@ -759,8 +888,8 @@
       \strng{authorbibnamehash}{56e9336c4f026b1f093fce98ac4c1243}
       \strng{authornamehash}{56e9336c4f026b1f093fce98ac4c1243}
       \strng{authorfullhash}{56e9336c4f026b1f093fce98ac4c1243}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings 2003 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2003)}
@@ -802,8 +931,8 @@
       \strng{authorbibnamehash}{3057f929683d9994495c63675117950b}
       \strng{authornamehash}{3057f929683d9994495c63675117950b}
       \strng{authorfullhash}{03baea38d3c54d8eb33b8a431161de1e}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Field Robotics}
@@ -838,8 +967,8 @@
       \strng{authorbibnamehash}{a9e4e496f500cc8f0643a63eb30ca311}
       \strng{authornamehash}{a9e4e496f500cc8f0643a63eb30ca311}
       \strng{authorfullhash}{a9e4e496f500cc8f0643a63eb30ca311}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Advanced Robotic Systems}
@@ -993,8 +1122,8 @@
       \strng{authorbibnamehash}{2c328f527cb71bd917b1f85566566eee}
       \strng{authornamehash}{2c328f527cb71bd917b1f85566566eee}
       \strng{authorfullhash}{91d902a41838b390ef9c26ffe8ec7e74}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}
@@ -1002,43 +1131,6 @@
       \field{year}{2020}
       \field{pages}{11621\bibrangedash 11631}
       \range{pages}{11}
-    \endentry
-    \entry{thrun2005probabilistic}{book}{}
-      \name{author}{3}{}{%
-        {{hash=5112ea130eadef0764fce0145b8b9f91}{%
-           family={Thrun},
-           familyi={T\bibinitperiod},
-           given={Sebastian},
-           giveni={S\bibinitperiod}}}%
-        {{hash=98f4ab1bc2ac191d8f8a0651315ce9c0}{%
-           family={Burgard},
-           familyi={B\bibinitperiod},
-           given={Wolfram},
-           giveni={W\bibinitperiod}}}%
-        {{hash=93b0c4a7857a82a8f94e256475887c74}{%
-           family={Fox},
-           familyi={F\bibinitperiod},
-           given={Dieter},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Cambridge, MA, USA}%
-      }
-      \list{publisher}{1}{%
-        {MIT Press}%
-      }
-      \strng{namehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
-      \strng{fullhash}{cb3e97dbc1e8d4a631a5b656776c23d3}
-      \strng{bibnamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
-      \strng{authorbibnamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
-      \strng{authornamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
-      \strng{authorfullhash}{cb3e97dbc1e8d4a631a5b656776c23d3}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Probabilistic Robotics}
-      \field{year}{2005}
     \endentry
     \entry{kalman1960new}{article}{}
       \name{author}{1}{}{%
@@ -1120,8 +1212,8 @@
       \strng{authorbibnamehash}{46be1162cd4bd01e4c1abbf265a0be7d}
       \strng{authornamehash}{46be1162cd4bd01e4c1abbf265a0be7d}
       \strng{authorfullhash}{46be1162cd4bd01e4c1abbf265a0be7d}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of AeroSense: The 11th International Symposium on Aerospace/Defense Sensing, Simulation and Controls}
@@ -1246,6 +1338,43 @@
       \verb 10.1177/0278364911430419
       \endverb
     \endentry
+    \entry{herbert2013fusion}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=b85387bcaf294f073faf1013a0ac6dcc}{%
+           family={Herbert},
+           familyi={H\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=dad6da2d4686d15deddf669ab5903d0c}{%
+           family={Scalea},
+           familyi={S\bibinitperiod},
+           given={Maurizio},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5d87e0c36213202151bff64fdd9346a3}{%
+           family={Stachniss},
+           familyi={S\bibinitperiod},
+           given={Cyrill},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{ad06bf4b1c86b4a3a9ef62b4b7c9ad95}
+      \strng{fullhash}{ad06bf4b1c86b4a3a9ef62b4b7c9ad95}
+      \strng{bibnamehash}{ad06bf4b1c86b4a3a9ef62b4b7c9ad95}
+      \strng{authorbibnamehash}{ad06bf4b1c86b4a3a9ef62b4b7c9ad95}
+      \strng{authornamehash}{ad06bf4b1c86b4a3a9ef62b4b7c9ad95}
+      \strng{authorfullhash}{ad06bf4b1c86b4a3a9ef62b4b7c9ad95}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
+      \field{title}{Fusion of stereo vision and lidar in large-scale urban environments}
+      \field{year}{2013}
+      \field{pages}{2559\bibrangedash 2565}
+      \range{pages}{7}
+    \endentry
     \entry{mmdet3d2020}{misc}{}
       \name{author}{1}{}{%
         {{hash=860842ec5ab118419b8a53d72d6e0ef1}{%
@@ -1260,8 +1389,8 @@
       \strng{authorbibnamehash}{860842ec5ab118419b8a53d72d6e0ef1}
       \strng{authornamehash}{860842ec5ab118419b8a53d72d6e0ef1}
       \strng{authorfullhash}{860842ec5ab118419b8a53d72d6e0ef1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://github.com/open-mmlab/mmdetection3d}}
@@ -1318,8 +1447,8 @@
       \strng{authorbibnamehash}{9b5e83c7a0f52371cb103247d8c0d675}
       \strng{authornamehash}{9b5e83c7a0f52371cb103247d8c0d675}
       \strng{authorfullhash}{9b5e83c7a0f52371cb103247d8c0d675}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE Intelligent Vehicles Symposium (IV)}
@@ -1355,8 +1484,8 @@
       \strng{authorbibnamehash}{627edf12ee4004074265a942326edc30}
       \strng{authornamehash}{627edf12ee4004074265a942326edc30}
       \strng{authorfullhash}{627edf12ee4004074265a942326edc30}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}
@@ -1394,8 +1523,8 @@
       \strng{authorbibnamehash}{996a151971efe2d4e1c979eb2afccb7b}
       \strng{authornamehash}{996a151971efe2d4e1c979eb2afccb7b}
       \strng{authorfullhash}{603cce8469d93f2a3d40405bc51769c0}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The International Journal of Robotics Research}
@@ -1409,100 +1538,8 @@
       \verb 10.1177/02783649211012805
       \endverb
     \endentry
-    \entry{kiss2025arxiv}{article}{}
-      \name{author}{6}{}{%
-        {{hash=30c17bb2248b22f9ef70d5e2cf83a153}{%
-           family={Guadagnino},
-           familyi={G\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-        {{hash=22de2fd16bb5f4526a603b5e0789c451}{%
-           family={Mersch},
-           familyi={M\bibinitperiod},
-           given={B.},
-           giveni={B\bibinitperiod}}}%
-        {{hash=1774a1f1ad14dc83fbedb7ce144b2603}{%
-           family={Gupta},
-           familyi={G\bibinitperiod},
-           given={S.},
-           giveni={S\bibinitperiod}}}%
-        {{hash=df1a9903f5d403922d3920209efd3d69}{%
-           family={Vizzo},
-           familyi={V\bibinitperiod},
-           given={I.},
-           giveni={I\bibinitperiod}}}%
-        {{hash=3c06f5d2b31ad5acee8aaf1085c50af9}{%
-           family={Grisetti},
-           familyi={G\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
-        {{hash=dc807e0640c5d99a25c02f497b0e081e}{%
-           family={Stachniss},
-           familyi={S\bibinitperiod},
-           given={C.},
-           giveni={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{ccf7200a4cf60edc86ca4f88e45db97f}
-      \strng{fullhash}{5288d650f52cb1c1adf3fb920783f0f3}
-      \strng{bibnamehash}{ccf7200a4cf60edc86ca4f88e45db97f}
-      \strng{authorbibnamehash}{ccf7200a4cf60edc86ca4f88e45db97f}
-      \strng{authornamehash}{ccf7200a4cf60edc86ca4f88e45db97f}
-      \strng{authorfullhash}{5288d650f52cb1c1adf3fb920783f0f3}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint}
-      \field{title}{{KISS-SLAM: A Simple, Robust, and Accurate 3D LiDAR SLAM System With Enhanced Generalization Capabilities}}
-      \field{volume}{arXiv:2503.12660}
-      \field{year}{2025}
-      \verb{urlraw}
-      \verb https://arxiv.org/pdf/2503.12660
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/pdf/2503.12660
-      \endverb
-    \endentry
-    \entry{blanco2025mola_lo}{article}{}
-      \name{author}{1}{}{%
-        {{hash=6526211ffd56d8688200df8bfc0baf62}{%
-           family={Blanco-Claraco},
-           familyi={B\bibinithyphendelim C\bibinitperiod},
-           given={Jose\bibnamedelima Luis},
-           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-      }
-      \strng{namehash}{6526211ffd56d8688200df8bfc0baf62}
-      \strng{fullhash}{6526211ffd56d8688200df8bfc0baf62}
-      \strng{bibnamehash}{6526211ffd56d8688200df8bfc0baf62}
-      \strng{authorbibnamehash}{6526211ffd56d8688200df8bfc0baf62}
-      \strng{authornamehash}{6526211ffd56d8688200df8bfc0baf62}
-      \strng{authorfullhash}{6526211ffd56d8688200df8bfc0baf62}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{The International Journal of Robotics Research}
-      \field{number}{0}
-      \field{title}{A flexible framework for accurate LiDAR odometry, map manipulation, and localization}
-      \field{volume}{0}
-      \field{year}{2025}
-      \field{pages}{02783649251316881}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1177/02783649251316881
-      \endverb
-      \verb{eprint}
-      \verb https://doi.org/10.1177/02783649251316881
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1177/02783649251316881
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1177/02783649251316881
-      \endverb
-    \endentry
   \enddatalist
-  \missing{autoware_ndt}
+  \missing{koide2021portable}
 \endrefsection
 \endinput
 

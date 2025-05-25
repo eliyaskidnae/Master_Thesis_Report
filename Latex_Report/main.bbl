@@ -1,0 +1,1507 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{kim2018stereo}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=03f38c879ca0bc9f1dcbada69ea0519a}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=3b5b63c088906080c5cd2b3533afc48b}{%
+           family={Jeong},
+           familyi={J\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=47283dd6210310eb4bbcd7bfafc0fbf7}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Madrid, Spain}%
+      }
+      \strng{namehash}{e6405d5e476ae01ea7a9d9c81c779753}
+      \strng{fullhash}{e6405d5e476ae01ea7a9d9c81c779753}
+      \strng{bibnamehash}{e6405d5e476ae01ea7a9d9c81c779753}
+      \strng{authorbibnamehash}{e6405d5e476ae01ea7a9d9c81c779753}
+      \strng{authornamehash}{e6405d5e476ae01ea7a9d9c81c779753}
+      \strng{authorfullhash}{e6405d5e476ae01ea7a9d9c81c779753}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
+      \field{month}{10}
+      \field{title}{Stereo camera localization in 3D LiDAR maps}
+      \field{year}{2018}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+    \endentry
+    \entry{carvalho1997optimal}{article}{}
+      \name{author}{4}{}{%
+        {{hash=b809d3b414b4decfdb05cc74f8b27a34}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=deaa5ab2ecaf8220ad9ba8a9aced3cd5}{%
+           family={Del\bibnamedelima Moral},
+           familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e96537450f0e7e354198eb6184106a83}{%
+           family={Monin},
+           familyi={M\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=296c4ac72719fee7007974c5f2f9bc2a}{%
+           family={Salut},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{eb21cfceaa8c060ca97486594d8812bb}
+      \strng{fullhash}{2c2a4697d49788060830af0eb977880b}
+      \strng{bibnamehash}{eb21cfceaa8c060ca97486594d8812bb}
+      \strng{authorbibnamehash}{eb21cfceaa8c060ca97486594d8812bb}
+      \strng{authornamehash}{eb21cfceaa8c060ca97486594d8812bb}
+      \strng{authorfullhash}{2c2a4697d49788060830af0eb977880b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Aerospace and Electronic Systems}
+      \field{title}{Optimal nonlinear filtering in GPS/INS integration}
+      \field{volume}{33}
+      \field{year}{1997}
+      \field{pages}{835\bibrangedash 850}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1109/7.599911
+      \endverb
+    \endentry
+    \entry{liu2019segmentation}{article}{}
+      \name{author}{5}{}{%
+        {{hash=240f15f7d0b589c89d5552453f46785d}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=896c7ab1fefa358148b746995b7dfa67}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Q.},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=39856f0439f35f79a8eed8b12d26166c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5ecc04ab7cd8350e63b66dc42451fa3e}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=51e5fb9f55c5b5d1edb17aea3861c908}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{8e509e5e53b3287487b3d77bfc550fb5}
+      \strng{fullhash}{708601ad6f45adf0ff69da3b92964a75}
+      \strng{bibnamehash}{8e509e5e53b3287487b3d77bfc550fb5}
+      \strng{authorbibnamehash}{8e509e5e53b3287487b3d77bfc550fb5}
+      \strng{authornamehash}{8e509e5e53b3287487b3d77bfc550fb5}
+      \strng{authorfullhash}{708601ad6f45adf0ff69da3b92964a75}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Remote Sensing}
+      \field{number}{12}
+      \field{title}{A Precise and Robust Segmentation-Based Lidar Localization System for Automated Urban Driving}
+      \field{volume}{11}
+      \field{year}{2019}
+      \field{pages}{1348}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/rs11111348
+      \endverb
+    \endentry
+    \entry{levinson2007mapbased}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=10ab64311e9a2f07ea01273bb283fd27}{%
+           family={Levinson},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b11f71e2c578baa4a4f849f4400cfed1}{%
+           family={Montemerlo},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9aae21f53f8024b5be43d6281ed55dce}{%
+           family={Thrun},
+           familyi={T\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA, USA}%
+      }
+      \strng{namehash}{19e12ec96ba5921aa3fd41ae745c3e40}
+      \strng{fullhash}{19e12ec96ba5921aa3fd41ae745c3e40}
+      \strng{bibnamehash}{19e12ec96ba5921aa3fd41ae745c3e40}
+      \strng{authorbibnamehash}{19e12ec96ba5921aa3fd41ae745c3e40}
+      \strng{authornamehash}{19e12ec96ba5921aa3fd41ae745c3e40}
+      \strng{authorfullhash}{19e12ec96ba5921aa3fd41ae745c3e40}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of Robotics: Science and Systems}
+      \field{title}{Map-based precision vehicle localization in urban environments}
+      \field{volume}{4}
+      \field{year}{2007}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+    \endentry
+    \entry{MohamedOdometry}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=540a68ad9d64518a803f082f9762fd9e}{%
+           family={Mohamed},
+           familyi={M\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b62c1aa3d93ec5ae42f5201c62f42af}
+      \strng{fullhash}{4b62c1aa3d93ec5ae42f5201c62f42af}
+      \strng{bibnamehash}{4b62c1aa3d93ec5ae42f5201c62f42af}
+      \strng{authorbibnamehash}{4b62c1aa3d93ec5ae42f5201c62f42af}
+      \strng{authornamehash}{4b62c1aa3d93ec5ae42f5201c62f42af}
+      \strng{authorfullhash}{4b62c1aa3d93ec5ae42f5201c62f42af}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Robotic Systems}
+      \field{title}{A Review on Visual and Non-visual Odometry Methods}
+      \field{year}{2020}
+    \endentry
+    \entry{WangVisionSurvey}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=bbe869383a7d3458b82c516a21e4482c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{acd9e82ae33177dd4a8978b3c1ffba56}
+      \strng{fullhash}{acd9e82ae33177dd4a8978b3c1ffba56}
+      \strng{bibnamehash}{acd9e82ae33177dd4a8978b3c1ffba56}
+      \strng{authorbibnamehash}{acd9e82ae33177dd4a8978b3c1ffba56}
+      \strng{authornamehash}{acd9e82ae33177dd4a8978b3c1ffba56}
+      \strng{authorfullhash}{acd9e82ae33177dd4a8978b3c1ffba56}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Comprehensive Survey of Visual Odometry: Trends and Evaluation}
+      \field{year}{2019}
+    \endentry
+    \entry{BeslICP1992}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=c86e978974a8b442b51fbaa04acd2e0b}{%
+           family={Besl},
+           familyi={B\bibinitperiod},
+           given={Paul\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=069445b230220d610c916f4272b33ced}{%
+           family={McKay},
+           familyi={M\bibinitperiod},
+           given={Neil\bibnamedelima D.},
+           giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{46f98bbe16698f10efa6e1b762574b99}
+      \strng{fullhash}{46f98bbe16698f10efa6e1b762574b99}
+      \strng{bibnamehash}{46f98bbe16698f10efa6e1b762574b99}
+      \strng{authorbibnamehash}{46f98bbe16698f10efa6e1b762574b99}
+      \strng{authornamehash}{46f98bbe16698f10efa6e1b762574b99}
+      \strng{authorfullhash}{46f98bbe16698f10efa6e1b762574b99}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
+      \field{title}{A Method for Registration of 3-D Shapes}
+      \field{year}{1992}
+    \endentry
+    \entry{ZhangSinghLOAM2014}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=f83176d7990e7bd6ad17dee08c194d1c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Ji},
+           giveni={J\bibinitperiod}}}%
+        {{hash=495200d014eb282f882493a67e925f57}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Sanjiv},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5774afd7a28afdf2d812435aa5734314}
+      \strng{fullhash}{5774afd7a28afdf2d812435aa5734314}
+      \strng{bibnamehash}{5774afd7a28afdf2d812435aa5734314}
+      \strng{authorbibnamehash}{5774afd7a28afdf2d812435aa5734314}
+      \strng{authornamehash}{5774afd7a28afdf2d812435aa5734314}
+      \strng{authorfullhash}{5774afd7a28afdf2d812435aa5734314}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Robotics: Science and Systems}
+      \field{title}{{LOAM}: Lidar Odometry and Mapping in Real-time}
+      \field{year}{2014}
+    \endentry
+    \entry{TangLooselyCoupled}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=cfc592e67cc246310d6f048315973684}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{9958455d9294ffae528fe3e37eca75a9}
+      \strng{fullhash}{9958455d9294ffae528fe3e37eca75a9}
+      \strng{bibnamehash}{9958455d9294ffae528fe3e37eca75a9}
+      \strng{authorbibnamehash}{9958455d9294ffae528fe3e37eca75a9}
+      \strng{authornamehash}{9958455d9294ffae528fe3e37eca75a9}
+      \strng{authorfullhash}{9958455d9294ffae528fe3e37eca75a9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sensors}
+      \field{title}{A Loosely Coupled LiDAR-Inertial Fusion Method}
+      \field{year}{2015}
+    \endentry
+    \entry{ShanEtAlLIOSAM2020}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=f439858b0566252d37d1e49c70405781}{%
+           family={Shan},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{5ef349425c2b1ab031ab36fda3b66740}
+      \strng{fullhash}{5ef349425c2b1ab031ab36fda3b66740}
+      \strng{bibnamehash}{5ef349425c2b1ab031ab36fda3b66740}
+      \strng{authorbibnamehash}{5ef349425c2b1ab031ab36fda3b66740}
+      \strng{authornamehash}{5ef349425c2b1ab031ab36fda3b66740}
+      \strng{authorfullhash}{5ef349425c2b1ab031ab36fda3b66740}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE/RSJ International Conference on Intelligent Robots and Systems}
+      \field{title}{{LIO-SAM}: Tightly-coupled Lidar Inertial Odometry via Smoothing and Mapping}
+      \field{year}{2020}
+    \endentry
+    \entry{lins}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c6f16bc781b2b3952102ac95e566848a}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Tong},
+           giveni={T\bibinitperiod}}}%
+        {{hash=de0189069ec807597ed74f1c50f193a1}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Peiliang},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0d6f0106ed13aa88a0ff49e841f0fead}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Shaojie},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{ade44334fdbd0306897ff8a730c2acba}
+      \strng{fullhash}{ade44334fdbd0306897ff8a730c2acba}
+      \strng{bibnamehash}{ade44334fdbd0306897ff8a730c2acba}
+      \strng{authorbibnamehash}{ade44334fdbd0306897ff8a730c2acba}
+      \strng{authornamehash}{ade44334fdbd0306897ff8a730c2acba}
+      \strng{authorfullhash}{ade44334fdbd0306897ff8a730c2acba}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Robotics and Automation Letters}
+      \field{number}{2}
+      \field{title}{LINS: A LiDAR-Inertial State Estimator for Robust and Fast Localization}
+      \field{volume}{5}
+      \field{year}{2020}
+      \field{pages}{3867\bibrangedash 3874}
+      \range{pages}{8}
+    \endentry
+    \entry{xuFastLIO2021}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=b1dd1a9ff59cc6aeba590fc68bcc39cf}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd08904658d79d66387382803b131d84}
+      \strng{fullhash}{fd08904658d79d66387382803b131d84}
+      \strng{bibnamehash}{fd08904658d79d66387382803b131d84}
+      \strng{authorbibnamehash}{fd08904658d79d66387382803b131d84}
+      \strng{authornamehash}{fd08904658d79d66387382803b131d84}
+      \strng{authorfullhash}{fd08904658d79d66387382803b131d84}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Robotics and Automation Letters}
+      \field{number}{2}
+      \field{title}{{FAST-LIO}: A Fast, Robust LiDAR-Inertial Odometry Package}
+      \field{volume}{6}
+      \field{year}{2021}
+      \field{pages}{3317\bibrangedash 3324}
+      \range{pages}{8}
+    \endentry
+    \entry{xuFastLIO2}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=b1dd1a9ff59cc6aeba590fc68bcc39cf}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd08904658d79d66387382803b131d84}
+      \strng{fullhash}{fd08904658d79d66387382803b131d84}
+      \strng{bibnamehash}{fd08904658d79d66387382803b131d84}
+      \strng{authorbibnamehash}{fd08904658d79d66387382803b131d84}
+      \strng{authornamehash}{fd08904658d79d66387382803b131d84}
+      \strng{authorfullhash}{fd08904658d79d66387382803b131d84}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE/RSJ International Conference on Intelligent Robots and Systems}
+      \field{title}{{FAST-LIO2}: Generalized Lightweight {LIO} system on {ROS2}}
+      \field{year}{2022}
+      \field{pages}{5958\bibrangedash 5964}
+      \range{pages}{7}
+    \endentry
+    \entry{yin2021center}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=38416cfd1d293286ab723e9cf254420a}{%
+           family={Yin},
+           familyi={Y\bibinitperiod},
+           given={Tianwei},
+           giveni={T\bibinitperiod}}}%
+        {{hash=24e39514a947d107ce59334310fc58bb}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xingyi},
+           giveni={X\bibinitperiod}}}%
+        {{hash=7680d27578e3f36a8f45650c3bdca314}{%
+           family={Krahenbuhl},
+           familyi={K\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{fullhash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{bibnamehash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{authorbibnamehash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{authornamehash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{authorfullhash}{dca0ade865943f2b21f7936b69eab87e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}
+      \field{title}{Center-based 3D Object Detection and Tracking}
+      \field{year}{2021}
+      \field{pages}{11784\bibrangedash 11793}
+      \range{pages}{10}
+    \endentry
+    \entry{cadena2016past}{article}{}
+      \name{author}{8}{}{%
+        {{hash=e3395f53691b0224f8a3c7766bd34f78}{%
+           family={Cadena},
+           familyi={C\bibinitperiod},
+           given={Cesar},
+           giveni={C\bibinitperiod}}}%
+        {{hash=09ed5bfe663f495a0cb6828e722b7919}{%
+           family={Carlone},
+           familyi={C\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d3fba7ea31b5b34d6e3b0b95322021df}{%
+           family={Carrillo},
+           familyi={C\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod}}}%
+        {{hash=82e3f7170d42d4c28496ebe305e97dec}{%
+           family={Latif},
+           familyi={L\bibinitperiod},
+           given={Yasir},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=dac21ab4ede215439fcc6b051be53a11}{%
+           family={Scaramuzza},
+           familyi={S\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+        {{hash=23707baa2f8d4714cd6c011d1675b4d0}{%
+           family={Neira},
+           familyi={N\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8d82839be6afd59c432fc7cf084f4326}{%
+           family={Reid},
+           familyi={R\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=ecbba107b554ea58eb96c11473735dba}{%
+           family={Leonard},
+           familyi={L\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{46551c66bb0a204a4831cdfaacb7668a}
+      \strng{fullhash}{e655ef40b6b8978a937fc3d224d56c27}
+      \strng{bibnamehash}{46551c66bb0a204a4831cdfaacb7668a}
+      \strng{authorbibnamehash}{46551c66bb0a204a4831cdfaacb7668a}
+      \strng{authornamehash}{46551c66bb0a204a4831cdfaacb7668a}
+      \strng{authorfullhash}{e655ef40b6b8978a937fc3d224d56c27}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics}
+      \field{number}{6}
+      \field{title}{Past, Present, and Future of Simultaneous Localization and Mapping: Toward the Robust-Perception Age}
+      \field{volume}{32}
+      \field{year}{2016}
+      \field{pages}{1309\bibrangedash 1332}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1109/TRO.2016.2624754
+      \endverb
+    \endentry
+    \entry{hess2016real}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=16d02dc575d8420a7d3067e90c93ed32}{%
+           family={Hess},
+           familyi={H\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+        {{hash=ffe8b5a0b01710333e7a1b95c3a23f39}{%
+           family={Kohlbrecher},
+           familyi={K\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f61ac2701a109fa914bb460898f3f070}
+      \strng{fullhash}{f61ac2701a109fa914bb460898f3f070}
+      \strng{bibnamehash}{f61ac2701a109fa914bb460898f3f070}
+      \strng{authorbibnamehash}{f61ac2701a109fa914bb460898f3f070}
+      \strng{authornamehash}{f61ac2701a109fa914bb460898f3f070}
+      \strng{authorfullhash}{f61ac2701a109fa914bb460898f3f070}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Intl. Conf. on Robotics and Automation (ICRA)}
+      \field{title}{Real-Time Loop Closure in 2D LIDAR SLAM}
+      \field{year}{2016}
+      \field{pages}{1271\bibrangedash 1278}
+      \range{pages}{8}
+    \endentry
+    \entry{grisetti_gmapping}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=1aa4adfed9f6f5be21fca54e130eacb5}{%
+           family={Grisetti},
+           familyi={G\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=5d87e0c36213202151bff64fdd9346a3}{%
+           family={Stachniss},
+           familyi={S\bibinitperiod},
+           given={Cyrill},
+           giveni={C\bibinitperiod}}}%
+        {{hash=98f4ab1bc2ac191d8f8a0651315ce9c0}{%
+           family={Burgard},
+           familyi={B\bibinitperiod},
+           given={Wolfram},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{46e0c8d908edcfca5bd82f3ddfe938a4}
+      \strng{fullhash}{46e0c8d908edcfca5bd82f3ddfe938a4}
+      \strng{bibnamehash}{46e0c8d908edcfca5bd82f3ddfe938a4}
+      \strng{authorbibnamehash}{46e0c8d908edcfca5bd82f3ddfe938a4}
+      \strng{authornamehash}{46e0c8d908edcfca5bd82f3ddfe938a4}
+      \strng{authorfullhash}{46e0c8d908edcfca5bd82f3ddfe938a4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE Transactions on Robotics}
+      \field{title}{Improved Techniques for Grid Mapping with Rao-Blackwellized Particle Filters}
+      \field{year}{2007}
+      \field{pages}{34\bibrangedash 46}
+      \range{pages}{13}
+    \endentry
+    \entry{blanco2025mola_lo}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6526211ffd56d8688200df8bfc0baf62}{%
+           family={Blanco-Claraco},
+           familyi={B\bibinithyphendelim C\bibinitperiod},
+           given={Jose\bibnamedelima Luis},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{fullhash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{bibnamehash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{authorbibnamehash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{authornamehash}{6526211ffd56d8688200df8bfc0baf62}
+      \strng{authorfullhash}{6526211ffd56d8688200df8bfc0baf62}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International Journal of Robotics Research}
+      \field{number}{0}
+      \field{title}{A flexible framework for accurate LiDAR odometry, map manipulation, and localization}
+      \field{volume}{0}
+      \field{year}{2025}
+      \field{pages}{02783649251316881}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1177/02783649251316881
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1177/02783649251316881
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1177/02783649251316881
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1177/02783649251316881
+      \endverb
+    \endentry
+    \entry{kiss2025arxiv}{article}{}
+      \name{author}{6}{}{%
+        {{hash=30c17bb2248b22f9ef70d5e2cf83a153}{%
+           family={Guadagnino},
+           familyi={G\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=22de2fd16bb5f4526a603b5e0789c451}{%
+           family={Mersch},
+           familyi={M\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1774a1f1ad14dc83fbedb7ce144b2603}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=df1a9903f5d403922d3920209efd3d69}{%
+           family={Vizzo},
+           familyi={V\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=3c06f5d2b31ad5acee8aaf1085c50af9}{%
+           family={Grisetti},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=dc807e0640c5d99a25c02f497b0e081e}{%
+           family={Stachniss},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{ccf7200a4cf60edc86ca4f88e45db97f}
+      \strng{fullhash}{5288d650f52cb1c1adf3fb920783f0f3}
+      \strng{bibnamehash}{ccf7200a4cf60edc86ca4f88e45db97f}
+      \strng{authorbibnamehash}{ccf7200a4cf60edc86ca4f88e45db97f}
+      \strng{authornamehash}{ccf7200a4cf60edc86ca4f88e45db97f}
+      \strng{authorfullhash}{5288d650f52cb1c1adf3fb920783f0f3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint}
+      \field{title}{{KISS-SLAM: A Simple, Robust, and Accurate 3D LiDAR SLAM System With Enhanced Generalization Capabilities}}
+      \field{volume}{arXiv:2503.12660}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/2503.12660
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/2503.12660
+      \endverb
+    \endentry
+    \entry{koide2024tightly}{article}{}
+      \name{author}{4}{}{%
+        {{hash=22d6cf0da576ce7de9f83dc948b76f73}{%
+           family={Koide},
+           familyi={K\bibinitperiod},
+           given={Kenji},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2ed0aa283f279ed29def050b0f231723}{%
+           family={Oishi},
+           familyi={O\bibinitperiod},
+           given={Shuji},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2a6e0dfbad8e15a994e540ed5c3ec9e1}{%
+           family={Yokozuka},
+           familyi={Y\bibinitperiod},
+           given={Masashi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8447abb2b5891593d601a323105665a0}{%
+           family={Banno},
+           familyi={B\bibinitperiod},
+           given={Atsuhiko},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{cadbf88200aa2873edac6814b1035989}
+      \strng{fullhash}{b8d81543a5050c309b2bffb41f6603e4}
+      \strng{bibnamehash}{cadbf88200aa2873edac6814b1035989}
+      \strng{authorbibnamehash}{cadbf88200aa2873edac6814b1035989}
+      \strng{authornamehash}{cadbf88200aa2873edac6814b1035989}
+      \strng{authorfullhash}{b8d81543a5050c309b2bffb41f6603e4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2402.05540}
+      \field{title}{Tightly Coupled Range Inertial Localization on a 3D Prior Map Based on Sliding Window Factor Graph Optimization}
+      \field{year}{2024}
+    \endentry
+    \entry{thrun2005probabilistic}{book}{}
+      \name{author}{3}{}{%
+        {{hash=5112ea130eadef0764fce0145b8b9f91}{%
+           family={Thrun},
+           familyi={T\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=98f4ab1bc2ac191d8f8a0651315ce9c0}{%
+           family={Burgard},
+           familyi={B\bibinitperiod},
+           given={Wolfram},
+           giveni={W\bibinitperiod}}}%
+        {{hash=93b0c4a7857a82a8f94e256475887c74}{%
+           family={Fox},
+           familyi={F\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{fullhash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{bibnamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{authorbibnamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{authornamehash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \strng{authorfullhash}{cb3e97dbc1e8d4a631a5b656776c23d3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Probabilistic Robotics}
+      \field{year}{2005}
+    \endentry
+    \entry{Levinson2007MapBased}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=926db68449a2d0b1f2baca8fbcc55683}{%
+           family={Levinson},
+           familyi={L\bibinitperiod},
+           given={Jesse},
+           giveni={J\bibinitperiod}}}%
+        {{hash=67d13fe110c028d272a9291dff505b23}{%
+           family={Montemerlo},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5112ea130eadef0764fce0145b8b9f91}{%
+           family={Thrun},
+           familyi={T\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{dae1c1eae460dd0e5054b64f28c51c89}
+      \strng{fullhash}{dae1c1eae460dd0e5054b64f28c51c89}
+      \strng{bibnamehash}{dae1c1eae460dd0e5054b64f28c51c89}
+      \strng{authorbibnamehash}{dae1c1eae460dd0e5054b64f28c51c89}
+      \strng{authornamehash}{dae1c1eae460dd0e5054b64f28c51c89}
+      \strng{authorfullhash}{dae1c1eae460dd0e5054b64f28c51c89}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Robotics: Science and Systems (RSS)}
+      \field{title}{Map-Based Precision Vehicle Localization in Urban Environments}
+      \field{year}{2007}
+    \endentry
+    \entry{Lin2021Autonomous}{article}{}
+      \name{author}{4}{}{%
+        {{hash=60af7813b90168af967b5f4a150425e3}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Xiaohu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=e48e3427d24da320222f2be598d1d2ab}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Fuhong},
+           giveni={F\bibinitperiod}}}%
+        {{hash=01d024c00ba226e55df645a616e4e21b}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Bisheng},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8343065ae2ffa40bcfe8cd7605266e48}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Wanwei},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{bcd4a7a9f4ff35b11453f2a0cfc02619}
+      \strng{fullhash}{a2248fedfcc68c169a03229e3b31549f}
+      \strng{bibnamehash}{bcd4a7a9f4ff35b11453f2a0cfc02619}
+      \strng{authorbibnamehash}{bcd4a7a9f4ff35b11453f2a0cfc02619}
+      \strng{authornamehash}{bcd4a7a9f4ff35b11453f2a0cfc02619}
+      \strng{authorfullhash}{a2248fedfcc68c169a03229e3b31549f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Remote Sensing}
+      \field{number}{3}
+      \field{title}{Autonomous Vehicle Localization with Prior Visual Point Cloud Map Constraints in {GNSS}-Challenged Environments}
+      \field{volume}{13}
+      \field{year}{2021}
+      \field{pages}{506}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/rs13030506
+      \endverb
+    \endentry
+    \entry{Rozenberszki2020LOL}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=1afaac4ea80b60cec97115ba6fe8958a}{%
+           family={Rozenberszki},
+           familyi={R\bibinitperiod},
+           given={Dávid},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e8bc3c4b429f8d08e556e4aa5d1d0b8a}{%
+           family={Majdik},
+           familyi={M\bibinitperiod},
+           given={András\bibnamedelima L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{827ceeb75dc7247e63eb7557096e2190}
+      \strng{fullhash}{827ceeb75dc7247e63eb7557096e2190}
+      \strng{bibnamehash}{827ceeb75dc7247e63eb7557096e2190}
+      \strng{authorbibnamehash}{827ceeb75dc7247e63eb7557096e2190}
+      \strng{authornamehash}{827ceeb75dc7247e63eb7557096e2190}
+      \strng{authorfullhash}{827ceeb75dc7247e63eb7557096e2190}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)}
+      \field{title}{{LOL}: Lidar-only Odometry and Localization in 3D Point Cloud Maps}
+      \field{year}{2020}
+    \endentry
+    \entry{biber2003ndt}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=f0251a645f5362abb90a83f3a4445ec1}{%
+           family={Biber},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a13be45d3cc0fff053e1ad5eaa9f2929}{%
+           family={Stra{ß}er},
+           familyi={S\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{56e9336c4f026b1f093fce98ac4c1243}
+      \strng{fullhash}{56e9336c4f026b1f093fce98ac4c1243}
+      \strng{bibnamehash}{56e9336c4f026b1f093fce98ac4c1243}
+      \strng{authorbibnamehash}{56e9336c4f026b1f093fce98ac4c1243}
+      \strng{authornamehash}{56e9336c4f026b1f093fce98ac4c1243}
+      \strng{authorfullhash}{56e9336c4f026b1f093fce98ac4c1243}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings 2003 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2003)}
+      \field{title}{The normal distributions transform: A new approach to laser scan matching}
+      \field{volume}{3}
+      \field{year}{2003}
+      \field{pages}{2743\bibrangedash 2748}
+      \range{pages}{6}
+    \endentry
+    \entry{magnusson2007ndt}{article}{}
+      \name{author}{4}{}{%
+        {{hash=30bd0c838e8f92d126ec452001b0c7d0}{%
+           family={Magnusson},
+           familyi={M\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=490c7a8d6199fbc87b6ea4dff87f8c54}{%
+           family={Nüchter},
+           familyi={N\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=07fbf6d793583366549426f06a764544}{%
+           family={Lilienthal},
+           familyi={L\bibinitperiod},
+           given={Achim\bibnamedelima J},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=5f79246010f00cdea0dbdcaefb39b516}{%
+           family={Hertzberg},
+           familyi={H\bibinitperiod},
+           given={Joachim},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{3057f929683d9994495c63675117950b}
+      \strng{fullhash}{03baea38d3c54d8eb33b8a431161de1e}
+      \strng{bibnamehash}{3057f929683d9994495c63675117950b}
+      \strng{authorbibnamehash}{3057f929683d9994495c63675117950b}
+      \strng{authornamehash}{3057f929683d9994495c63675117950b}
+      \strng{authorfullhash}{03baea38d3c54d8eb33b8a431161de1e}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Field Robotics}
+      \field{number}{10}
+      \field{title}{Scan registration for autonomous mining vehicles using 3D-NDT}
+      \field{volume}{24}
+      \field{year}{2007}
+      \field{pages}{803\bibrangedash 827}
+      \range{pages}{25}
+    \endentry
+    \entry{koide2019portable}{article}{}
+      \name{author}{3}{}{%
+        {{hash=22d6cf0da576ce7de9f83dc948b76f73}{%
+           family={Koide},
+           familyi={K\bibinitperiod},
+           given={Kenji},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3fca85c58d6b25b820979f8e31e8f2d5}{%
+           family={Miura},
+           familyi={M\bibinitperiod},
+           given={Jun},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0441759bcd75b2cc1328059b7e2794ee}{%
+           family={Menegatti},
+           familyi={M\bibinitperiod},
+           given={Emanuele},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{a9e4e496f500cc8f0643a63eb30ca311}
+      \strng{fullhash}{a9e4e496f500cc8f0643a63eb30ca311}
+      \strng{bibnamehash}{a9e4e496f500cc8f0643a63eb30ca311}
+      \strng{authorbibnamehash}{a9e4e496f500cc8f0643a63eb30ca311}
+      \strng{authornamehash}{a9e4e496f500cc8f0643a63eb30ca311}
+      \strng{authorfullhash}{a9e4e496f500cc8f0643a63eb30ca311}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advanced Robotic Systems}
+      \field{title}{A Portable 3D LIDAR-based System for Long-term and Wide-area People Behavior Measurement}
+      \field{year}{2019}
+    \endentry
+    \entry{lang2019pointpillars}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=e9927725a3483dbe3fe8289056f46494}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={Alex\bibnamedelima H},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=9c0abc10b8b8b47d7540b19fe4802ff4}{%
+           family={Vora},
+           familyi={V\bibinitperiod},
+           given={Sourabh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d2047c4d49ddd538f9c22a99dc18fa3c}{%
+           family={Caesar},
+           familyi={C\bibinitperiod},
+           given={Holger},
+           giveni={H\bibinitperiod}}}%
+        {{hash=18b2b7bcac2726abd9a2a21e2cd788ef}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Lubing},
+           giveni={L\bibinitperiod}}}%
+        {{hash=df7964e44c59618d377ea26520d99168}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Jiong},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0c3325985f73ff54cb6bd5443fd77c0e}{%
+           family={Beijbom},
+           familyi={B\bibinitperiod},
+           given={Oscar},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{46f23355dccbe318400f0706e6a6ab94}
+      \strng{fullhash}{c98e0d7c993a3b6dbbaf5aad5225a7e2}
+      \strng{bibnamehash}{46f23355dccbe318400f0706e6a6ab94}
+      \strng{authorbibnamehash}{46f23355dccbe318400f0706e6a6ab94}
+      \strng{authornamehash}{46f23355dccbe318400f0706e6a6ab94}
+      \strng{authorfullhash}{c98e0d7c993a3b6dbbaf5aad5225a7e2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}
+      \field{title}{PointPillars: Fast Encoders for Object Detection from Point Clouds}
+      \field{year}{2019}
+      \field{pages}{12697\bibrangedash 12705}
+      \range{pages}{9}
+    \endentry
+    \entry{yan2018second}{article}{}
+      \name{author}{3}{}{%
+        {{hash=7991a015696b3862155dff66c97e619b}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ad7e6942aaa73d5de6d5bf649a5f4f7b}{%
+           family={Mao},
+           familyi={M\bibinitperiod},
+           given={Yuxing},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=a9c8728e355996d027a7e56b60820a18}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{ac4851e7427b5540084b079be5206480}
+      \strng{fullhash}{ac4851e7427b5540084b079be5206480}
+      \strng{bibnamehash}{ac4851e7427b5540084b079be5206480}
+      \strng{authorbibnamehash}{ac4851e7427b5540084b079be5206480}
+      \strng{authornamehash}{ac4851e7427b5540084b079be5206480}
+      \strng{authorfullhash}{ac4851e7427b5540084b079be5206480}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sensors}
+      \field{number}{10}
+      \field{title}{SECOND: Sparsely Embedded Convolutional Detection}
+      \field{volume}{18}
+      \field{year}{2018}
+      \field{pages}{3337}
+      \range{pages}{1}
+    \endentry
+    \entry{caesar2020nuscenes}{inproceedings}{}
+      \name{author}{10}{}{%
+        {{hash=d2047c4d49ddd538f9c22a99dc18fa3c}{%
+           family={Caesar},
+           familyi={C\bibinitperiod},
+           given={Holger},
+           giveni={H\bibinitperiod}}}%
+        {{hash=6d2898a2a942f70dba274e4ca01c309a}{%
+           family={Bankiti},
+           familyi={B\bibinitperiod},
+           given={Varun},
+           giveni={V\bibinitperiod}}}%
+        {{hash=e9927725a3483dbe3fe8289056f46494}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={Alex\bibnamedelima H},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=9c0abc10b8b8b47d7540b19fe4802ff4}{%
+           family={Vora},
+           familyi={V\bibinitperiod},
+           given={Sourabh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2bbb3979ebf91b42242a0c58ec57d311}{%
+           family={Liong},
+           familyi={L\bibinitperiod},
+           given={Venice\bibnamedelima Erin},
+           giveni={V\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6cacd034725d0431a7b1f3fd4a060c02}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=5f853094b70c00b55c9bfd73dc41d683}{%
+           family={Krishnan},
+           familyi={K\bibinitperiod},
+           given={Anush},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d627c895a7726afc8a55a9fa241c4b19}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=4dab25d83f7aedebf88253fb9d8e2c64}{%
+           family={Baldan},
+           familyi={B\bibinitperiod},
+           given={Giancarlo},
+           giveni={G\bibinitperiod}}}%
+        {{hash=0c3325985f73ff54cb6bd5443fd77c0e}{%
+           family={Beijbom},
+           familyi={B\bibinitperiod},
+           given={Oscar},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{2c328f527cb71bd917b1f85566566eee}
+      \strng{fullhash}{91d902a41838b390ef9c26ffe8ec7e74}
+      \strng{bibnamehash}{2c328f527cb71bd917b1f85566566eee}
+      \strng{authorbibnamehash}{2c328f527cb71bd917b1f85566566eee}
+      \strng{authornamehash}{2c328f527cb71bd917b1f85566566eee}
+      \strng{authorfullhash}{91d902a41838b390ef9c26ffe8ec7e74}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}
+      \field{title}{nuScenes: A multimodal dataset for autonomous driving}
+      \field{year}{2020}
+      \field{pages}{11621\bibrangedash 11631}
+      \range{pages}{11}
+    \endentry
+    \entry{kalman1960new}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2bdc83bc7a4c09a9020f492d9e1b5c92}{%
+           family={Kalman},
+           familyi={K\bibinitperiod},
+           given={R.\bibnamedelimi E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
+      \strng{fullhash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
+      \strng{bibnamehash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
+      \strng{authorbibnamehash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
+      \strng{authornamehash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
+      \strng{authorfullhash}{2bdc83bc7a4c09a9020f492d9e1b5c92}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Basic Engineering}
+      \field{number}{1}
+      \field{title}{A New Approach to Linear Filtering and Prediction Problems}
+      \field{volume}{82}
+      \field{year}{1960}
+      \field{pages}{35\bibrangedash 45}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1115/1.3662552
+      \endverb
+    \endentry
+    \entry{mourikis2007multi}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=3280738b235db4a5d06496396d3f939e}{%
+           family={Mourikis},
+           familyi={M\bibinitperiod},
+           given={Anastasios\bibnamedelima I.},
+           giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=77e00f5693ce8144b43e2d4507bf457b}{%
+           family={Roumeliotis},
+           familyi={R\bibinitperiod},
+           given={Stergios\bibnamedelima I.},
+           giveni={S\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ffde757da3863460c4d0fa4babfba0cd}
+      \strng{fullhash}{ffde757da3863460c4d0fa4babfba0cd}
+      \strng{bibnamehash}{ffde757da3863460c4d0fa4babfba0cd}
+      \strng{authorbibnamehash}{ffde757da3863460c4d0fa4babfba0cd}
+      \strng{authornamehash}{ffde757da3863460c4d0fa4babfba0cd}
+      \strng{authorfullhash}{ffde757da3863460c4d0fa4babfba0cd}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)}
+      \field{title}{A Multi-State Constraint Kalman Filter for Vision-aided Inertial Navigation}
+      \field{year}{2007}
+      \field{pages}{3565\bibrangedash 3572}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/ROBOT.2007.364024
+      \endverb
+    \endentry
+    \entry{julier1997new}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=80d83e3d56bc4413658bfad461dc4586}{%
+           family={Julier},
+           familyi={J\bibinitperiod},
+           given={Simon\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=5c26b146559462ed5dfeb7fcccc1030b}{%
+           family={Uhlmann},
+           familyi={U\bibinitperiod},
+           given={Jeffrey\bibnamedelima K.},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{46be1162cd4bd01e4c1abbf265a0be7d}
+      \strng{fullhash}{46be1162cd4bd01e4c1abbf265a0be7d}
+      \strng{bibnamehash}{46be1162cd4bd01e4c1abbf265a0be7d}
+      \strng{authorbibnamehash}{46be1162cd4bd01e4c1abbf265a0be7d}
+      \strng{authornamehash}{46be1162cd4bd01e4c1abbf265a0be7d}
+      \strng{authorfullhash}{46be1162cd4bd01e4c1abbf265a0be7d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of AeroSense: The 11th International Symposium on Aerospace/Defense Sensing, Simulation and Controls}
+      \field{title}{A New Extension of the Kalman Filter to Nonlinear Systems}
+      \field{year}{1997}
+      \field{pages}{182\bibrangedash 193}
+      \range{pages}{12}
+    \endentry
+    \entry{dellaert2017factor}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=44074d3cb57c174a8b15ccc9a576ac0d}{%
+           family={Dellaert},
+           familyi={D\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{44074d3cb57c174a8b15ccc9a576ac0d}
+      \strng{fullhash}{44074d3cb57c174a8b15ccc9a576ac0d}
+      \strng{bibnamehash}{44074d3cb57c174a8b15ccc9a576ac0d}
+      \strng{authorbibnamehash}{44074d3cb57c174a8b15ccc9a576ac0d}
+      \strng{authornamehash}{44074d3cb57c174a8b15ccc9a576ac0d}
+      \strng{authorfullhash}{44074d3cb57c174a8b15ccc9a576ac0d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://doi.org/10.5281/zenodo.14117}}
+      \field{note}{Accessed: 2024-04-01}
+      \field{title}{Factor Graphs and {GTSAM}: A Hands-On Introduction}
+      \field{year}{2017}
+    \endentry
+    \entry{kschischang1998factor}{article}{}
+      \name{author}{3}{}{%
+        {{hash=24383f85ec375eabffb98bb0d1e1ebba}{%
+           family={Kschischang},
+           familyi={K\bibinitperiod},
+           given={F.\bibnamedelimi R.},
+           giveni={F\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=53615385518701884f1dce2e18fda5f6}{%
+           family={Frey},
+           familyi={F\bibinitperiod},
+           given={B.\bibnamedelimi J.},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=db2f8600c0724792e0d3db19774a9595}{%
+           family={Loeliger},
+           familyi={L\bibinitperiod},
+           given={H.-A.},
+           giveni={H\bibinithyphendelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{864778c9dd6baf4aafa237c2d3ac1f6e}
+      \strng{fullhash}{864778c9dd6baf4aafa237c2d3ac1f6e}
+      \strng{bibnamehash}{864778c9dd6baf4aafa237c2d3ac1f6e}
+      \strng{authorbibnamehash}{864778c9dd6baf4aafa237c2d3ac1f6e}
+      \strng{authornamehash}{864778c9dd6baf4aafa237c2d3ac1f6e}
+      \strng{authorfullhash}{864778c9dd6baf4aafa237c2d3ac1f6e}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Information Theory}
+      \field{number}{2}
+      \field{title}{Factor Graphs and the Sum-Product Algorithm}
+      \field{volume}{47}
+      \field{year}{2001}
+      \field{pages}{498\bibrangedash 519}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1109/18.910572
+      \endverb
+    \endentry
+    \entry{kaess2012isam2}{article}{}
+      \name{author}{6}{}{%
+        {{hash=da701266dff9b3f01fdc8e0d18e5f021}{%
+           family={Kaess},
+           familyi={K\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=481bde394efc2e16cb09bb38e8c4642d}{%
+           family={Johannsson},
+           familyi={J\bibinitperiod},
+           given={Hordur},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4819fbc11d2fdee2d331548ffc860919}{%
+           family={Roberts},
+           familyi={R\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f5e5324ba5a0c6326bc964b97fa52724}{%
+           family={Ila},
+           familyi={I\bibinitperiod},
+           given={Viorela},
+           giveni={V\bibinitperiod}}}%
+        {{hash=6c960232ba2aefe8f363bbf79b4c03b7}{%
+           family={Leonard},
+           familyi={L\bibinitperiod},
+           given={John\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=44074d3cb57c174a8b15ccc9a576ac0d}{%
+           family={Dellaert},
+           familyi={D\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{3fbcb4af6b78c36ee3493ecc22663649}
+      \strng{fullhash}{898146e759470137311d84eab1b7fc00}
+      \strng{bibnamehash}{3fbcb4af6b78c36ee3493ecc22663649}
+      \strng{authorbibnamehash}{3fbcb4af6b78c36ee3493ecc22663649}
+      \strng{authornamehash}{3fbcb4af6b78c36ee3493ecc22663649}
+      \strng{authorfullhash}{898146e759470137311d84eab1b7fc00}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International Journal of Robotics Research}
+      \field{number}{2}
+      \field{title}{iSAM2: Incremental Smoothing and Mapping Using the Bayes Tree}
+      \field{volume}{31}
+      \field{year}{2012}
+      \field{pages}{217\bibrangedash 236}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1177/0278364911430419
+      \endverb
+    \endentry
+    \entry{mmdet3d2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=860842ec5ab118419b8a53d72d6e0ef1}{%
+           family={Contributors},
+           familyi={C\bibinitperiod},
+           given={MMDetection3D},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{860842ec5ab118419b8a53d72d6e0ef1}
+      \strng{fullhash}{860842ec5ab118419b8a53d72d6e0ef1}
+      \strng{bibnamehash}{860842ec5ab118419b8a53d72d6e0ef1}
+      \strng{authorbibnamehash}{860842ec5ab118419b8a53d72d6e0ef1}
+      \strng{authornamehash}{860842ec5ab118419b8a53d72d6e0ef1}
+      \strng{authorfullhash}{860842ec5ab118419b8a53d72d6e0ef1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/open-mmlab/mmdetection3d}}
+      \field{title}{{MMDetection3D: OpenMMLab} next-generation platform for general {3D} object detection}
+      \field{year}{2020}
+    \endentry
+    \entry{autoware_universe}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=1eb6f4f494c147df1e88e94373c4a9b8}{%
+           family={Foundation},
+           familyi={F\bibinitperiod},
+           given={Autoware},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1eb6f4f494c147df1e88e94373c4a9b8}
+      \strng{fullhash}{1eb6f4f494c147df1e88e94373c4a9b8}
+      \strng{bibnamehash}{1eb6f4f494c147df1e88e94373c4a9b8}
+      \strng{authorbibnamehash}{1eb6f4f494c147df1e88e94373c4a9b8}
+      \strng{authornamehash}{1eb6f4f494c147df1e88e94373c4a9b8}
+      \strng{authorfullhash}{1eb6f4f494c147df1e88e94373c4a9b8}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/autowarefoundation/autoware.universe}}
+      \field{note}{Accessed: 2024-04-29}
+      \field{title}{Autoware Universe: An Open-source Software Stack for Autonomous Driving}
+      \field{year}{2023}
+    \endentry
+    \entry{teufel2022realistic}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=57e4268138ecaf4bfc0b224082367dcd}{%
+           family={Teufel},
+           familyi={T\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=81b6f3912bf8c05a9645a38408936a6e}{%
+           family={Meißner},
+           familyi={M\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3561537d773e73f265a933af9d2acf65}{%
+           family={Wagner},
+           familyi={W\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{9b5e83c7a0f52371cb103247d8c0d675}
+      \strng{fullhash}{9b5e83c7a0f52371cb103247d8c0d675}
+      \strng{bibnamehash}{9b5e83c7a0f52371cb103247d8c0d675}
+      \strng{authorbibnamehash}{9b5e83c7a0f52371cb103247d8c0d675}
+      \strng{authornamehash}{9b5e83c7a0f52371cb103247d8c0d675}
+      \strng{authorfullhash}{9b5e83c7a0f52371cb103247d8c0d675}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE Intelligent Vehicles Symposium (IV)}
+      \field{title}{{Realistic Rain, Snow, and Fog Variations for Comprehensive Performance Characterization of LiDAR Perception}}
+      \field{year}{2022}
+      \field{pages}{567\bibrangedash 574}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/IV53394.2022.00086
+      \endverb
+    \endentry
+    \entry{Geiger2012KITTI}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=06133052ac3c14a188601b82783cd4f7}{%
+           family={Geiger},
+           familyi={G\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f594289a77a4b801a7156edc29235ad8}{%
+           family={Lenz},
+           familyi={L\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod}}}%
+        {{hash=bc58c1e920023b071a4d0695299cf804}{%
+           family={Urtasun},
+           familyi={U\bibinitperiod},
+           given={Raquel},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{627edf12ee4004074265a942326edc30}
+      \strng{fullhash}{627edf12ee4004074265a942326edc30}
+      \strng{bibnamehash}{627edf12ee4004074265a942326edc30}
+      \strng{authorbibnamehash}{627edf12ee4004074265a942326edc30}
+      \strng{authornamehash}{627edf12ee4004074265a942326edc30}
+      \strng{authorfullhash}{627edf12ee4004074265a942326edc30}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}
+      \field{title}{Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite}
+      \field{year}{2012}
+      \field{pages}{3354\bibrangedash 3361}
+      \range{pages}{8}
+    \endentry
+    \entry{Kim2020Mulran}{article}{}
+      \name{author}{4}{}{%
+        {{hash=656677ed0198a0b2134ef0242cfb8d88}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Giseop},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8bf1e77f9de3972442930b7b022d3674}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Seong\bibnamedelima Hun},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=f1160aa8e428ceffe149a12a0ba14c8a}{%
+           family={Jeon},
+           familyi={J\bibinitperiod},
+           given={Jinwoo},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c3242678326dc788084c2ca12ce8b526}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Ayoung},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{996a151971efe2d4e1c979eb2afccb7b}
+      \strng{fullhash}{603cce8469d93f2a3d40405bc51769c0}
+      \strng{bibnamehash}{996a151971efe2d4e1c979eb2afccb7b}
+      \strng{authorbibnamehash}{996a151971efe2d4e1c979eb2afccb7b}
+      \strng{authornamehash}{996a151971efe2d4e1c979eb2afccb7b}
+      \strng{authorfullhash}{603cce8469d93f2a3d40405bc51769c0}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International Journal of Robotics Research}
+      \field{number}{12-14}
+      \field{title}{MulRan: Multimodal Range Dataset for Urban Place Recognition}
+      \field{volume}{40}
+      \field{year}{2021}
+      \field{pages}{1394\bibrangedash 1407}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1177/02783649211012805
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

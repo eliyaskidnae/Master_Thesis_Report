@@ -1,9 +1,18 @@
 \select@language {english} \addvspace {10\p@ }
 \select@language {english} \addvspace {10\p@ }
-\select@language {english} \contentsline {figure}{\numberline {2.1}{\ignorespaces Architecture of FAST-LIO2: A tightly coupled LiDAR-Inertial Odometry \blx@tocontentsinit {0}\cite {xuFastLIO2}\relax }}{9}{figure.caption.1}%
-\select@language {english} \contentsline {figure}{\numberline {2.2}{\ignorespaces Factor graph representation: green nodes are state variables (poses), blue nodes are motion model factors, and red nodes represent sensor measurements.\relax }}{16}{figure.caption.4}%
+\select@language {english} \contentsline {figure}{\numberline {2.1}{\ignorespaces Architecture of FAST-LIO2: A tightly coupled LiDAR-Inertial Odometry \blx@tocontentsinit {0}\cite {yin2021center}\relax }}{7}{figure.caption.1}%
+\select@language {english} \contentsline {figure}{\numberline {2.2}{\ignorespaces Overview of CenterPoint 3d object detection framework. \blx@tocontentsinit {0}\cite {yin2021center}\relax }}{10}{figure.caption.2}%
+\select@language {english} \contentsline {figure}{\numberline {2.3}{\ignorespaces Factor graph representation: green nodes are state variables (poses), blue nodes are motion model factors, and red nodes represent sensor measurements.\relax }}{14}{figure.caption.5}%
 \select@language {english} \addvspace {10\p@ }
-\select@language {english} \contentsline {figure}{\numberline {3.1}{\ignorespaces Complete Diagram of Map Based Localization\relax }}{20}{figure.caption.6}%
-\select@language {english} \contentsline {figure}{\numberline {3.2}{\ignorespaces LIDAR scan pre-processing\relax }}{21}{figure.caption.7}%
-\select@language {english} \contentsline {figure}{\numberline {3.3}{\ignorespaces Grid Based Point-cloud division \relax }}{23}{figure.caption.10}%
+\select@language {english} \contentsline {figure}{\numberline {3.1}{\ignorespaces Complete Diagram of Map Based Localization\relax }}{18}{figure.caption.7}%
+\select@language {english} \contentsline {figure}{\numberline {3.2}{\ignorespaces LIDAR scan pre-processing\relax }}{19}{figure.caption.8}%
+\select@language {english} \contentsline {figure}{\numberline {3.3}{\ignorespaces Demonstration of fixed-lag smoothing with a lag size of \( n = 4 \) in a factor graph-based localization system.\relax }}{27}{figure.caption.14}%
 \select@language {english} \addvspace {10\p@ }
+\select@language {english} \contentsline {figure}{\numberline {4.1}{\ignorespaces Hardware setup used for real-world data collection and testing: (a) Hunter robotic platform; (b) onboard sensors.\relax }}{31}{figure.caption.19}%
+\select@language {english} \contentsline {figure}{\numberline {4.2}{\ignorespaces Saxion Sequence 01 – Trajectory Alignment with Zoomed Comparison}}{34}{figure.caption.25}%
+\select@language {english} \contentsline {figure}{\numberline {4.3}{\ignorespaces KITTI Sequence 05 – Trajectory Alignment with Zoomed Comparison}}{36}{figure.caption.30}%
+\select@language {english} \contentsline {figure}{\numberline {4.4}{\ignorespaces Computation characteristics of the proposed localization system: Sliding-window optimization scalability and real-time frame-wise timing breakdown.\relax }}{37}{figure.caption.33}%
+\select@language {english} \contentsline {figure}{\numberline {4.5}{\ignorespaces Detecting and removing dynamic objects from 3d LIDAR point-cloud}}{38}{figure.caption.35}%
+\select@language {english} \contentsline {figure}{\numberline {4.6}{\ignorespaces Point-cloud Registration Performance with and without Dynamic Object Removal}}{39}{figure.caption.37}%
+\select@language {english} \contentsline {figure}{\numberline {4.8}{\ignorespaces Error compression localization in transition zone}}{41}{figure.caption.41}%
+\select@language {english} \contentsline {figure}{\numberline {4.9}{\ignorespaces Point‐cloud snapshots under increasing composite geometric noise levels: (a) Original scan; (b) Mild noise; (c) Moderate noise; (d) Severe noise.\relax }}{42}{figure.caption.44}%

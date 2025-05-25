@@ -3,7 +3,7 @@
 
 \section{Experimental Environment}
 
-\subsection{Hardware Setup}
+\subsection{Hardware and Software Setup}
 All experiments were conducted on a development laptop equipped with an AMD Ryzen™ 7 7735HS processor, 32 GB of DDR5 RAM, and an NVIDIA GPU for accelerated computation , as well as on a \emph{Hunter} mobile robotic platform for on-campus data collection.The robot is equipped with a suite of sensors, including a 3D LiDAR sensor for environment perception, an Inertial Measurement Unit (IMU) for estimating motion and orientation, and a camera for visual reference. An onboard NVIDIA CPU/GPU computing module provides local processing capability.
 
 \begin{figure}[H]
@@ -22,17 +22,15 @@ All experiments were conducted on a development laptop equipped with an AMD Ryze
 	\label{fig:hunter-robot-setup}
 \end{figure}
 
-
-\subsection{Software Setup}
 Our approach is implemented primarily in C++ on top of the ROS\,2 Humble middleware. We rely on:
 \begin{itemize}
   \item \textbf{PCL (Point Cloud Library):} for point cloud data structures and filtering.
   \item \textbf{Eigen:} for linear algebra operations (transformations, matrix computations).
-  \item \textbf{ROS\,2 Bag Files:} each dataset is provided or recorded in a \texttt{.bag} format, facilitating playback of sensor data.
+
 \end{itemize}
 Additional scripts in Python were employed for plotting and minor data manipulations.
 
-\subsection{Datasets}
+\subsection{Datasets and Map Preparation}
 We evaluated our map-based localization on multiple datasets, each of which offers LiDAR and IMU data. Table~\ref{tab:datasets} summarizes their key characteristics.
 
 \begin{table}[htbp]
@@ -47,35 +45,27 @@ We evaluated our map-based localization on multiple datasets, each of which offe
 	\textbf{KITTI Odometry} & 05 & L + I & Velodyne HDL-64E & L: 10, I: 100 & GT-based aggregation \\
 	%\textbf{KITTI Odometry} & 09 & L + I & Velodyne HDL-64E & L: 10, I: 100 & GT-based aggregation \\
 	\textbf{MulRan}         & KiAST-02,03 & L + I & Ouster OS1-64    & L: 10, I: 100 & Fast-LIO2 SLAM \\
-	\textbf{Saxion campus}  & seq1,2,3 & L + I & Ouster OS1-128    & L: 10, I: 100 & Fast-LIO2 SLAM \\
+	\textbf{Saxion Dataset}  & seq1,2,3 & L + I & Ouster OS1-128    & L: 10, I: 100 & Fast-LIO2 SLAM \\
 	
 	\bottomrule
 	\end{tabular}%
 	}
 \end{table}
 
-\paragraph{KITTI Sequences}
-We tested on sequences 05 from the KITTI odometry benchmark\cite{Geiger2012KITTI}. These sequences contain semi-urban driving scenarios with moderate speeds. Each frame is timestamped and stored in a ROS\,2 bag for convenient playback.
 
-\paragraph{MulRan (KiAST) Sequences}
-Two sequences (KiAST-02, KiAST-03) from the MulRan dataset\cite{Kim2020Mulran} were used. These contain Ouster OS1-64 LiDAR and IMU measurements in campus-like settings with dynamic objects and complex geometry. The ROS\,2 bags allow consistent replay for algorithm testing.
 
-\subsection{Map Preparation}
-For each dataset, a prior 3D map was generated before running the localization:
+\paragraph{Benchmark Dataset}
+ We used sequences 05 from the KITTI odometry benchmark\cite{Geiger2012KITTI} and two sequences (KiAST-02, KiAST-03) from the MulRan dataset\cite{Kim2020Mulran},both representing semi-urban driving scenarios with moderate speeds.The official ground-truth poses were used to transform and aggregate each LiDAR frame into a global coordinate system for generate 3D priori map.
+\paragraph{Custom Saxion Dataset}
+ As no direct ground truth was available for this dataset, we employed Fast-LIO2 SLAM to generate a consistent map from repeated traversals. 
 
-\begin{itemize}
-    \item \textbf{KITTI:} We leveraged the official ground-truth poses to transform and aggregate each LiDAR frame into a global coordinate system. The resulting dense point cloud was lightly downsampled (e.g., voxel size of 0.1\,m).
-    \item \textbf{MulRan (KAiST) and Campus (Saxion) Dataset:} No direct ground truth was provided, so we employed \textit{Fast-LIO2 SLAM} to build a consistent map from repeated traversals. This method fuses LiDAR scans and IMU data for robust odometry. The final aggregated map was also voxel-downsampled.
-\end{itemize}
-
-In both cases, the final global point cloud is subdivided into manageable tiles for efficient dynamic loading during localization. Each tile is stored as a separate file or database entry keyed by tile coordinates, allowing the system to load only relevant tiles based on the vehicle’s current estimated position.
-
+In both cases, the final global point cloud is subdivided into manageable tiles for efficient local map loading during localization. Each tile is stored as a separate file or database entry keyed by tile coordinates, allowing the system to load only relevant tiles based on the vehicle’s current estimated position.
 
 
 \section{Performance Evaluation}
-This section presents the experimental results evaluating the proposed LiDAR-inertial localization system. The evaluation is divided into two main parts: performance under standard conditions, and extended experiments conducted under different scenarios to assess system robustness. Standard conditions refer to scenario where the reference map is up-to-date, sensor data is relatively noise-free, and feature-rich map. In contrast, under extended scenarios, we test robustness by replaying the same trajectory through map transition zones, with composite geometric noise (simulating fog, rain, and snow), slight map aging, and dynamic object removal.Overall,we evaluate localization performance in terms of Absolute Pose Error, convergence behavior, and real-time processing latency.
+This section presents the experimental results evaluating the proposed LiDAR-inertial localization system. The evaluation is divided into two main parts: performance under standard conditions, and extended experiments conducted under different scenarios to assess system robustness. Standard conditions refer to scenario where the reference map is up-to-date, sensor data is relatively noise-free, and feature-rich map. In contrast, under extended scenarios, we test robustness by replaying the same trajectory through map transition zones, with composite geometric noise (simulating fog, rain, and snow), slight map aging, and dynamic object removal.
 
-Overall, we evaluate localization performance in terms of Absolute Pose Error (APE), convergence behavior, and real-time processing latency. The evaluation includes comparisons against two categories of baselines: component baselines, which consist of the individual modules integrated into our system (Fast-LIO2\cite{xuFastLIO2} and NDT\cite{biber2003ndt} scan matching), and external SLAM baselines, such as MOLA\cite{blanco2025mola_lo} and KISS-ICP\cite{kiss2025arxiv}, which represent complete state estimation frameworks used for comparative benchmarking.
+Overall, we evaluate localization performance in terms of Absolute Pose Error (APE), convergence behavior, and real-time processing latency. The evaluation includes comparisons against two categories of baselines: component baselines, which consist of the individual modules integrated into our system (Fast-LIO2\cite{xuFastLIO2} and NDT\cite{biber2003ndt} scan matching), and external SLAM baselines, such as MOLA\cite{blanco2025mola_lo} and KISS-SLAM\cite{kiss2025arxiv}, which represent complete state estimation frameworks used for comparative benchmarking.
 
 \subsection{ Localization Performance in Standard Conditions}
 
@@ -86,7 +76,7 @@ We evaluated our proposed LiDAR-inertial localization system on three sequences 
 
  In the longer and more complex trajectories (Sequences 2 and 3), the proposed fusion method achieves decimeter-level accuracy, significantly reducing translational RMSE compared to Fast-LIO2 (from 3.3 m to 0.11–0.13 m) and improving rotational RMSE by up to 1.6°. While NDT achieves similar translational RMSE in some cases, the fusion method offers better rotational accuracy and stability, especially under challenging conditions.
  
-Trajectory plots Figures \ref{fig:saxion-seq1-trajectory-zoom}~ \ref{fig:saxion-seq2-trajectory-zoom}~\ref{fig:saxion-seq3-trajectory-zoom}  illustrate the alignment of estimated poses with reference trajectory. Zoomed-in regions further emphasize the proposed method’s ability to track the trajectory accurately, even in complex zones and long trajectory.Overall, these results confirm that the proposed system provides robust and drift-resilient localization across short, medium, and long trajectories, maintaining centimeter- to decimeter-level precision under varying compexity.
+Trajectory plots Figures \ref{fig:saxion-seq1-trajectory-zoom}~ \ref{fig:saxion-seq2-trajectory-zoom}~\ref{fig:saxion-seq3-trajectory-zoom}  illustrate the alignment of estimated poses with reference trajectory. Zoomed-in regions further emphasize the proposed method’s ability to track the trajectory accurately, even in complex zones and long trajectory.
 
 
 
@@ -295,8 +285,6 @@ Despite the presence of loop closures, both SLAM methods exhibit notable drift a
 
 \subsubsection{Real-time Performance }
 
-
-
 We evaluate  scan-to-map matching by varying the radius of the local sub map and compare multi-threaded
 NDT (NDT-OMP) , standard NDT and classic ICP all operating on identically generated local maps.As shown in the table \ref{tab:scanmap_radius} While both NDT and ICP maintain convergence on small radii (> 100 m), their per‐scan runtime  is exceed 100 ms and increases as map grows.In contrast, NDT-OMP maintains sub-25 ms mean latency with over 95 $\%$ convergence up to 200 m, and still achieves under 33 ms runtimes and 90 $\%$ convergence at 350 m (with occasional failures). This demonstrates that NDT-OMP’s parallelization, coupled with an adaptive local-map radius based on the robot’s pose, significantly improves scan-matching efficiency without sacrificing robustness.
 
@@ -347,7 +335,6 @@ NDT (NDT-OMP) , standard NDT and classic ICP all operating on identically genera
 \end{figure}
 
 
-
 Considering a high-frequency LiDAR-inertial odometry (LIO) stream and periodic map-matching updates, we compare a sliding-window factor-graph optimizer against a full-batch solver. By restricting the graph to the most recent 5–50 seconds of data,as shown in Figure~\ref{fig:sliding_vs_batch} the sliding-window approach maintains nearly constant solve times under 1 ms per update regardless of localization duration. In contrast, the full-batch solver’s complexity grows superlinearly as more keyframes accumulate, eventually fail in real‐time as the numer of nodes increase.
 
 Figure~\ref{fig:computation_summary} further breaks down the per-frame latency of the proposed system. With point-cloud pre-processing and map loading taking ~2 ms, scan-to-map matching ~25 ms, and factor-graph optimization ~1 ms, the total remains below 35 ms. This comfortably satisfies the real-time 10 Hz requirement (100 ms), achieving ~36 Hz processing frequency.
@@ -355,7 +342,7 @@ Figure~\ref{fig:computation_summary} further breaks down the per-frame latency o
 \subsection{ Extended Evaluation Under Challenging Conditions}
 
 
-\subsubsection{Scenario A – Dynamic Object Removal}
+\subsubsection{Impact of Dynamic Object Removal on Registration Performance}
 
 In this evaluation, we assess the impact of incorporating dynamic object removal into the localization pipeline.Example of  detected 3D bounding boxes and the corresponding retained point cloud after dynamic object removal are illustrated in Figure~\ref{fig:dynamic-object-removal}.The objective is to analyze how removing transient objects from LiDAR scans influences registration accuracy, localization robustness, and computational efficiency. Key performance indicators include registration convergence rate, average iteration count and  execution time are evaluated.
 
@@ -417,10 +404,11 @@ In this evaluation, we assess the impact of incorporating dynamic object removal
 	\label{fig:registration_metrics_comparison}
 \end{figure}
 
-The point-cloud registration performance was evaluated across 300 scan frames before and after applying dynamic object removal. As summarized in Table~\ref{tab:dynamic_removal_stats}, filtering dynamic objects results  reduction in average registration iterations (from 19 to 12) and execution time (from 14.41 ms to 9.73 ms). Additionally, the number of convergence failures dropped from 7 to 2. The performance plots in Figure~\ref{fig:registration_metrics_comparison} further illustrate this trend. Dynamic object removal improves stability and efficiency by eliminating noisy inputs that otherwise increase iteration count, processing time, or lead to failed alignments.
+
+The point-cloud registration performance was evaluated across 300 scan frames , selected based on a high number of detected dynamic objects. As summarized in Table~\ref{tab:dynamic_removal_stats}, filtering dynamic objects results  reduction in average registration iterations (from 19 to 12) and execution time (from 14.41 ms to 9.73 ms). Additionally, the number of convergence failures dropped from 7 to 2. The performance plots in Figure~\ref{fig:registration_metrics_comparison} further illustrate this trend. Dynamic object removal improves stability and efficiency by eliminating noisy inputs that otherwise increase iteration count, processing time, or lead to failed alignments.
 
 
-Table~\ref{tab:dynamic_object_runtime_pipeline_comparison} presents the computational overhead introduced by integrating dynamic object detection and filtering into the localization pipeline. While this module enhances registration robustness and accuracy, it incurs additional processing time. Specifically, the 3D object detection step (using ONNX inference) adds approximately 31 ms, and the point cloud filtering (using a CropBox filter) adds another 8 ms per frame. Although the registration and optimization stage benefits from a reduction in processing time—from 15 ms to 10 ms—the overall per-frame runtime increases from 15 ms (without removal) to 49 ms (with removal), resulting in a net overhead of 34 ms. Despite this increase, the system remains within acceptable real-time performance bounds for medium-speed mobile robotics applications.
+Table~\ref{tab:dynamic_object_runtime_pipeline_comparison} presents the computational overhead introduced by integrating dynamic object detection and filtering into the localization pipeline. While this module enhances registration robustness and accuracy, it incurs additional processing time. Specifically, the 3D object detection step (using ONNX inference) adds approximately 31 ms, and the point cloud filtering (using a CropBox filter) adds another 8 ms per frame. Although the registration and optimization stage benefits from a reduction in processing time from 15 ms to 10 ms the overall per-frame runtime increases from 15 ms (without removal) to 49 ms (with removal), resulting in a net overhead of 34 ms. Despite this increase, the system remains within acceptable real-time performance bounds for medium-speed mobile robotics applications.
 
 
 \begin{table}[H]
@@ -444,7 +432,7 @@ Table~\ref{tab:dynamic_object_runtime_pipeline_comparison} presents the computat
 
 
 
-\subsubsection{Scenario B – Map-Side Feature-Sparse Environment}
+\subsubsection{Localization on Map Side Feature Sparse Environment}
 
 Map-side feature-sparse environments refer to areas where the current LiDAR observations contain few or no correspondences in the prebuilt map. This situation typically arises at the boundaries of a mapped area, in unmapped zones, or at transitions between separately built or merged submaps. In such regions, the prior map lacks persistent geometric features required for reliable scan-to-map registration, resulting in degraded or failed localization if scan matching is used in isolation.
 
@@ -476,7 +464,7 @@ Map-side feature-sparse environments refer to areas where the current LiDAR obse
 
 In this scenario, the robot traverses an approximately 70-meter-long transition sub-street connecting two main streets, which includes partially mapped and unmapped segments. As shown in Figure~\ref{fig:unmapped-zone}, this zone is highlighted in red. This path was repeated twice to validate consistency. The NDT-based scan matching frequently failed within this zone due to the lack of map overlap, as reflected in the significant error spikes shown in Figure~\ref{fig:ape-error-unmapped-ndt}, \ref{fig:ape-error-trajectory-unmapped-proposed}. However, the proposed fusion pipeline maintained stable localization throughout the traversal shown in Figure~\ref{fig:ape-error-unmapped-proposed}.
 
-A comparison of APE statistics is summarized in Table ~\ref{tab:ape-unmapped-comparison} . Notably, the maximum APE for NDT Scan Matching reached 2.178 meters, whereas the proposed fusion method limited the maximum error to 0.455 meters. The Root Mean Square Error (RMSE) also showed a significant reduction, from 0.295 meters in NDT to 0.095 meters in the fusion approach. These results underscore the robustness of the proposed method in feature-deprived environments.
+A comparison of APE statistics is summarized in Table~\ref{tab:ape-unmapped-comparison}. Notably, the maximum APE for NDT Scan Matching reached 2.178 meters, whereas the proposed fusion method limited the maximum error to 0.455 meters. The Root Mean Square Error (RMSE) also showed a significant reduction, from 0.295 meters in NDT to 0.095 meters in the fusion approach. These results underscore the robustness of the proposed method in feature-deprived environments.
 
 
 For context, under standard conditions specifically, Saxion Sequence 1 APE statistics is summarized in Table ~\ref{tab:ape_rot_saxion_seq1}, which was conducted in a fully mapped environment the proposed fusion method achieved a maximum APE of 0.395 meters and an RMSE of 0.067 meters. This comparison underscores the robustness of the fusion approach, demonstrating its ability to maintain localization accuracy even in challenging, feature-sparse environments.
@@ -525,11 +513,15 @@ For context, under standard conditions specifically, Saxion Sequence 1 APE stati
 \end{table}
 
 
-\subsubsection{Scenario C – Recent-Map under Composite Environmental Noise}
+\subsubsection{Localization Under Fog Degradation with a Recent Map}
 
-In this scenario we evaluate localization performance using a one-month-old prebuilt map and subject the live LiDAR observations to three levels of composite geometric noise (Mild, Moderate, Severe, see Table~\ref{tab:noise_levels}). Figure \ref{fig:different-noise-levels} presents  bird’s-eye views of the same point cloud under each noise level, illustrating point dropouts, scatter, backscatter shifts, and spurious returns. After adding the selected noise level, we test the localization pipeline and compare the resulting Absolute Pose Error (APE) against the standard baseline, thereby isolating the pure geometric impact of simulated fog, rain, and snow–like disturbances on localization accuracy.
+We tested the localization pipeline on the \textbf{Saxion Sequence 1} using a one-month-old prebuilt map and simulated fog at three visibility levels: \textit{Mild (100~m)}, \textit{Moderate (60~m)}, and \textit{Severe (30~m)} see Table~\ref{tab:noise_levels}. Figure~\ref{fig:fog_visualization} illustrates fog-induced degradation effects such as point dropouts, false near-field returns, and spatial clutter. The resulting {Absolute Pose Error (APE)} was compared against a baseline under clear conditions.
 
 
+Under Mild and Moderate fog Table~\ref{tab:ape_fog_translation}, the proposed fusion and NDT only methods show limited degradation compared to the baseline (Table~\ref{tab:ape_rot_saxion_seq1}).APE increses to 0..10-0.28 m , with occasional peaks over 1.4 m, but RMSE remains stable, confirms the robustness of NDT under moderate visibility loses.In contrast,FAST-LIO2 drifts significantly, with higher mean RMSE values, indicating its sensitivity to fog when operating without map-based correction.
+
+Under Severe fog (visibility 30~m), all methods show significant degradation. The {NDT scan matcher becomes unstable} and fails to converge consistently due to severe point dropout and noise. {Fast-LIO also exhibits large drift}, and the combined effect causes the {fusion pipeline to fail repeatedly}, unable to maintain consistent localization beyond a short distance.
+ 
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[t]{0.46\textwidth}
@@ -544,72 +536,54 @@ In this scenario we evaluate localization performance using a one-month-old preb
 		}
 		\label{fig:mild-noise-level-pointcloud}
 	\end{subfigure}
-     \hfill
+	\hfill
 	\begin{subfigure}[t]{0.46\textwidth}
-		\includegraphics[height=3.5cm , width=\linewidth]{images/level2_noise.png}
+		\includegraphics[height=3.5cm , width=\linewidth]{images/noise/15.png}
 		\caption{ Moderate noise level added point-cloud
 		}
-		\label{fig::mild-noise-level-pointcloud}
+		\label{fig:severe-noise-level-pointcloud}
 	\end{subfigure}
-      \hfill
+	\hfill
 	\begin{subfigure}[t]{0.46\textwidth}
-		\includegraphics[height=3.5cm , width=\linewidth]{images/level3_noiseb.png}
+		\includegraphics[height=3.5cm , width=\linewidth]{images/noise/14.png}
 		\caption{ Severe noise level added point-cloud
 		}
 		\label{fig:mild-noise-level-pointcloud}
 	\end{subfigure}
+
 		
 	\caption{Point‐cloud snapshots under increasing composite geometric noise levels: (a) Original scan; (b) Mild noise; (c) Moderate noise; (d) Severe noise.}
 	
-	\label{fig:different-noise-levels}
+	\label{fig:fog_visualization}
 \end{figure}
 
-Evaluated on the Saxion Sequence 1 dataset, both Mild and Moderate composite‐noise scenarios incur only minor degradations in translational accuracy on the order of a few centimeters (0.06–0.08 m) compared to the noise free baseline (Table \ref{tab:ape_rot_saxion_seq1}). This demonstrates that both the standalone NDT scan‐matching pipeline and our fusion method remain robust under light to moderate noise level. By contrast, under Severe noise the NDT pipeline intermittently fails, with its maximum translational error exceeding 1.4 m and an overall RMSE of 0.218 m. Our fusion approach, however, still confines drift to acceptable bounds, limiting its maximum APE to 0.38 m and achieving an RMSE of 0.145 m as shown in Figure \ref{fig:different-noise-levels-ate}.
+
+
 
 \begin{table}[H]
 	\centering
-	\caption{Translation (APE) and Rotation Error statistics under Mild, Moderate, and Severe composite noise}
-	\label{tab:ape_noise_all_swapped}
-	\begin{tabular}{l l l c c c c c}
+	\caption{Translation error (APE) statistics under Severe and Moderate  fog visibility}
+	\label{tab:ape_fog_translation}
+	\begin{tabular}{l l c c c c c}
 		\toprule
-		\textbf{Condition} & \textbf{Method} & \textbf{Metric}  & \textbf{Max} & \textbf{Mean} & \textbf{Min} & \textbf{RMSE} & \textbf{Std Dev} \\
+		\textbf{Condition} & \textbf{Method} & \textbf{Max} & \textbf{Mean} & \textbf{Min} & \textbf{RMSE} & \textbf{Std Dev} \\
 		\midrule
-		\multirow{4}{*}{Mild}     
-		& \multirow{2}{*}{NDT}      
-		& APE (m)      & 0.4236 & 0.1183 & 0.0163 & 0.1259 & 0.0430 \\
-		&                           
-		& Rot.\ (deg)  & 5.7259 & 0.4643 & 0.0430 & 0.6845 & 0.5030 \\
-		\cmidrule{2-8}
-		& \multirow{2}{*}{Proposed} 
-		& APE (m)      & 0.3670 & 0.1030 & 0.0186 & 0.1122 & 0.0445 \\
-		&                           
-		& Rot.\ (deg)  & 4.7577 & 0.3940 & 0.0313 & 0.5870 & 0.4350 \\
+		
+		\multirow{3}{*}{Mild} 
+		& Proposed     & 0.3682 & 0.1238 & 0.0250 & 0.1356 & 0.0583 \\
+		& NDT          & 0.4089 & 0.1474 & 0.0164 & 0.1585 & 0.0581 \\
+		& Fast-LIO     & 12.0253 & 4.2643 & 0.581 & 5.7521 & 3.2145 \\
+		
 		\midrule
-		\multirow{4}{*}{Moderate} 
-		& \multirow{2}{*}{NDT}      
-		& APE (m)      & 0.4089 & 0.1474 & 0.0164 & 0.1585 & 0.0581 \\
-		&                           
-		& Rot.\ (deg)  & 10.3233 & 0.6253 & 0.0593 & 0.9917 & 0.7697 \\
-		\cmidrule{2-8}
-		& \multirow{2}{*}{Proposed} 
-		& APE (m)      & 0.3682 & 0.1238 & 0.025 & 0.1356 & 0.0583 \\
-		&                           
-		& Rot.\ (deg)  & 5.20& 0.52 & 0.036 & 0.698 & 0.4592 \\
-		\midrule
-		\multirow{4}{*}{Severe}   
-		& \multirow{2}{*}{NDT}      
-		& APE (m)      & 1.3442 & 0.1712 & 0.0193 & 0.2178 & 0.1346 \\
-		&                           
-		& Rot.\ (deg)  & 10.3233 & 0.6253 & 0.0593 & 0.9917 & 0.7697 \\
-		\cmidrule{2-8}
-		& \multirow{2}{*}{Proposed} 
-		& APE (m)      & 0.3792 & 0.1326 & 0.0092 & 0.1452 & 0.0593 \\
-		&                           
-		& Rot.\ (deg)  & 5.2157 & 0.5231 & 0.0620 & 0.7231 & 0.4992 \\
+		
+		\multirow{3}{*}{Moderate} 
+		& Proposed     & 0.3792 & 0.1326 & 0.0092 & 0.1452 & 0.0593 \\
+		& NDT          & 1.3442 & 0.1712 & 0.0193 & 0.2178 & 0.1346 \\
+		& Fast-LIO     & 17.7823 & 6.2.3521 & 0.0610 & 12.9345 & 5.3614 \\
+		
 		\bottomrule
 	\end{tabular}
 \end{table}
-
 
 
 
