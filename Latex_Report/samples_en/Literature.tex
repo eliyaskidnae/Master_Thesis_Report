@@ -15,7 +15,8 @@ By contrast, tightly coupled designs feed raw IMU data directly into the LiDAR o
 \begin{figure}
     \centering
     \includegraphics[width=1 \linewidth]{images/fast_lio.drawio.png}
-    \caption{Architecture of FAST-LIO2: A tightly coupled LiDAR-Inertial Odometry \cite{yin2021center}}
+    \caption{Architecture of FAST-LIO2: A tightly coupled LiDAR-Inertial Odometry 
+    	\cite{xuFastLIO2}}
     \label{fig:fast_lio2_architecture}
 \end{figure}
 
@@ -36,6 +37,9 @@ Monte Carlo Localization (MCL) is a well-established probabilistic technique for
 Multiple recent works highlight the potential of map-aided localization for achieving robust and precise vehicle pose estimation.\cite{Levinson2007MapBased} propose building a 2D road-surface reflectivity map from lidar data, then using real-time lidar scan correlation against this map to localize within a few decimeters in busy urban areas.Similarly,\cite{liu2019segmentation} adopt a detailed segmentation approach: each incoming lidar frame is broken down into ground, curb, edge, and surface features,which are then aligned with a prior feature map; the refined estimates are further fused with a MEMS-IMU for centimeter-level accuracy at high frequency.
 
 By contrast,\cite{Lin2021Autonomous} utilize stereo-based “visual point cloud” maps, avoiding LiDAR hardware yet involving dense stereo matching for both the offline (map) and online (frame) steps. Their system then registers these point clouds via normal distribution transform (NDT). While it lowers sensor costs, it adds a heavy stereo workload and remains susceptible to lighting or texture issues. The authors also report that deviations can occur at sharp turns, albeit these are later corrected. Finally, \cite{Rozenberszki2020LOL} integrate LOAM odometry with a global segment-based prior map (via SegMap) for re-localization when drift accumulates. The system occasionally triggers place recognition in the global map, confirms geometry with RANSAC, then refines the pose using fine-grained ICP.
+
+By contrast, \cite{Lin2021Autonomous} utilize stereo-based “visual point cloud” maps, avoiding LiDAR hardware yet involving dense stereo matching for both the offline (map) and online (frame) steps. Their system then registers these point clouds via normal distribution transform (NDT). While it lowers sensor costs, it adds a heavy stereo workload and remains susceptible to lighting or texture issues.The authors also report that deviations can occur at sharp turns, albeit these are later corrected. Similarly, \cite{kim2018stereo} propose a stereo vision localization method within 3D LiDAR maps by extracting visual features in the Bird’s-Eye View (BEV) domain and matching them to the LiDAR map. Finally, \cite{Rozenberszki2020LOL} integrate LOAM odometry with a global segment-based prior map (via SegMap) for re-localization when drift accumulates. The system occasionally triggers place recognition in the global map, confirms geometry with RANSAC, then refines the pose using fine-grained ICP.
+
 
 Together, these works illustrate the diversity of map-based localization strategies, but many are constrained by computational inefficiency, dependence on handcrafted or road-specific map features, and limited scalability or adaptability to dynamic and degraded environments. This underscores the need for a more efficient, generalizable, and real-time-capable localization framework.
 

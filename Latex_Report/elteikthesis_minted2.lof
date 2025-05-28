@@ -1,24 +1,26 @@
 \select@language {english} \addvspace {10\p@ }
 \select@language {english} \addvspace {10\p@ }
-\select@language {english} \contentsline {figure}{\numberline {2.1}{\ignorespaces Architecture of FAST-LIO2: A tightly coupled LiDAR-Inertial Odometry \blx@tocontentsinit {0}\cite {yin2021center}\relax }}{8}{figure.caption.1}%
-\select@language {english} \contentsline {figure}{\numberline {2.2}{\ignorespaces Overview of CenterPoint 3d object detection framework. \blx@tocontentsinit {0}\cite {yin2021center}\relax }}{11}{figure.caption.2}%
-\select@language {english} \contentsline {figure}{\numberline {2.3}{\ignorespaces Factor graph representation: green nodes are state variables (poses), blue nodes are motion model factors, and red nodes represent sensor measurements.\relax }}{15}{figure.caption.5}%
+\select@language {english} \contentsline {figure}{\numberline {2.1}{\ignorespaces Architecture of FAST-LIO2: A tightly coupled LiDAR-Inertial Odometry \blx@tocontentsinit {0}\cite {xuFastLIO2}\relax }}{7}{figure.caption.8}%
+\select@language {english} \contentsline {figure}{\numberline {2.2}{\ignorespaces Overview of CenterPoint 3d object detection framework. \blx@tocontentsinit {0}\cite {yin2021center}\relax }}{11}{figure.caption.9}%
+\select@language {english} \contentsline {figure}{\numberline {2.3}{\ignorespaces Factor graph representation: green nodes are state variables (poses), blue nodes are motion model factors, and red nodes represent sensor measurements.\relax }}{14}{figure.caption.12}%
 \select@language {english} \addvspace {10\p@ }
-\select@language {english} \contentsline {figure}{\numberline {3.1}{\ignorespaces Complete Diagram of Map Based Localization\relax }}{18}{figure.caption.7}%
-\select@language {english} \contentsline {figure}{\numberline {3.2}{\ignorespaces Overview of LiDAR scan pre-processing steps. The raw point cloud undergoes spatial cropping, statistical outlier removal, voxel-grid downsampling, and dynamic object removal.\relax }}{20}{figure.caption.8}%
-\select@language {english} \contentsline {figure}{\numberline {3.3}{\ignorespaces Demonstration of fixed-lag smoothing with a lag size of \( n = 4 \) in a factor graph-based localization system.\relax }}{27}{figure.caption.13}%
+\select@language {english} \contentsline {figure}{\numberline {3.1}{\ignorespaces System architecture of the proposed map-based localization pipeline. The system fuses high-frequency LiDAR-inertial odometry with global map-based pose corrections using scan-to-map matching and factor graph optimization.\relax }}{18}{figure.caption.14}%
+\select@language {english} \contentsline {figure}{\numberline {3.2}{\ignorespaces Overview of LiDAR scan pre-processing steps. The raw point cloud undergoes spatial cropping, statistical outlier removal, voxel-grid downsampling, and dynamic object removal.\relax }}{20}{figure.caption.15}%
+\select@language {english} \contentsline {figure}{\numberline {3.3}{\ignorespaces Demonstration of fixed-lag smoothing with a lag size of \( n = 4 \) in a factor graph-based localization system.\relax }}{27}{figure.caption.20}%
 \select@language {english} \addvspace {10\p@ }
-\select@language {english} \contentsline {figure}{\numberline {4.1}{\ignorespaces Hardware setup used for real-world data collection and testing: (a) Hunter robotic platform; (b) onboard sensors.\relax }}{31}{figure.caption.18}%
-\select@language {english} \contentsline {figure}{\numberline {4.2}{\ignorespaces Saxion Sequence 01 – Trajectory Alignment with Zoomed Comparison}}{34}{figure.caption.24}%
-\select@language {english} \contentsline {figure}{\numberline {4.3}{\ignorespaces KITTI Sequence 05 – Trajectory Alignment with Zoomed Comparison}}{36}{figure.caption.29}%
-\select@language {english} \contentsline {figure}{\numberline {4.4}{\ignorespaces Computation characteristics of the proposed localization system: Sliding-window optimization scalability and real-time frame-wise timing breakdown.\relax }}{37}{figure.caption.32}%
-\select@language {english} \contentsline {figure}{\numberline {4.5}{\ignorespaces Detecting and removing dynamic objects from 3d LIDAR point-cloud}}{38}{figure.caption.34}%
-\select@language {english} \contentsline {figure}{\numberline {4.6}{\ignorespaces Point-cloud Registration Performance with and without Dynamic Object Removal}}{39}{figure.caption.36}%
-\select@language {english} \contentsline {figure}{\numberline {4.8}{\ignorespaces Error compression localization in transition zone}}{41}{figure.caption.40}%
-\select@language {english} \contentsline {figure}{\numberline {4.9}{\ignorespaces Point‐cloud snapshots under increasing composite geometric noise levels: (a) Original scan; (b) Mild noise; (c) Moderate noise; (d) Severe noise.\relax }}{42}{figure.caption.43}%
+\select@language {english} \contentsline {figure}{\numberline {4.1}{\ignorespaces Hardware setup used for real-world data collection and testing: (a) Hunter robotic platform; (b) onboard sensors.\relax }}{32}{figure.caption.24}%
+\select@language {english} \contentsline {figure}{\numberline {4.2}{\ignorespaces Saxion Sequence 01 – Trajectory Alignment with Zoomed Comparison}}{35}{figure.caption.30}%
+\select@language {english} \contentsline {figure}{\numberline {4.3}{\ignorespaces Absolute Pose Error Comparison of (a) Saxion Sequence 2 and (b) Saxion Sequence 3 .\relax }}{36}{figure.caption.33}%
+\select@language {english} \contentsline {figure}{\numberline {4.4}{\ignorespaces Computation characteristics of the proposed localization system: (a) Sliding-window optimization scalability and (b) real-time frame-wise timing breakdown.\relax }}{37}{figure.caption.36}%
+\select@language {english} \contentsline {figure}{\numberline {4.5}{\ignorespaces Detecting and removing dynamic objects from 3d LIDAR point-cloud}}{38}{figure.caption.38}%
+\select@language {english} \contentsline {figure}{\numberline {4.6}{\ignorespaces Point-cloud Registration Performance with and without Dynamic Object Removal}}{39}{figure.caption.40}%
+\select@language {english} \contentsline {figure}{\numberline {4.8}{\ignorespaces Error compression in transition zone}}{41}{figure.caption.44}%
+\select@language {english} \contentsline {figure}{\numberline {4.9}{\ignorespaces Point‐cloud snapshots under increasing composite geometric noise levels: (a) Original scan; (b) Mild noise; (c) Moderate noise; (d) Severe noise.\relax }}{42}{figure.caption.48}%
+\select@language {english} \contentsline {figure}{\numberline {4.10}{\ignorespaces Error comparison in transition zone}}{43}{figure.caption.50}%
+\select@language {english} \contentsline {figure}{\numberline {4.11}{\ignorespaces KITTI Sequence 05 – Trajectory Alignment with Zoomed Comparison}}{45}{figure.caption.55}%
+\select@language {english} \addvspace {10\p@ }
+\select@language {english} \contentsline {figure}{\numberline {5.1}{\ignorespaces Comparison of sensor fusion architectures. (a) The current design integrates FAST-LIO2 with NDT-based map matching in a tightly coupled manner. (b) The proposed approach restructures the system into a modular factor graph, supporting IMU pre-integration and extensibility to visual or radar factors for increased robustness in degraded environments.\relax }}{49}{figure.caption.56}%
 \select@language {english} \addvspace {10\p@ }
 \select@language {english} \addvspace {10\p@ }
-\select@language {english} \addvspace {10\p@ }
-\select@language {english} \contentsline {figure}{\numberline {A.1}{\ignorespaces Saxion Sequence 02– Trajectory Alignment with Zoomed Comparison}}{48}{figure.caption.45}%
-\select@language {english} \contentsline {figure}{\numberline {A.2}{\ignorespaces Saxion Sequence 03 – Trajectory Alignment with Zoomed Comparison}}{49}{figure.caption.46}%
-\select@language {english} \contentsline {figure}{\numberline {A.3}{\ignorespaces NDT scan matching and proposed Translation (APE) Error statistics under Mild, Moderate, and Severe composite noise (b) Mild noise; (c) Moderate noise; (d) Severe noise.\relax }}{50}{figure.caption.47}%
+\select@language {english} \contentsline {figure}{\numberline {A.1}{\ignorespaces Saxion Sequence 02– Trajectory Alignment with Zoomed Comparison}}{51}{figure.caption.57}%
+\select@language {english} \contentsline {figure}{\numberline {A.2}{\ignorespaces Saxion Sequence 03 – Trajectory Alignment with Zoomed Comparison}}{52}{figure.caption.58}%

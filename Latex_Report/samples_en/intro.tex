@@ -10,7 +10,7 @@ An alternative that improves accuracy and stability is map-based localization, w
 
 Despite its advantages, map-based localization poses several challenges.First,real-time performance requires efficient management of high-resolution 3D maps and the use of fast, precise scan-to-map matching algorithm for accurate pose estimation. Second, integrating local motion estimation (e.g., via LiDAR-Inertial Odometry) with global map alignment must be handled carefully to ensure both consistency and computational feasibility. Finally, the presence of dynamic objects and adverse environmental conditions further complicates the localization pipeline.
 
-This thesis addresses these challenges by proposing a hybrid system that combines real-time LiDAR-Inertial Odometry (FAST-LIO2), efficient map-matching via multithreaded NDT (NDT-OMP), and a sliding-window factor graph fusion approach. The system dynamically loads submaps around the robot based on a configurable radius, allowing scalable scan-matching while maintaining global consistency.In addition, a learning-based object detection module identifies and removes dynamic objects from the LiDAR scans, further enhancing robustness. Together, these components form a real-time, accurate, and robust localization framework tailored for large-scale, \textbf{semi-dynamic} environments.
+This thesis addresses these challenges by proposing a hybrid system that combines real-time LiDAR-Inertial Odometry (FAST-LIO2), efficient map-matching via multithreaded NDT (NDT-OMP), and a sliding-window factor graph fusion approach. The system dynamically loads submaps around the robot based on a configurable radius, allowing scalable scan-matching while maintaining global consistency.In addition, a learning-based object detection module identifies and removes dynamic objects from the LiDAR scans, further enhancing robustness. Together, these components form a real-time, accurate, and robust localization framework tailored for large-scale, semi-dynamic environments.
 
 \section{Objective}
 
@@ -44,13 +44,31 @@ The primary questions guiding this research are:
 \end{enumerate}
 \section{Scope and limitations}
 \subsection{Scope}
-The proposed localization system is designed for real-time operation in diverse environments, including indoor spaces, outdoor areas, and urban environments. It assumes the availability of a high-resolution 3D LIDAR map of the operation environment. The system provides accurate pose estimation by fusing LIDAR-Inertial Odometry with scan-to-map matching, and its particularly suited scenarios where GNSS is unreliable or unavailable.
+The proposed localization system is designed for real-time operation in diverse environments, including indoor spaces, outdoor areas, and urban environments. It assumes the availability of a high-resolution 3D LIDAR map of the operation environment.Furthermore, the system is capable of maintaining localization even when the robot temporarily traverses boundary or transition zones where the pre-built map is sparse or unavailable.  The system provides accurate pose estimation by fusing LIDAR-Inertial Odometry with scan-to-map matching, and its particularly suited scenarios where GNSS is unreliable or unavailable.
 \subsection{Limitations}
 \begin{itemize}
 	\item The system does not perform global localization (i.e., it cannot determine an unknown initial pose within the map). It assumes the robot starts with a known or approximated initial position close to its true location.
-	\item The approach relies entirely on a pre-built map; it does not perform simultaneous mapping (SLAM) or update the map during operation.
-	\item Highly dynamic environments or areas with significant structural changes may affect scan matching accuracy and overall system.
 \end{itemize}
+\subsection*{1.4 Contributions of the Thesis}
+
+This thesis contributes to the advancement of real-time, map-based localization in autonomous systems by addressing key challenges related to accuracy, robustness, and scalability in GNSS-denied and semi-dynamic environments. The main contributions of this work are summarized as follows:
+
+\begin{enumerate}
+	\item \textbf{Hybrid Localization Framework:}  
+	Developed a real-time localization pipeline that combines FAST-LIO2 odometry with NDT-based scan-to-map matching within a sliding-window factor graph, achieving drift-resilient 6-DoF pose estimation.
+	
+	\item \textbf{Dynamic Submap Loading:}  
+	Implemented an adaptive, tile-based map management strategy that loads only relevant submaps based on the robot’s estimated position, ensuring scalability and memory efficiency in large-scale environments.
+	
+	\item \textbf{Learning-Based Dynamic Object Removal:}  
+	Integrated a deep-learning-based CenterPoint detector into the LiDAR preprocessing stage to identify and remove dynamic objects, improving the robustness of scan matching in semi-dynamic scenes.
+	
+	\item \textbf{Real-Time Performance:}  
+	Achieved an average per-frame processing latency below 23 milliseconds through multithreaded NDT registration, voxel filtering, and efficient scan-to-map alignment.
+	
+	\item \textbf{Robustness in Degraded Conditions:}  
+	Demonstrated reliable localization performance in feature-sparse areas and under moderate visibility degradation (e.g., fog), with fallback to high-rate odometry when scan matching becomes unreliable.
+\end{enumerate}
 
 
 %\section{Methodology overview}
@@ -63,14 +81,7 @@ The proposed localization system is designed for real-time operation in diverse 
 % \end{enumerate}
 
 \section{Overview of the thesis structure}
-\begin{itemize}
-	\item Chapter 2 – Literature Review: Provides a comprehensive overview of state-of-the-art LiDAR-based localization techniques, including LiDAR–Inertial Odometry, SLAM, map-based localization, scan-matching algorithms, sensor-fusion methods, and learning-based 3D dynamic-object removal.
-
-	\item Chapter 3 – Methodology: Describes the design of the proposed system, including each module, the integration flow, and technical implementation details.
-	\item Chapter 4 - Experimental setup and results: Presents experimental evaluations, including performance metrics and comparisons with baseline approaches.
-	\item Chapter 5 – Discussion: Interprets the findings, discusses limitations, and addresses how the proposed system meets the research objectives.
-	\item Chapter 6 - Conclusion and future work: Summarizes key contributions, discusses possible improvements, and proposes directions for further research.
-\end{itemize}
+This thesis is organized as follows. \textbf{Chapter 2} reviews relevant literature on LiDAR-based localization, covering LiDAR–Inertial Odometry, SLAM, map-based methods, scan matching, sensor fusion, and learning-based dynamic object removal. \textbf{Chapter 3} details the proposed system architecture, outlining the design and integration of each module. \textbf{Chapter 4} presents the experimental setup and results, including performance metrics and comparisons with baseline methods. \textbf{Chapter 5} discusses key findings, addresses system limitations, and outlines potential directions for improvement and future work. Finally, \textbf{Chapter 6} concludes the thesis by summarizing the main contributions.
 
 % The rest of the thesis is organized as follows. Chapter 2 overviews the related
 % literature, including a brief description of the selected reference LIO-SAM frame-

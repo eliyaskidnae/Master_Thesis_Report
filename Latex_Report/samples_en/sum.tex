@@ -1,7 +1,67 @@
 \chapter{Conclusion}
 \label{ch:sum}
+\section{Summary of Findings}
+This thesis presented a real-time, map-based localization system that combines LiDAR-Inertial Odometry (FAST-LIO2), multithreaded Normal Distributions Transform (NDT) scan matching, and a fixed-lag factor graph optimization framework. The system was designed to provide accurate and drift-resilient 6-DoF pose estimation in large-scale, GNSS-denied, and partially dynamic environments.
 
-\subsection{Summary of findings}
-This thesis presented a real-time, map-based localization system that integrates LiDAR-Inertial Odometry (FAST-LIO2), multithreaded NDT scan matching, and factor graph optimization. Evaluated across multiple datasets in GNSS-denied scenarios such as indoor and urban environments, the system consistently achieved centimeter- to decimeter-level translational RMSE, outperforming standalone odometry methods like FAST-LIO2, which experienced meter-level drift. Compared to SLAM-based approaches that rely on loop closures, the proposed method maintained global consistency by continuously referencing a prior map.
+Evaluations conducted on benchmark and custom datasets demonstrated that the system consistently achieved centimeter- to decimeter-level translational RMSE, outperforming standalone odometry methods such as FAST-LIO2, which exhibited meter-level drift in long trajectories.The proposed method achieved similar or superior localization
+accuracy compared to recent map-based approaches.Furthermore,compared to SLAM-based techniques that rely on loop closures, the proposed method maintained better global consistency by continuously aligning LiDAR scans with a pre-built 3D map.
 
-The system maintained real-time performance with average per-frame latency below 35 ms, enabled by a sliding-window factor graph and multithreaded NDT-OMP. Its design supports scalability in large environments through adaptive submap loading and tile-based map management, keeping memory usage efficient. NDT scan matching demonstrated resilience in fog and noisy conditions, while dynamic object removal enhanced registration stability in semi-dynamic scenes. These capabilities make the system well-suited for high-accuracy localization in repetitive and large-scale navigation tasks under real-world deployment conditions.
+Real-time performance was sustained with an average processing latency of under 23 ms per frame, enabled by a multithreaded NDT implementation and dynamic submap loading. This ensured scalability across large environments while maintaining memory and computational efficiency. Additionally, dynamic object removal using a deep learning-based detection model improved registration stability in semi-dynamic scenes, and NDT demonstrated resilience under moderate visibility degradation such as fog.
+The system also maintained robust localization in feature-sparse map boundaries and unmapped transition zones, where scan-to-map registration typically fails. By relying on high-frequency odometry within the factor graph, it preserved pose continuity and minimized drift.
+
+These findings confirm that the proposed localization pipeline is well-suited for high-accuracy, real-time navigation in complex, unstructured, and dynamic environments.
+
+%6.2 Research Questions Revisited
+%
+%This section revisits the key research questions outlined in the introduction and summarizes how they were addressed throughout the thesis:
+%
+%RQ1: How can LiDAR-Inertial Odometry (FAST-LIO2) and NDT-based map matching be effectively fused to enhance real-time localization accuracy and robustness?
+%→ The fusion was achieved through a sliding-window factor graph optimization framework, which combined the high-frequency motion estimates from FAST-LIO2 with global pose corrections from NDT scan matching. This integration resulted in both high accuracy and drift resilience.
+%
+%RQ2: How does integrating a prior map improve the accuracy and robustness of LiDAR-based localization in GNSS-challenged environments?
+%→ By registering live LiDAR scans to a pre-built 3D map, the system maintained global alignment and reduced drift significantly, even in the absence of loop closures or GNSS signals.
+%
+%RQ3: How does the proposed system maintain real-time performance and scalability in large-scale environments?
+%→ The use of multithreaded NDT-OMP and a grid-based submap loading strategy enabled efficient scan-to-map matching, keeping per-frame processing time under 23 ms and limiting memory usage.
+%
+%RQ4: Does the proposed localization method maintain accuracy in feature-sparse and noisy environmental conditions?
+%→ Yes. The system preserved localization accuracy in challenging scenarios, including feature-deprived zones and foggy conditions. Dynamic object removal further improved the robustness of scan registration.
+%
+%Through these contributions, the thesis provides a comprehensive and extensible solution to the problem of robust, real-time localization in complex environments, and establishes a strong foundation for future integration with additional sensing modalities such as camera or radar.
+%
+%
+%\section{Conclusion}
+%
+%\subsection{6.1 Summary of Findings}
+%
+%This thesis presented a real-time, map-based localization system that combines LiDAR-Inertial Odometry (FAST-LIO2), multithreaded Normal Distributions Transform (NDT) scan matching, and a fixed-lag factor graph optimization framework. The system was designed to provide accurate and drift-resilient 6-DoF pose estimation in large-scale, GNSS-denied, and partially dynamic environments.
+%
+%Evaluations conducted on benchmark and custom datasets demonstrated that the system consistently achieved centimeter- to decimeter-level translational RMSE, outperforming standalone odometry methods such as FAST-LIO2, which exhibited meter-level drift in long trajectories. Compared to SLAM-based techniques that rely on loop closures, the proposed method maintained better global consistency by continuously aligning LiDAR scans with a pre-built 3D map.
+%
+%Furthermore, when tested on benchmark datasets such as KITTI Sequence 05 and MulRan KiAST sequences, the proposed method achieved similar or superior localization accuracy compared to recent map-based approaches including KISS-ICP and MOLA SLAM. While these systems depend on loop closures to correct drift, the proposed pipeline maintains global consistency in an open-loop manner, leveraging prior map alignment and tightly fused odometry without requiring revisits.
+%
+%Real-time performance was sustained with an average processing latency of under 23 ms per frame, enabled by a multithreaded NDT implementation and dynamic submap loading. This ensured scalability across large environments while maintaining memory and computational efficiency. Additionally, dynamic object removal using a deep learning-based detection model improved registration stability in semi-dynamic scenes, and NDT demonstrated resilience under moderate visibility degradation such as fog.
+%
+%Importantly, the system also maintained robust localization performance in challenging scenarios involving feature-sparse map boundaries and unmapped transition zones. In such cases—where scan-to-map registration often fails due to limited geometric information—the system successfully leveraged high-frequency odometry propagation within the factor graph to preserve continuity and minimize drift.
+%
+%These findings confirm that the proposed localization pipeline is a practical, extensible, and accurate solution for autonomous systems operating in complex, unstructured, and dynamic environments.
+%
+%\subsection{6.2 Research Questions Revisited}
+%
+%This section revisits the key research questions outlined in the introduction and summarizes how they were addressed throughout the thesis:
+%
+%\begin{itemize}
+%	\item \textbf{RQ1:} How can LiDAR-Inertial Odometry (FAST-LIO2) and NDT-based map matching be effectively fused to enhance real-time localization accuracy and robustness?  
+%	→ The fusion was achieved through a sliding-window factor graph optimization framework, which combined the high-frequency motion estimates from FAST-LIO2 with global pose corrections from NDT scan matching. This integration resulted in both high accuracy and drift resilience.
+%	
+%	\item \textbf{RQ2:} How does integrating a prior map improve the accuracy and robustness of LiDAR-based localization in GNSS-challenged environments?  
+%	→ By registering live LiDAR scans to a pre-built 3D map, the system maintained global alignment and reduced drift significantly, even in the absence of loop closures or GNSS signals.
+%	
+%	\item \textbf{RQ3:} How does the proposed system maintain real-time performance and scalability in large-scale environments?  
+%	→ The use of multithreaded NDT-OMP and a grid-based submap loading strategy enabled efficient scan-to-map matching, keeping per-frame processing time under 23 ms and limiting memory usage.
+%	
+%	\item \textbf{RQ4:} Does the proposed localization method maintain accuracy in feature-sparse and noisy environmental conditions?  
+%	→ Yes. The system preserved localization accuracy in challenging scenarios, including fog, semi-dynamic environments, and map boundaries or unmapped transition zones. The fusion strategy maintained consistent pose estimation even when scan matching was weakened by poor feature correspondence.
+%\end{itemize}
+%
+%Through these contributions, the thesis provides a comprehensive and extensible solution to the problem of robust, real-time localization in complex environments and establishes a strong foundation for future integration with additional sensing modalities such as camera or radar.

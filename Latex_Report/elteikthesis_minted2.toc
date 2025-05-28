@@ -1,25 +1,30 @@
-\select@language {english} \contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
-\select@language {english} \contentsline {section}{\numberline {1.1}Motivation}{3}{section.1.1}%
-\select@language {english} \contentsline {section}{\numberline {1.2}Objective}{4}{section.1.2}%
-\select@language {english} \contentsline {section}{\numberline {1.3}Research Questions}{5}{section.1.3}%
-\select@language {english} \contentsline {section}{\numberline {1.4}Scope and limitations}{5}{section.1.4}%
-\select@language {english} \contentsline {subsection}{\numberline {1.4.1}Scope}{5}{subsection.1.4.1}%
-\select@language {english} \contentsline {subsection}{\numberline {1.4.2}Limitations}{5}{subsection.1.4.2}%
-\select@language {english} \contentsline {section}{\numberline {1.5}Overview of the thesis structure}{6}{section.1.5}%
-\select@language {english} \contentsline {chapter}{\numberline {2}Litreature Review}{7}{chapter.2}%
-\select@language {english} \contentsline {section}{\numberline {2.1}Overview of Relevant Literature}{7}{section.2.1}%
-\select@language {english} \contentsline {subsection}{\numberline {2.1.1}LiDAR and LiDAR-Inertial Odometry Techniques}{7}{subsection.2.1.1}%
-\select@language {english} \contentsline {subsection}{\numberline {2.1.2}SLAM and Loop Closure-Based Localization}{9}{subsection.2.1.2}%
-\select@language {english} \contentsline {subsection}{\numberline {2.1.3}Localization Using Prior Maps}{9}{subsection.2.1.3}%
-\select@language {english} \contentsline {subsection}{\numberline {2.1.4}Point Cloud Registration Techniques}{10}{subsection.2.1.4}%
-\select@language {english} \contentsline {subsection}{\numberline {2.1.5}Dynamic Object Removal Techniques}{11}{subsection.2.1.5}%
-\select@language {english} \contentsline {section}{\numberline {2.2}Theoretical Background }{12}{section.2.2}%
-\select@language {english} \contentsline {subsection}{\numberline {2.2.1}Normal Distributions Transform (NDT)}{12}{subsection.2.2.1}%
-\select@language {english} \contentsline {subsection}{\numberline {2.2.2}Sensor Fusion Approaches}{13}{subsection.2.2.2}%
-\select@language {english} \contentsline {subsubsection}{Filtered Based Approaches}{13}{section*.3}%
-\select@language {english} \contentsline {subsubsection}{Factor Graph Based Sensor Fusion}{14}{section*.4}%
-\select@language {english} \contentsline {subsubsection}{Incremental Solvers}{15}{section*.6}%
-\select@language {english} \contentsline {section}{\numberline {2.3}Research Gaps}{16}{section.2.3}%
+\select@language {english} \contentsline {chapter}{Abstract}{i}{chapter*.1}%
+\select@language {english} \contentsline {chapter}{Acknowledgements}{ii}{chapter*.2}%
+\select@language {english} \contentsline {chapter}{List of Figures}{iii}{section*.3}%
+\select@language {english} \contentsline {chapter}{List of Tables}{v}{section*.4}%
+\select@language {english} \contentsline {chapter}{List of Algorithms}{vi}{section*.5}%
+\select@language {english} \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\select@language {english} \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}%
+\select@language {english} \contentsline {section}{\numberline {1.2}Objective}{2}{section.1.2}%
+\select@language {english} \contentsline {section}{\numberline {1.3}Research Questions}{3}{section.1.3}%
+\select@language {english} \contentsline {section}{\numberline {1.4}Scope and limitations}{3}{section.1.4}%
+\select@language {english} \contentsline {subsection}{\numberline {1.4.1}Scope}{3}{subsection.1.4.1}%
+\select@language {english} \contentsline {subsection}{\numberline {1.4.2}Limitations}{4}{subsection.1.4.2}%
+\select@language {english} \contentsline {section}{\numberline {1.5}Overview of the thesis structure}{4}{section.1.5}%
+\select@language {english} \contentsline {chapter}{\numberline {2}Litreature Review}{6}{chapter.2}%
+\select@language {english} \contentsline {section}{\numberline {2.1}Overview of Relevant Literature}{6}{section.2.1}%
+\select@language {english} \contentsline {subsection}{\numberline {2.1.1}LiDAR and LiDAR-Inertial Odometry Techniques}{6}{subsection.2.1.1}%
+\select@language {english} \contentsline {subsection}{\numberline {2.1.2}SLAM and Loop Closure-Based Localization}{8}{subsection.2.1.2}%
+\select@language {english} \contentsline {subsection}{\numberline {2.1.3}Localization Using Prior Maps}{8}{subsection.2.1.3}%
+\select@language {english} \contentsline {subsection}{\numberline {2.1.4}Point Cloud Registration Techniques}{9}{subsection.2.1.4}%
+\select@language {english} \contentsline {subsection}{\numberline {2.1.5}Dynamic Object Removal Techniques}{10}{subsection.2.1.5}%
+\select@language {english} \contentsline {section}{\numberline {2.2}Theoretical Background }{11}{section.2.2}%
+\select@language {english} \contentsline {subsection}{\numberline {2.2.1}Normal Distributions Transform (NDT)}{11}{subsection.2.2.1}%
+\select@language {english} \contentsline {subsection}{\numberline {2.2.2}Sensor Fusion Approaches}{12}{subsection.2.2.2}%
+\select@language {english} \contentsline {subsubsection}{Filtered Based Approaches}{12}{section*.10}%
+\select@language {english} \contentsline {subsubsection}{Factor Graph Based Sensor Fusion}{13}{section*.11}%
+\select@language {english} \contentsline {subsubsection}{Incremental Solvers}{15}{section*.13}%
+\select@language {english} \contentsline {section}{\numberline {2.3}Research Gaps}{15}{section.2.3}%
 \select@language {english} \contentsline {chapter}{\numberline {3}Methodology}{17}{chapter.3}%
 \select@language {english} \contentsline {section}{\numberline {3.1}System Overview}{17}{section.3.1}%
 \select@language {english} \contentsline {subsection}{\numberline {3.1.1}LiDAR Scan Pre-Processing}{19}{subsection.3.1.1}%
@@ -28,9 +33,9 @@
 \select@language {english} \contentsline {section}{\numberline {3.3}Scan-to-Map Matching}{22}{section.3.3}%
 \select@language {english} \contentsline {section}{\numberline {3.4} Real-Time Factor Graph Optimization }{23}{section.3.4}%
 \select@language {english} \contentsline {subsection}{\numberline {3.4.1}Factor Graph Formulation}{24}{subsection.3.4.1}%
-\select@language {english} \contentsline {paragraph}{1. Prior Factor}{24}{section*.10}%
-\select@language {english} \contentsline {paragraph}{2. Odometry (Between) Factors}{24}{section*.11}%
-\select@language {english} \contentsline {paragraph}{3. Map-Matching Priors}{25}{section*.12}%
+\select@language {english} \contentsline {paragraph}{1. Prior Factor}{24}{section*.17}%
+\select@language {english} \contentsline {paragraph}{2. Odometry (Between) Factors}{24}{section*.18}%
+\select@language {english} \contentsline {paragraph}{3. Map-Matching Priors}{25}{section*.19}%
 \select@language {english} \contentsline {subsection}{\numberline {3.4.2}Maximum A Posteriori (MAP) Estimation}{25}{subsection.3.4.2}%
 \select@language {english} \contentsline {subsection}{\numberline {3.4.3}Fixed-Lag Smoothing and Marginalization}{25}{subsection.3.4.3}%
 \select@language {english} \contentsline {subsection}{\numberline {3.4.4}Outlier Rejection via Mahalanobis Distance}{28}{subsection.3.4.4}%
@@ -38,36 +43,32 @@
 \select@language {english} \contentsline {subsection}{\numberline {3.5.1}Dynamic Object Detection}{28}{subsection.3.5.1}%
 \select@language {english} \contentsline {subsection}{\numberline {3.5.2}Detected Object removal }{29}{subsection.3.5.2}%
 \select@language {english} \contentsline {section}{\numberline {3.6}Environmental Noise Simulation}{29}{section.3.6}%
-\select@language {english} \contentsline {subparagraph}{Point Deletion.}{30}{section*.14}%
-\select@language {english} \contentsline {subparagraph}{Backscatter Modification.}{30}{section*.15}%
-\select@language {english} \contentsline {subparagraph}{Intensity Attenuation.}{30}{section*.16}%
-\select@language {english} \contentsline {chapter}{\numberline {4}Result}{31}{chapter.4}%
+\select@language {english} \contentsline {subparagraph}{Point Deletion.}{30}{section*.21}%
+\select@language {english} \contentsline {subparagraph}{Backscatter Modification.}{30}{section*.22}%
+\select@language {english} \contentsline {subparagraph}{Intensity Attenuation.}{30}{section*.23}%
+\select@language {english} \contentsline {chapter}{\numberline {4}Experimental Setup and Result}{31}{chapter.4}%
 \select@language {english} \contentsline {section}{\numberline {4.1}Experimental Environment}{31}{section.4.1}%
 \select@language {english} \contentsline {subsection}{\numberline {4.1.1}Hardware and Software Setup}{31}{subsection.4.1.1}%
-\select@language {english} \contentsline {subsection}{\numberline {4.1.2}Datasets and Map Preparation}{32}{subsection.4.1.2}%
-\select@language {english} \contentsline {paragraph}{Benchmark Dataset}{32}{section*.20}%
-\select@language {english} \contentsline {paragraph}{Custom Saxion Dataset}{32}{section*.21}%
-\select@language {english} \contentsline {section}{\numberline {4.2}Performance Evaluation}{32}{section.4.2}%
-\select@language {english} \contentsline {subsection}{\numberline {4.2.1} Localization Performance in Standard Conditions}{33}{subsection.4.2.1}%
-\select@language {english} \contentsline {subsubsection}{Saxion Campus Dataset}{33}{section*.22}%
-\select@language {english} \contentsline {subsubsection}{Comparison with SLAM Methods }{35}{section*.27}%
-\select@language {english} \contentsline {subsubsection}{Real-time Performance }{36}{section*.30}%
-\select@language {english} \contentsline {subsection}{\numberline {4.2.2} Extended Evaluation Under Challenging Conditions}{38}{subsection.4.2.2}%
-\select@language {english} \contentsline {subsubsection}{Impact of Dynamic Object Removal on Registration Performance}{38}{section*.33}%
-\select@language {english} \contentsline {subsubsection}{Localization on Map Side Feature Sparse Environment}{40}{section*.38}%
-\select@language {english} \contentsline {subsubsection}{Localization Under Fog Degradation with a Recent Map}{41}{section*.42}%
-\select@language {english} \contentsline {chapter}{\numberline {5}Discussion}{43}{chapter.5}%
-\select@language {english} \contentsline {section}{\numberline {5.1}Interpretation of Results}{43}{section.5.1}%
-\select@language {english} \contentsline {subsection}{\numberline {5.1.1}Accuracy and Robustness }{43}{subsection.5.1.1}%
-\select@language {english} \contentsline {subsection}{\numberline {5.1.2}Real-Time Performance }{44}{subsection.5.1.2}%
-\select@language {english} \contentsline {subsection}{\numberline {5.1.3}Environmental Adaptability }{44}{subsection.5.1.3}%
-\select@language {english} \contentsline {section}{\numberline {5.2}Implications}{44}{section.5.2}%
-\select@language {english} \contentsline {section}{\numberline {5.3}Limitations and Future Work}{45}{section.5.3}%
-\select@language {english} \contentsline {chapter}{\numberline {6}Conclusion}{46}{chapter.6}%
-\select@language {english} \contentsline {subsection}{\numberline {6.0.1}Summary of findings}{46}{subsection.6.0.1}%
-\select@language {english} \contentsline {chapter}{\numberline {A}Trajectory Plot}{47}{appendix.A}%
-\select@language {english} \contentsline {chapter}{Bibliography}{51}{section*.48}%
-\select@language {english} \contentsline {chapter}{List of Figures}{55}{section*.50}%
-\select@language {english} \contentsline {chapter}{List of Tables}{56}{section*.51}%
-\select@language {english} \contentsline {chapter}{List of Algorithms}{57}{section*.52}%
-\select@language {english} \contentsline {chapter}{List of Codes}{58}{section*.54}%
+\select@language {english} \contentsline {subsection}{\numberline {4.1.2}Datasets Collection and Map Preparation}{32}{subsection.4.1.2}%
+\select@language {english} \contentsline {paragraph}{Benchmark Dataset}{33}{section*.26}%
+\select@language {english} \contentsline {paragraph}{Custom Saxion Dataset}{33}{section*.27}%
+\select@language {english} \contentsline {section}{\numberline {4.2}Experimental Evaluation}{33}{section.4.2}%
+\select@language {english} \contentsline {subsection}{\numberline {4.2.1}Evaluation Metrics and Methodology}{33}{subsection.4.2.1}%
+\select@language {english} \contentsline {subsection}{\numberline {4.2.2} Localization Performance}{34}{subsection.4.2.2}%
+\select@language {english} \contentsline {subsubsection}{Comparison with baseline methods }{34}{section*.28}%
+\select@language {english} \contentsline {subsubsection}{Real-time Performance }{36}{section*.34}%
+\select@language {english} \contentsline {subsubsection}{Impact of Dynamic Object Removal on Registration Performance}{37}{section*.37}%
+\select@language {english} \contentsline {subsubsection}{Localization on Map Side Feature Sparse Environment}{40}{section*.42}%
+\select@language {english} \contentsline {subsubsection}{Localization Under Fog Degradation with a Recent Map}{41}{section*.46}%
+\select@language {english} \contentsline {subsubsection}{Benchmarking on Public Dataset}{43}{section*.51}%
+\select@language {english} \contentsline {chapter}{\numberline {5}Discussion}{46}{chapter.5}%
+\select@language {english} \contentsline {section}{\numberline {5.1}Interpretation of Results}{46}{section.5.1}%
+\select@language {english} \contentsline {subsection}{\numberline {5.1.1}Accuracy and Robustness }{46}{subsection.5.1.1}%
+\select@language {english} \contentsline {subsection}{\numberline {5.1.2}Real-Time Performance }{47}{subsection.5.1.2}%
+\select@language {english} \contentsline {subsection}{\numberline {5.1.3}Environmental Adaptability }{47}{subsection.5.1.3}%
+\select@language {english} \contentsline {section}{\numberline {5.2}Implications}{48}{section.5.2}%
+\select@language {english} \contentsline {subsection}{\numberline {5.2.1}Limitations and Future Work}{48}{subsection.5.2.1}%
+\select@language {english} \contentsline {chapter}{\numberline {6}Conclusion}{50}{chapter.6}%
+\select@language {english} \contentsline {section}{\numberline {6.1}Summary of Findings}{50}{section.6.1}%
+\select@language {english} \contentsline {chapter}{\numberline {A}Trajectory Plot}{51}{appendix.A}%
+\select@language {english} \contentsline {chapter}{Bibliography}{53}{section*.59}%

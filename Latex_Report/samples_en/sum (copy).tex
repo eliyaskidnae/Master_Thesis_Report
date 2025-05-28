@@ -1,0 +1,7 @@
+\chapter{Conclusion}
+\label{ch:sum}
+
+\subsection{Summary of findings}
+This thesis presented a real-time, map-based localization system that integrates LiDAR-Inertial Odometry (FAST-LIO2), multithreaded NDT scan matching, and factor graph optimization. Evaluated across multiple datasets in GNSS-denied scenarios such as indoor and urban environments, the system consistently achieved centimeter- to decimeter-level translational RMSE, outperforming standalone odometry methods like FAST-LIO2, which experienced meter-level drift. Compared to SLAM-based approaches that rely on loop closures, the proposed method maintained global consistency by continuously referencing a prior map.
+
+The system maintained real-time performance with average per-frame latency below 35 ms, enabled by a sliding-window factor graph and multithreaded NDT-OMP. Its design supports scalability in large environments through adaptive submap loading and tile-based map management, keeping memory usage efficient. NDT scan matching demonstrated resilience in fog and noisy conditions, while dynamic object removal enhanced registration stability in semi-dynamic scenes. These capabilities make the system well-suited for high-accuracy localization in repetitive and large-scale navigation tasks under real-world deployment conditions.

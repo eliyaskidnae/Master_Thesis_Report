@@ -137,6 +137,7 @@
       \strng{authorbibnamehash}{8e509e5e53b3287487b3d77bfc550fb5}
       \strng{authornamehash}{8e509e5e53b3287487b3d77bfc550fb5}
       \strng{authorfullhash}{708601ad6f45adf0ff69da3b92964a75}
+      \field{extraname}{1}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -432,40 +433,6 @@
       \field{year}{2022}
       \field{pages}{5958\bibrangedash 5964}
       \range{pages}{7}
-    \endentry
-    \entry{yin2021center}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=38416cfd1d293286ab723e9cf254420a}{%
-           family={Yin},
-           familyi={Y\bibinitperiod},
-           given={Tianwei},
-           giveni={T\bibinitperiod}}}%
-        {{hash=24e39514a947d107ce59334310fc58bb}{%
-           family={Zhou},
-           familyi={Z\bibinitperiod},
-           given={Xingyi},
-           giveni={X\bibinitperiod}}}%
-        {{hash=7680d27578e3f36a8f45650c3bdca314}{%
-           family={Krahenbuhl},
-           familyi={K\bibinitperiod},
-           given={Philipp},
-           giveni={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{dca0ade865943f2b21f7936b69eab87e}
-      \strng{fullhash}{dca0ade865943f2b21f7936b69eab87e}
-      \strng{bibnamehash}{dca0ade865943f2b21f7936b69eab87e}
-      \strng{authorbibnamehash}{dca0ade865943f2b21f7936b69eab87e}
-      \strng{authornamehash}{dca0ade865943f2b21f7936b69eab87e}
-      \strng{authorfullhash}{dca0ade865943f2b21f7936b69eab87e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}
-      \field{title}{Center-based 3D Object Detection and Tracking}
-      \field{year}{2021}
-      \field{pages}{11784\bibrangedash 11793}
-      \range{pages}{10}
     \endentry
     \entry{cadena2016past}{article}{}
       \name{author}{8}{}{%
@@ -824,6 +791,7 @@
       \strng{authorbibnamehash}{bcd4a7a9f4ff35b11453f2a0cfc02619}
       \strng{authornamehash}{bcd4a7a9f4ff35b11453f2a0cfc02619}
       \strng{authorfullhash}{a2248fedfcc68c169a03229e3b31549f}
+      \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -975,6 +943,40 @@
       \field{title}{A Portable 3D LIDAR-based System for Long-term and Wide-area People Behavior Measurement}
       \field{year}{2019}
     \endentry
+    \entry{yin2021center}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=38416cfd1d293286ab723e9cf254420a}{%
+           family={Yin},
+           familyi={Y\bibinitperiod},
+           given={Tianwei},
+           giveni={T\bibinitperiod}}}%
+        {{hash=24e39514a947d107ce59334310fc58bb}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xingyi},
+           giveni={X\bibinitperiod}}}%
+        {{hash=7680d27578e3f36a8f45650c3bdca314}{%
+           family={Krahenbuhl},
+           familyi={K\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{fullhash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{bibnamehash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{authorbibnamehash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{authornamehash}{dca0ade865943f2b21f7936b69eab87e}
+      \strng{authorfullhash}{dca0ade865943f2b21f7936b69eab87e}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}
+      \field{title}{Center-based 3D Object Detection and Tracking}
+      \field{year}{2021}
+      \field{pages}{11784\bibrangedash 11793}
+      \range{pages}{10}
+    \endentry
     \entry{lang2019pointpillars}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=e9927725a3483dbe3fe8289056f46494}{%
@@ -1051,8 +1053,8 @@
       \strng{authorbibnamehash}{ac4851e7427b5540084b079be5206480}
       \strng{authornamehash}{ac4851e7427b5540084b079be5206480}
       \strng{authorfullhash}{ac4851e7427b5540084b079be5206480}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Sensors}
@@ -1180,8 +1182,8 @@
       \strng{authorbibnamehash}{ffde757da3863460c4d0fa4babfba0cd}
       \strng{authornamehash}{ffde757da3863460c4d0fa4babfba0cd}
       \strng{authorfullhash}{ffde757da3863460c4d0fa4babfba0cd}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)}
@@ -1323,8 +1325,8 @@
       \strng{authorbibnamehash}{3fbcb4af6b78c36ee3493ecc22663649}
       \strng{authornamehash}{3fbcb4af6b78c36ee3493ecc22663649}
       \strng{authorfullhash}{898146e759470137311d84eab1b7fc00}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The International Journal of Robotics Research}
@@ -1365,8 +1367,8 @@
       \strng{authorbibnamehash}{ad06bf4b1c86b4a3a9ef62b4b7c9ad95}
       \strng{authornamehash}{ad06bf4b1c86b4a3a9ef62b4b7c9ad95}
       \strng{authorfullhash}{ad06bf4b1c86b4a3a9ef62b4b7c9ad95}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
@@ -1538,8 +1540,120 @@
       \verb 10.1177/02783649211012805
       \endverb
     \endentry
+    \entry{liu2023hba}{article}{}
+      \name{author}{4}{}{%
+        {{hash=9010b1dbea5f12b52033b52fe2b5d334}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Xinyu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=eb761f0ec974830dfebae92d776d3bbe}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Zikang},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=df6b3941c0de61555786af4a80bf2f03}{%
+           family={Kong},
+           familyi={K\bibinitperiod},
+           given={Fei},
+           giveni={F\bibinitperiod}}}%
+        {{hash=ae021641a8f85fd2607152ab99ed115b}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Fan},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{af7e81c5c727f9862149d73613c08fde}
+      \strng{fullhash}{fcb15a4eff7daed0a94fc49979507a30}
+      \strng{bibnamehash}{af7e81c5c727f9862149d73613c08fde}
+      \strng{authorbibnamehash}{af7e81c5c727f9862149d73613c08fde}
+      \strng{authornamehash}{af7e81c5c727f9862149d73613c08fde}
+      \strng{authorfullhash}{fcb15a4eff7daed0a94fc49979507a30}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Robotics and Automation Letters}
+      \field{number}{3}
+      \field{title}{Large-Scale {LiDAR} Consistent Mapping Using Hierarchical {LiDAR} Bundle Adjustment}
+      \field{volume}{8}
+      \field{year}{2023}
+      \field{pages}{1523\bibrangedash 1530}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/LRA.2023.3238902
+      \endverb
+    \endentry
+    \entry{grupp2017evo}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b294f1132fed6e2be0ed0f2792bc5b48}{%
+           family={Grupp},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b294f1132fed6e2be0ed0f2792bc5b48}
+      \strng{fullhash}{b294f1132fed6e2be0ed0f2792bc5b48}
+      \strng{bibnamehash}{b294f1132fed6e2be0ed0f2792bc5b48}
+      \strng{authorbibnamehash}{b294f1132fed6e2be0ed0f2792bc5b48}
+      \strng{authornamehash}{b294f1132fed6e2be0ed0f2792bc5b48}
+      \strng{authorfullhash}{b294f1132fed6e2be0ed0f2792bc5b48}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/MichaelGrupp/evo}}
+      \field{title}{evo: Python package for the evaluation of odometry and SLAM.}
+      \field{year}{2017}
+    \endentry
+    \entry{lin2021autonomous}{article}{}
+      \name{author}{4}{}{%
+        {{hash=d54334745e5a0b56a24e9d644566f3e4}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=3768cb3691d9f8be784a4b189ba55772}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=1272bf544a348d314e1044e9b2c87f70}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=13414502df57d59c82c59a065c752294}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d5fa54d0b1249cf2111c00bfd236b42b}
+      \strng{fullhash}{6f771749c035f3ec1b867b46c16b4fa2}
+      \strng{bibnamehash}{d5fa54d0b1249cf2111c00bfd236b42b}
+      \strng{authorbibnamehash}{d5fa54d0b1249cf2111c00bfd236b42b}
+      \strng{authornamehash}{d5fa54d0b1249cf2111c00bfd236b42b}
+      \strng{authorfullhash}{6f771749c035f3ec1b867b46c16b4fa2}
+      \field{extraname}{2}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Remote Sensing}
+      \field{number}{506}
+      \field{title}{Autonomous Vehicle Localization with Prior Visual Point Cloud Map Constraints in GNSS-Challenged Environments}
+      \field{volume}{13}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.3390/rs13030506
+      \endverb
+    \endentry
   \enddatalist
-  \missing{koide2021portable}
 \endrefsection
 \endinput
 

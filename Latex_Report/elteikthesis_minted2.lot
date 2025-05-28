@@ -1,19 +1,21 @@
 \select@language {english} \addvspace {10\p@ }
 \select@language {english} \addvspace {10\p@ }
 \select@language {english} \addvspace {10\p@ }
-\select@language {english} \contentsline {table}{\numberline {3.1}{\ignorespaces Key parameters of the NDT-OMP Scan-to-Map Matching implementation\relax }}{23}{table.caption.9}%
-\select@language {english} \contentsline {table}{\numberline {3.2}{\ignorespaces Fog severity levels based on visibility range\relax }}{30}{table.caption.17}%
+\select@language {english} \contentsline {table}{\numberline {3.1}{\ignorespaces Key parameters of the NDT-OMP Scan-to-Map Matching implementation\relax }}{23}{table.caption.16}%
 \select@language {english} \addvspace {10\p@ }
-\select@language {english} \contentsline {table}{\numberline {4.1}{\ignorespaces Overview of datasets and sensor configurations. (L: LiDAR; I: IMU)\relax }}{32}{table.caption.19}%
-\select@language {english} \contentsline {table}{\numberline {4.2}{\ignorespaces Translation (APE) and Rotation Error statistics for Saxion \textbf {Sequence 1} \relax }}{34}{table.caption.23}%
-\select@language {english} \contentsline {table}{\numberline {4.3}{\ignorespaces Translation (APE) and Rotation Error statistics for Saxion \textbf {Sequence 2} \relax }}{34}{table.caption.25}%
-\select@language {english} \contentsline {table}{\numberline {4.4}{\ignorespaces Translation (APE) and Rotation Error statistics for Saxion \textbf {Sequence 3} \relax }}{35}{table.caption.26}%
-\select@language {english} \contentsline {table}{\numberline {4.5}{\ignorespaces Translation (APE) and Rotation Error statistics for \textbf {KITTI Sequence 05}\relax }}{35}{table.caption.28}%
-\select@language {english} \contentsline {table}{\numberline {4.6}{\ignorespaces Scan‐Matching Performance vs.\ Local Map Radius\relax }}{37}{table.caption.31}%
-\select@language {english} \contentsline {table}{\numberline {4.7}{\ignorespaces Comparison of Point-cloud Registration Metrics Before and After Dynamic Object Removal\relax }}{38}{table.caption.35}%
-\select@language {english} \contentsline {table}{\numberline {4.8}{\ignorespaces Per-frame runtime analysis with and without dynamic object removal.\relax }}{40}{table.caption.37}%
-\select@language {english} \contentsline {table}{\numberline {4.9}{\ignorespaces Absolute Pose Error (APE) Statistics in Transition Corridor\relax }}{41}{table.caption.41}%
-\select@language {english} \contentsline {table}{\numberline {4.10}{\ignorespaces Translation error (APE) statistics under Severe and Moderate fog visibility\relax }}{42}{table.caption.44}%
+\select@language {english} \contentsline {table}{\numberline {4.1}{\ignorespaces Dataset Overview and Environmental Characteristics\relax }}{32}{table.caption.25}%
+\select@language {english} \contentsline {table}{\numberline {4.2}{\ignorespaces Translation (APE) and Rotation Error statistics for Saxion \textbf {Sequence 1} \relax }}{34}{table.caption.29}%
+\select@language {english} \contentsline {table}{\numberline {4.3}{\ignorespaces Translation (APE) and Rotation Error statistics for Saxion \textbf {Sequence 2} \relax }}{35}{table.caption.31}%
+\select@language {english} \contentsline {table}{\numberline {4.4}{\ignorespaces Translation (APE) and Rotation Error statistics for Saxion \textbf {Sequence 3} \relax }}{35}{table.caption.32}%
+\select@language {english} \contentsline {table}{\numberline {4.5}{\ignorespaces Scan‐Matching Performance vs.\ Local Map Radius\relax }}{37}{table.caption.35}%
+\select@language {english} \contentsline {table}{\numberline {4.6}{\ignorespaces Comparison of Point-cloud Registration Metrics Before and After Dynamic Object Removal\relax }}{38}{table.caption.39}%
+\select@language {english} \contentsline {table}{\numberline {4.7}{\ignorespaces Per-frame runtime analysis with and without dynamic object removal.\relax }}{40}{table.caption.41}%
+\select@language {english} \contentsline {table}{\numberline {4.8}{\ignorespaces Absolute Pose Error (APE) Statistics in Transition Corridor\relax }}{41}{table.caption.45}%
+\select@language {english} \contentsline {table}{\numberline {4.9}{\ignorespaces Fog severity levels based on visibility range\relax }}{42}{table.caption.47}%
+\select@language {english} \contentsline {table}{\numberline {4.10}{\ignorespaces Translation error (APE) statistics under Severe and Moderate fog visibility\relax }}{43}{table.caption.49}%
+\select@language {english} \contentsline {table}{\numberline {4.11}{\ignorespaces Comparison of translation and rotation errors (mean and standard deviation) on KITTI Sequence 05.\relax }}{44}{table.caption.52}%
+\select@language {english} \contentsline {table}{\numberline {4.12}{\ignorespaces Translation (APE) and Rotation Error statistics for \textbf {KITTI Sequence 05}\relax }}{44}{table.caption.53}%
+\select@language {english} \contentsline {table}{\numberline {4.13}{\ignorespaces Translation (APE) Error statistics for \textbf {Mulran-KAiST-03}\relax }}{44}{table.caption.54}%
 \select@language {english} \addvspace {10\p@ }
 \select@language {english} \addvspace {10\p@ }
 \select@language {english} \addvspace {10\p@ }

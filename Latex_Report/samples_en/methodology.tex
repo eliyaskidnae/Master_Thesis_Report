@@ -37,12 +37,13 @@ The overall system architecture and step-by-step algorithm flow are illustrated 
 %	
 %\end{enumerate}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=1\linewidth]{images/system-overview.png}
-    \caption{Complete Diagram of Map Based Localization}
-    \label{fig:diagram-map-basedlocalization}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.95\linewidth]{images/system-overview.png}
+	\caption{System architecture of the proposed map-based localization pipeline. The system fuses high-frequency LiDAR-inertial odometry with global map-based pose corrections using scan-to-map matching and factor graph optimization.}
+	\label{fig:diagram-map-basedlocalization}
 \end{figure}
+
 
 
 \begin{algorithm}[H]
@@ -463,20 +464,6 @@ I(d) = I_0 \cdot e^{-\gamma d}, \quad \gamma = 0.02
 \]
 Points with final intensity below a threshold (e.g., 1000 for 16-bit returns) are discarded. Simulated backscatter points are assigned random intensities in the range of 0--32\% of the maximum value, consistent with real sensor behavior under fog.
 
-\begin{table}[H]
-	\centering
-	\caption{Fog severity levels based on visibility range}
-	\label{tab:noise_levels}
-	\begin{tabular}{lc}
-		\toprule
-		\textbf{Fog Level} & \textbf{Visibility \( V \) (m)} \\
-		\midrule
-		Mild      & 100 \\
-		Moderate  & 60  \\
-		Severe    & 30  \\
-		\bottomrule
-	\end{tabular}
-\end{table}
 
 This fog simulation enables a physically interpretable, parameterized degradation model suitable for evaluating localization performance under various visibility conditions.
 
